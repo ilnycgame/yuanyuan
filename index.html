@@ -13,10 +13,10 @@
    PICTURE: 圓滾滾的動物客人、會眨眼的大碗、偷吃的仙草貓
    COLOUR and TYPE: 草莓牛奶粉、仙草深棕、蛋黃黃點綴；粉圓體 Huninn
    LAYOUT: 狀態列、攤位舞台、碗與配料台兩欄；手機改直排、碗與出餐鈕並排 */
-:root{color-scheme:light dark;--bg:light-dark(#ffe4ea,#24161d);--ink:light-dark(#4a2a20,#ffeef2);--soft:light-dark(#8a5a50,#d9b3bf);--card:light-dark(#fff8f9,#35232c);--line:light-dark(#f6c3cf,#5a3a48);--pink:#ff7aa2;--pinkd:light-dark(#e2537f,#c94a72);--sun:#ffc93c;--wood:light-dark(#eaa874,#8a5634);--wall:light-dark(#fff3dc,#3a2833)}
+:root{color-scheme:light dark;--cream:#FFF3DF;--caramel:#875C43;--jelly:#43342F;--bean:#D99A91;--matcha:#A4B58C;--honey:#E8BD70;--bg:light-dark(#FFF3DF,#2A2220);--ink:light-dark(#43342F,#FFF3DF);--soft:light-dark(#875C43,#D9BFA8);--card:light-dark(#FFFAF2,#372C28);--line:light-dark(#E6CFB2,#5C4A42);--pink:#D99A91;--pinkd:#B9766C;--sun:#E8BD70;--wood:light-dark(#C99868,#7A5638);--wall:light-dark(#FFF3DF,#33282A);--btn:light-dark(#FFFDF8,#40332E);--sel:light-dark(#F7E3DA,#4E3833)}
 :root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
-[data-season=winter]{--wall:light-dark(#eef3ff,#2b2a3c)}[data-season=spring]{--wall:light-dark(#fff0f6,#3a2833)}
-[data-season=summer]{--wall:light-dark(#fff5c4,#3a3226)}[data-season=autumn]{--wall:light-dark(#ffeedd,#3a2a22)}
+[data-season=winter]{--wall:light-dark(#F3EEE6,#2C2A2E)}[data-season=spring]{--wall:light-dark(#FCEEE6,#33282A)}
+[data-season=summer]{--wall:light-dark(#FFF1D6,#352E24)}[data-season=autumn]{--wall:light-dark(#F9E7D3,#352A22)}
 *{box-sizing:border-box;min-width:0}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 'Huninn','Zen Maru Gothic','PingFang TC','Noto Sans TC',sans-serif;overflow-x:clip;-webkit-tap-highlight-color:transparent}
 button{touch-action:manipulation;user-select:none;-webkit-user-select:none}
@@ -30,7 +30,7 @@ h1{font-size:clamp(26px,4vw,40px);line-height:1.05;margin:0}
 .timebar{height:12px;border-radius:999px;background:var(--card);border:2px solid var(--line);overflow:hidden;margin-bottom:10px}
 .timebar i{display:block;height:100%;width:100%;background:linear-gradient(90deg,var(--sun),var(--pink));transition:width .1s linear}
 .stage{position:relative;height:280px;--top:62px;border-radius:28px;overflow:hidden;background:var(--wall);border:3px solid var(--line);transition:background .6s}
-body{--aw:#ff7aa2}[data-skin=sky]{--aw:#6cb8f0}[data-skin=lemon]{--aw:#ffc21a}[data-skin=grape]{--aw:#a98be0}[data-skin=tomato]{--aw:#ff6a55}[data-skin=wood]{--aw:#b07a4f}
+body{--aw:#D99A91}[data-skin=sky]{--aw:#6cb8f0}[data-skin=lemon]{--aw:#ffc21a}[data-skin=grape]{--aw:#a98be0}[data-skin=tomato]{--aw:#ff6a55}[data-skin=wood]{--aw:#b07a4f}
 .awning{position:absolute;inset:0 0 auto;height:40px;background:repeating-linear-gradient(90deg,var(--aw) 0 40px,#fff 40px 80px);z-index:1}
 .awning::after{content:"";position:absolute;top:40px;left:0;right:0;height:20px;background:radial-gradient(circle at 20px 0,var(--aw) 19px,transparent 20px) 0 0/80px 20px repeat-x,radial-gradient(circle at 60px 0,#fff 19px,transparent 20px) 0 0/80px 20px repeat-x}
 #nextup{margin-top:8px;background:var(--card);border:2px dashed var(--line);border-radius:16px;padding:6px 12px;font-size:15px;display:flex;flex-wrap:wrap;gap:4px 8px;align-items:center}
@@ -149,9 +149,9 @@ body{--aw:#ff7aa2}[data-skin=sky]{--aw:#6cb8f0}[data-skin=lemon]{--aw:#ffc21a}[d
  header{gap:4px 6px;margin-bottom:6px;flex-wrap:nowrap}header h1{display:none}.stats{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}#mute{min-height:32px;min-width:0;font-size:13px;padding:0 10px;flex:none}
  .chip{font-size:13px;padding:2px 9px}.mhide{display:none}.stats .chip{flex:none}
  .timebar{height:9px;margin-bottom:6px}
- .stage{height:228px;border-radius:22px}
+ .stage{height:248px;border-radius:22px}
  .stage[data-sl="2"]{height:236px}.stage[data-sl="3"],.stage[data-sl="4"]{height:262px}
- #bubble .oc{font-size:14px;padding:1px 7px 1px 2px;gap:3px}#bubble .oc svg{width:18px;height:18px}#bubble .order{gap:4px}
+ #bubble .oc{font-size:13px;padding:1px 6px 1px 2px;gap:2px}#bubble .oc svg{width:18px;height:18px}#bubble .order{gap:4px}
  kbd{display:none}
  .tp .pr{display:none}.tp small:has(> .pr:only-child){display:none}
  .tp{min-height:58px;justify-content:center}
@@ -175,7 +175,7 @@ body{--aw:#ff7aa2}[data-skin=sky]{--aw:#6cb8f0}[data-skin=lemon]{--aw:#ffc21a}[d
  .work{grid-template-columns:minmax(0,1fr);gap:10px;margin-top:10px}
  .hint.desk{display:none}
  .tp{font-size:15px;padding:6px 1px 4px}
- .tp svg{width:28px;height:28px}
+ .tp svg{width:24px;height:24px}
  .cat{width:54px;top:-30px;right:12px;left:auto}
  .cat span{font-size:12px;padding:0 6px}
  .dc.s-eave{top:46px}.dc.s-eave svg{width:18px}.dc.s-wall{right:8px;top:auto;bottom:60px;width:46px}.dc.s-wall.big{width:82px}.dc.s-counter{left:auto;right:62px;width:48px}.dc.s-floor{z-index:1;left:auto;right:10px;width:44px}
@@ -197,9 +197,166 @@ body{--aw:#ff7aa2}[data-skin=sky]{--aw:#6cb8f0}[data-skin=lemon]{--aw:#ffc21a}[d
 #pause:active{transform:translateY(2px);box-shadow:0 1px 0 var(--pinkd)}
 #pause:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
 @media(prefers-reduced-motion:reduce){#spot{animation:none}.bob,.cat,#pop.show{animation:none}#pop.show{opacity:1}}
+/* ===== 美術改版・第一階段：色彩系統與 UI 元件 ===== */
+.btn{border-radius:14px;border:2px solid var(--caramel);background:var(--btn);color:var(--ink);box-shadow:0 3px 0 var(--caramel);transition:transform .12s ease,box-shadow .12s ease,background-color .15s}
+.btn:hover:not([disabled]){background:var(--sel)}
+.btn:active:not([disabled]){transform:translateY(3px);box-shadow:0 0 0 var(--caramel)}
+.btn.main{background:var(--jelly);border-color:var(--jelly);color:var(--cream);box-shadow:0 3px 0 #241B18}
+.btn.main:hover:not([disabled]){background:#5A4740}
+.btn.main:active:not([disabled]){box-shadow:0 0 0 #241B18}
+.btn[disabled],.tp[disabled]{opacity:.5;box-shadow:none;border-style:dashed}
+.mini{border-radius:12px;border:2px solid var(--line);background:var(--card);transition:border-color .15s,transform .12s}
+.mini:hover{border-color:var(--caramel)}.mini:active{transform:translateY(2px)}
+.tabs .mini[aria-selected=true]{background:var(--jelly);color:var(--cream);border-color:var(--jelly)}
+.chip{border-radius:12px;border:2px solid var(--line);background:var(--card)}
+.chip b{color:var(--caramel)}
+#money{display:inline-block}#money.bump{animation:bump .3s ease}
+@keyframes bump{40%{transform:scale(1.35);color:#C9923A}}
+.timebar{border-radius:6px}
+.timebar i{background:repeating-linear-gradient(90deg,var(--honey) 0 8px,#DDAE5E 8px 16px)}
+.stage{border-radius:20px;border:3px solid var(--caramel)}
+.card{border-radius:18px;background:var(--card);box-shadow:0 3px 0 var(--line)}
+.card h2{color:var(--caramel)}
+.tp{border-radius:14px;background:var(--btn);transition:transform .12s ease,border-color .12s,background-color .12s}
+.tp:hover:not([disabled]){border-color:var(--caramel)}
+.tp:active:not([disabled]){transform:translateY(2px) scale(.97)}
+.tp[aria-pressed=true]{border-color:var(--bean);background:var(--sel);box-shadow:inset 0 0 0 2px var(--bean)}
+.tp.out{border-color:#B5574A;background:light-dark(#FBEDE8,#40292A)}.tp.out small{color:#B5574A}
+.qb{background:var(--jelly);color:var(--cream);border-radius:8px}
+#hot[aria-pressed=true]{background:var(--jelly);border-color:var(--jelly);color:var(--cream);box-shadow:0 3px 0 #241B18}
+#ice[aria-pressed=true]{background:#E4EEF0;border-color:#7E9BA6;color:#3E5C66;box-shadow:0 3px 0 #7E9BA6}
+#milk[aria-pressed=true]{background:#FFF8EA;border-color:var(--honey);color:var(--jelly);box-shadow:0 3px 0 var(--honey)}
+.bw{border-radius:14px}.bw.on{border-color:var(--bean);background:var(--sel)}.bw.on span{color:var(--caramel)}
+.bw.wk span{color:#6E8256}
+#bubble{background:#FFFDF8;color:var(--jelly);border:2px solid var(--caramel);border-radius:16px;box-shadow:0 4px 0 rgba(135,92,67,.22)}
+.oc{background:#F6E9DC;color:var(--jelly);border-radius:10px;padding:2px 9px 2px 3px}
+.oc.done{background:#E5ECD8;text-decoration-color:#6E8256;color:#5E6E4A}
+.oc svg{width:24px;height:24px}#bubble.multi .oc svg{width:16px;height:16px}
+.cname,.x2{color:#B0675C}.note{color:#B5574A}
+.bn{background:var(--bean);border-radius:7px}
+.vipb,.vip{background:var(--honey);color:var(--jelly)}.cntb{background:var(--bean);color:#fff}
+.box{border-radius:22px;border:3px solid var(--caramel);background:var(--card)}
+.ov{background:rgba(45,32,27,.55)}
+.stars{color:var(--honey)}
+.item{border-radius:14px;background:var(--btn)}.item .lv{color:var(--honey)}
+.box .unlock{background:light-dark(#FBEBC9,#4A3D28)}
+.rcpt{background:var(--btn)}
+#pop{border:2px solid var(--caramel);border-radius:12px;background:#FFFDF8;color:var(--jelly)}
+#pop.good{color:#5E7A3E}#pop.bad{color:#B5574A}#pop.warn{color:#9A6A1E}
+#pause{border-radius:14px;border:2px solid var(--jelly);background:var(--jelly);color:var(--cream);box-shadow:0 3px 0 #241B18;transition:transform .12s}
+#pause i{background:var(--cream)}#pause:active{box-shadow:0 0 0 #241B18}
+#gtip{border:2px solid var(--caramel);color:var(--jelly);background:#FFFDF8}#gtip small{color:#B0675C}
+#spot{box-shadow:0 0 0 4px var(--honey),0 0 0 200vmax rgba(45,32,27,.55)}
+@keyframes pulse{50%{box-shadow:0 0 0 8px var(--honey),0 0 0 200vmax rgba(45,32,27,.55)}}
+.counter{background:repeating-linear-gradient(90deg,var(--wood) 0 46px,light-dark(#B98557,#6E4C31) 46px 48px);border-top:7px solid var(--caramel)}
+.awning{background:repeating-linear-gradient(90deg,var(--aw) 0 40px,#FFF6E6 40px 80px)}
+.awning::after{background:radial-gradient(circle at 20px 0,var(--aw) 19px,transparent 20px) 0 0/80px 20px repeat-x,radial-gradient(circle at 60px 0,#FFF6E6 19px,transparent 20px) 0 0/80px 20px repeat-x}
+.gskip{color:var(--caramel)}
+/* 微動畫 */
+.steam{animation:steam 1.8s ease-in-out infinite}.steam.s2{animation-delay:.6s}.steam.s3{animation-delay:1.2s}
+@keyframes steam{0%{transform:translateY(8px);opacity:0}35%{opacity:.9}100%{transform:translateY(-14px);opacity:0}}
+.drop{animation:drop .28s cubic-bezier(.3,1.6,.5,1)}
+@keyframes drop{0%{transform:translateY(-24px);opacity:0}55%{opacity:1}}
+.twk{animation:twk 1.6s steps(2) infinite}.twk.t2{animation-delay:.8s}
+@keyframes twk{50%{opacity:.15}}
+.burst{position:absolute;inset:0;pointer-events:none;overflow:visible}
+.burst i{position:absolute;left:50%;top:38%;width:6px;height:6px;margin:-3px;background:var(--honey);animation:burst .3s ease-out forwards}
+@keyframes burst{to{transform:translate(var(--dx),var(--dy));opacity:0}}
+.starfx{position:absolute;pointer-events:none;z-index:5;width:0;height:0}
+.starfx i{position:absolute;width:14px;height:14px;margin:-7px;background:var(--honey);clip-path:polygon(50% 0,62% 38%,100% 50%,62% 62%,50% 100%,38% 62%,0 50%,38% 38%);animation:star .5s ease-out forwards}
+@keyframes star{0%{transform:translate(0,0) scale(.3);opacity:1}100%{transform:translate(var(--dx),var(--dy)) scale(1);opacity:0}}
+@media(prefers-reduced-motion:reduce){.steam,.drop,.twk,.burst i,.starfx i,#money.bump{animation:none}}
+/* ===== 第二階段：角色與甜品店背景 ===== */
+.eyes{transform-box:fill-box;transform-origin:center;animation:blink 4.4s infinite}
+@keyframes blink{0%,93%,100%{transform:scaleY(1)}96%{transform:scaleY(.1)}}
+.stage{background:radial-gradient(ellipse 70% 60% at 50% 0%,light-dark(rgba(255,214,150,.55),rgba(255,190,120,.16)),transparent 70%),linear-gradient(90deg,transparent 0 calc(50% - 1px),light-dark(rgba(135,92,67,.07),rgba(255,255,255,.04)) calc(50% - 1px) calc(50% + 1px),transparent calc(50% + 1px)) 0 0/90px 100%,var(--wall)}
+.tiles{position:absolute;left:0;right:0;bottom:54px;height:46px;border-top:4px solid light-dark(#C9A27C,#5A4232);background-color:light-dark(#F4E7D5,#3A302B);background-image:radial-gradient(circle at 50% 50%,light-dark(#D99A91,#9C6A62) 0 3px,transparent 3.5px),radial-gradient(circle at 0 0,light-dark(#A4B58C,#6E7F5C) 0 4px,transparent 4.5px),radial-gradient(circle at 100% 0,light-dark(#A4B58C,#6E7F5C) 0 4px,transparent 4.5px),radial-gradient(circle at 0 100%,light-dark(#A4B58C,#6E7F5C) 0 4px,transparent 4.5px),radial-gradient(circle at 100% 100%,light-dark(#A4B58C,#6E7F5C) 0 4px,transparent 4.5px),linear-gradient(90deg,light-dark(rgba(135,92,67,.22),rgba(0,0,0,.3)) 1px,transparent 1px),linear-gradient(light-dark(rgba(135,92,67,.22),rgba(0,0,0,.3)) 1px,transparent 1px);background-size:23px 23px;pointer-events:none}
+.counter{background:linear-gradient(light-dark(#D9AA7A,#8A623F) 0 5px,transparent 5px),repeating-linear-gradient(90deg,transparent 0 62px,light-dark(rgba(90,58,36,.35),rgba(0,0,0,.35)) 62px 64px),repeating-linear-gradient(0deg,transparent 0 9px,light-dark(rgba(255,255,255,.06),rgba(255,255,255,.03)) 9px 10px),linear-gradient(light-dark(#C08A5B,#7A5638),light-dark(#A87448,#654630));border-top:6px solid var(--caramel)}
+.menu{background:linear-gradient(160deg,#3E4A3A,#2F3A2D);color:#F4EEDC;border:6px solid #9C6B44;border-radius:10px;box-shadow:0 4px 0 rgba(67,52,47,.25),inset 0 0 12px rgba(0,0,0,.25);font-size:13px}
+.menu b{color:var(--honey)}
+.shelf{position:absolute;left:160px;top:96px;width:120px;height:66px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 66'%3E%3Crect x='2' y='54' width='116' height='7' rx='2' fill='%23A87448' stroke='%23875C43' stroke-width='1.5'/%3E%3Cpath d='M12 61v5M108 61v5' stroke='%23875C43' stroke-width='3'/%3E%3Cg stroke='%23875C43' stroke-width='1.5'%3E%3Crect x='10' y='18' width='28' height='36' rx='6' fill='%23ffffff' fill-opacity='.55'/%3E%3Crect x='46' y='12' width='28' height='42' rx='6' fill='%23ffffff' fill-opacity='.55'/%3E%3Crect x='82' y='22' width='28' height='32' rx='6' fill='%23ffffff' fill-opacity='.55'/%3E%3C/g%3E%3Crect x='13' y='32' width='22' height='19' rx='4' fill='%239A2F38'/%3E%3Crect x='49' y='28' width='22' height='23' rx='4' fill='%23A68ACB'/%3E%3Crect x='85' y='36' width='22' height='15' rx='4' fill='%23D6AB6F'/%3E%3Cg fill='%23E8BD70' stroke='%23875C43' stroke-width='1.2'%3E%3Crect x='12' y='13' width='24' height='6' rx='2'/%3E%3Crect x='48' y='7' width='24' height='6' rx='2'/%3E%3Crect x='84' y='17' width='24' height='6' rx='2'/%3E%3C/g%3E%3Cpath d='M15 22v8M51 16v10M87 26v6' stroke='%23fff' stroke-width='2.5' stroke-linecap='round' opacity='.8'/%3E%3C/svg%3E") no-repeat center/contain;pointer-events:none}
+.pot{position:absolute;left:166px;bottom:50px;width:78px;height:54px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 84 58'%3E%3Cpath d='M8 22h68v20q0 14-14 14H22Q8 56 8 42Z' fill='%235A5450' stroke='%2333302E' stroke-width='2'/%3E%3Cpath d='M2 26h8M74 26h8' stroke='%2333302E' stroke-width='4' stroke-linecap='round'/%3E%3Cellipse cx='42' cy='22' rx='35' ry='7' fill='%2343342F' stroke='%2333302E' stroke-width='2'/%3E%3Cellipse cx='34' cy='21' rx='14' ry='2' fill='%23fff' opacity='.18'/%3E%3Cpath d='M16 30v18' stroke='%23fff' stroke-width='3' stroke-linecap='round' opacity='.2'/%3E%3C/svg%3E") no-repeat center bottom/contain;pointer-events:none}
+.pot::before{content:"";position:absolute;left:30%;top:-26px;width:40%;height:30px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 30'%3E%3Cpath d='M8 28q-6-6 0-12t0-12M24 28q-6-6 0-12t0-12' stroke='%23CDB8A4' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center/contain;animation:steam 2s ease-in-out infinite}
+.rain{position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .6s;background:repeating-linear-gradient(105deg,transparent 0 22px,light-dark(rgba(120,150,170,.35),rgba(180,210,230,.25)) 22px 23px);background-size:100% 200%;animation:rain .7s linear infinite}
+.stage[data-wx=rain] .rain{opacity:1}
+@keyframes rain{to{background-position:-30px 60px}}
+@media(max-width:899px){.shelf,.pot{display:none}}
+@media(max-width:600px){.tiles{height:30px;bottom:54px;background-size:18px 18px}}
+@media(prefers-reduced-motion:reduce){.eyes,.pot::before,.rain{animation:none}}
+.tk{display:flex;flex-wrap:wrap;justify-content:center;gap:3px;margin:0 2px 4px;min-height:24px}.tk[hidden]{display:none}
+.ti{position:relative;display:inline-grid;place-items:center;width:26px;height:26px;border-radius:8px;background:#F6E9DC;border:1.5px solid var(--line);transition:opacity .2s,background-color .2s}
+.ti svg{width:20px;height:20px}
+.ti b{position:absolute;right:-5px;top:-6px;background:var(--jelly);color:var(--cream);font-size:10px;line-height:1;padding:2px 3px;border-radius:5px}
+.ti.ok{background:#E5ECD8;border-color:#A4B58C;opacity:.5}
+.bw .tk .ti{position:relative;left:auto;top:auto;font-size:inherit;font-weight:400}
+.bw{display:flex;flex-direction:column;justify-content:flex-start;align-items:stretch}
+/* ===== 第三階段：商店圖示與解鎖動畫 ===== */
+.item.ic{grid-template-columns:48px minmax(0,1fr) auto}
+.item.ic .ii{grid-row:1/3;grid-column:1;width:48px;height:48px;display:grid;place-items:center;background:var(--sel);border:1.5px solid var(--line);border-radius:12px;overflow:hidden;padding:5px}
+.item.ic .ii svg{width:100%;height:100%;max-height:38px}
+.item.ic b,.item.ic p{grid-column:2}.item.ic .btn{grid-column:3}
+.unl{position:absolute;left:50%;top:46%;z-index:6;display:flex;align-items:center;gap:10px;padding:10px 18px;background:#FFFDF8;border:2px solid var(--honey);border-radius:16px;box-shadow:0 5px 0 rgba(135,92,67,.25),0 0 0 6px rgba(232,189,112,.28);color:var(--jelly);transform:translate(-50%,-50%);animation:unl 2.4s ease forwards;pointer-events:none;text-align:left}
+.unl svg{width:42px;height:42px;flex:none}.unl small{display:block;color:var(--caramel);font-size:13px}.unl b{font-size:19px;white-space:nowrap}
+@keyframes unl{0%{opacity:0;transform:translate(-50%,-50%) scale(.6)}12%{opacity:1;transform:translate(-50%,-50%) scale(1.06)}20%{transform:translate(-50%,-50%) scale(1)}85%{opacity:1}100%{opacity:0;transform:translate(-50%,-62%)}}
+@media(prefers-reduced-motion:reduce){.unl{animation:none}}
+@media(max-width:600px){.item.ic{grid-template-columns:42px minmax(0,1fr) auto;gap:4px 10px}.item.ic .ii{width:42px;height:42px}}
+@media(max-width:600px){.ti{width:22px;height:22px;border-radius:7px}.ti svg{width:17px;height:17px}.tk{gap:2px}}
+.btn.main,#hot[aria-pressed=true],#pause{background:light-dark(#43342F,#D99A91);border-color:light-dark(#43342F,#D99A91);color:light-dark(#FFF3DF,#2A2220);box-shadow:0 3px 0 light-dark(#241B18,#9C6A62)}
+.btn.main:hover:not([disabled]){background:light-dark(#5A4740,#E3ABA3)}
+#pause i{background:light-dark(#FFF3DF,#2A2220)}
+.tabs .mini[aria-selected=true]{background:light-dark(#43342F,#D99A91);color:light-dark(#FFF3DF,#2A2220);border-color:light-dark(#43342F,#D99A91)}
 </style>
 </head>
 <body data-season="winter">
+<svg id="gdefs" width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+<linearGradient id="gTaro" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E6D9F5"/><stop offset="1" stop-color="#9C7FC2"/></linearGradient>
+<linearGradient id="gSweet" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FCDDAC"/><stop offset="1" stop-color="#E3923F"/></linearGradient>
+<radialGradient id="gPearl" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#9A715E"/><stop offset=".6" stop-color="#5A3D31"/><stop offset="1" stop-color="#3A2620"/></radialGradient>
+<radialGradient id="gTang" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".6" stop-color="#FBEDEA"/><stop offset="1" stop-color="#EACDC6"/></radialGradient>
+<linearGradient id="gNut" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F7E3BC"/><stop offset="1" stop-color="#D0A05F"/></linearGradient>
+<radialGradient id="gBean" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#D3666F"/><stop offset=".55" stop-color="#9A2F38"/><stop offset="1" stop-color="#6E2129"/></radialGradient>
+<radialGradient id="gMung" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#D2E6B6"/><stop offset=".6" stop-color="#8FAE68"/><stop offset="1" stop-color="#62804A"/></radialGradient>
+<linearGradient id="gPud" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FDEBB6"/><stop offset="1" stop-color="#EBBA5B"/></linearGradient>
+<linearGradient id="gBowl" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FFFFFF"/><stop offset=".45" stop-color="#FFF8EE"/><stop offset="1" stop-color="#E6D3BC"/></linearGradient>
+<radialGradient id="gJelly" cx=".4" cy=".35" r=".75"><stop offset="0" stop-color="#6B5248"/><stop offset=".55" stop-color="#43342F"/><stop offset="1" stop-color="#2E2320"/></radialGradient>
+<linearGradient id="gIce" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#DDEAF0"/></linearGradient>
+<linearGradient id="gInner" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D8BFA2"/><stop offset="1" stop-color="#EFE0CC"/></linearGradient>
+<radialGradient id="gMilk" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#F7ECDF" stop-opacity=".95"/><stop offset=".55" stop-color="#E2CDB8" stop-opacity=".75"/><stop offset="1" stop-color="#B89A84" stop-opacity="0"/></radialGradient><radialGradient id="gJellyMilk" cx=".45" cy=".4" r=".7"><stop offset="0" stop-color="#C9A88F"/><stop offset=".55" stop-color="#9A7964"/><stop offset="1" stop-color="#6A5045"/></radialGradient><filter id="fSoft" x="-20%" y="-50%" width="140%" height="200%"><feGaussianBlur stdDeviation="2.4"/></filter>
+<radialGradient id="fBear" cx=".4" cy=".3" r=".8"><stop offset="0" stop-color="#E8BE90"/><stop offset="1" stop-color="#BD8758"/></radialGradient>
+<radialGradient id="fCat" cx=".4" cy=".3" r=".8"><stop offset="0" stop-color="#FCCC98"/><stop offset="1" stop-color="#E38D4B"/></radialGradient>
+<radialGradient id="fBunny" cx=".4" cy=".3" r=".8"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#EEE1D8"/></radialGradient>
+<radialGradient id="fChick" cx=".4" cy=".3" r=".8"><stop offset="0" stop-color="#FFEEA6"/><stop offset="1" stop-color="#F2C24A"/></radialGradient>
+<radialGradient id="fKuro" cx=".4" cy=".3" r=".8"><stop offset="0" stop-color="#655A6E"/><stop offset="1" stop-color="#2E2934"/></radialGradient>
+<linearGradient id="gWood" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#B98255"/><stop offset="1" stop-color="#8E5E3B"/></linearGradient>
+<radialGradient id="dLan" cx=".4" cy=".35" r=".75"><stop offset="0" stop-color="#F9AFA2"/><stop offset="1" stop-color="#D45F55"/></radialGradient>
+<linearGradient id="dGlass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F4FBFE"/><stop offset="1" stop-color="#BFE0F0"/></linearGradient>
+<linearGradient id="dRadio" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#DBA571"/><stop offset="1" stop-color="#A8703F"/></linearGradient>
+<linearGradient id="dBox" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#A6CEE0"/><stop offset="1" stop-color="#6FA2BA"/></linearGradient>
+<symbol id="u-pot" viewBox="0 0 32 32"><path d="M5 13h22v8q0 7-7 7h-8q-7 0-7-7Z" fill="#6A625C" stroke="#33302E" stroke-width="1.5"/><ellipse cx="16" cy="13" rx="11" ry="3" fill="#43342F" stroke="#33302E" stroke-width="1.5"/><path d="M2 15h3M27 15h3" stroke="#33302E" stroke-width="2.5" stroke-linecap="round"/><path d="M12 9q-2-2.5 0-5M20 9q-2-2.5 0-5" stroke="#CDB8A4" stroke-width="1.6" fill="none" stroke-linecap="round"/></symbol>
+<symbol id="u-box" viewBox="0 0 32 32"><rect x="6" y="5" width="20" height="23" rx="3" fill="#DCEBF0" stroke="#7A9EAE" stroke-width="1.5"/><path d="M6 13h20" stroke="#7A9EAE" stroke-width="1.5"/><path d="M22 8v3M22 16v7" stroke="#7A9EAE" stroke-width="2" stroke-linecap="round"/><path d="M10 8l2 2" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/></symbol>
+<symbol id="u-cat" viewBox="0 0 32 32"><rect x="12" y="5" width="8" height="21" rx="2" fill="#E8C795" stroke="#875C43" stroke-width="1.5"/><path d="M12 9h8M12 13h8M12 17h8M12 21h8" stroke="#C9A06A" stroke-width="1"/><rect x="6" y="26" width="20" height="3.5" rx="1.7" fill="#D99A91" stroke="#875C43" stroke-width="1.2"/><circle cx="25" cy="8" r="3.5" fill="#E8BD70" stroke="#875C43" stroke-width="1.2"/></symbol>
+<symbol id="u-shade" viewBox="0 0 32 32"><path d="M3 16Q16 0 29 16Q25.5 13 22.5 16Q19.5 13 16 16Q12.5 13 9.5 16Q6.5 13 3 16Z" fill="#D99A91" stroke="#875C43" stroke-width="1.5" stroke-linejoin="round"/><path d="M16 16v10q0 3-3 3" stroke="#875C43" stroke-width="1.8" fill="none" stroke-linecap="round"/></symbol>
+<symbol id="u-board" viewBox="0 0 32 32"><rect x="4" y="5" width="24" height="17" rx="2" fill="#FFFDF8" stroke="#875C43" stroke-width="1.5"/><path d="M8 10h10M8 14h14M8 18h7" stroke="#9FC0CF" stroke-width="1.6" stroke-linecap="round"/><path d="M10 22l-3 7M22 22l3 7" stroke="#875C43" stroke-width="1.5" stroke-linecap="round"/></symbol>
+<symbol id="u-sign" viewBox="0 0 32 32"><rect x="4" y="8" width="24" height="14" rx="3" fill="#FFE2A6" stroke="#875C43" stroke-width="1.5"/><path d="M9 15h14" stroke="#D99A91" stroke-width="3" stroke-linecap="round"/><path d="M16 22v6M11 28.5h10" stroke="#875C43" stroke-width="1.6" stroke-linecap="round"/><path d="M4 4l2 2M28 4l-2 2M16 2v3" stroke="#E8BD70" stroke-width="1.6" stroke-linecap="round"/></symbol>
+<symbol id="u-shaver" viewBox="0 0 32 32"><rect x="8" y="3" width="16" height="9" rx="2" fill="#9FC0CF" stroke="#5E7F8E" stroke-width="1.5"/><path d="M12 12v4M20 12v4" stroke="#5E7F8E" stroke-width="1.5"/><path d="M8 24Q9 15.5 16 15.5Q23 15.5 24 24Z" fill="#fff" stroke="#9DB6C3" stroke-width="1.4"/><path d="M7 24h18l-2 4.5H9Z" fill="#FFF8EE" stroke="#875C43" stroke-width="1.4" stroke-linejoin="round"/><circle cx="26.5" cy="7.5" r="2.5" fill="#E8BD70" stroke="#875C43"/></symbol>
+<symbol id="u-helper" viewBox="0 0 32 32"><path d="M6 30q0-10 10-10t10 10Z" fill="#A4B58C" stroke="#7E9467" stroke-width="1.5"/><path d="M12 21.5h8v8.5h-8Z" fill="#FFF8EE" stroke="#7E9467" stroke-width="1.2"/><circle cx="16" cy="11" r="6.5" fill="#F7D9BE" stroke="#875C43" stroke-width="1.5"/><path d="M9.6 10q6.4-8 12.8 0Q20 6.5 16 6.5T9.6 10Z" fill="#5A3A2E"/><circle cx="13.5" cy="12" r=".9" fill="#3A2A24"/><circle cx="18.5" cy="12" r=".9" fill="#3A2A24"/></symbol>
+<symbol id="u-slots" viewBox="0 0 32 32"><path d="M1.5 17h13q-1 7-6.5 8Q2.5 24 1.5 17Z" fill="#FFF8EE" stroke="#875C43" stroke-width="1.3"/><ellipse cx="8" cy="17" rx="6.5" ry="2" fill="#43342F"/><path d="M17.5 17h13q-1 7-6.5 8Q18.5 24 17.5 17Z" fill="#FFF8EE" stroke="#875C43" stroke-width="1.3"/><ellipse cx="24" cy="17" rx="6.5" ry="2" fill="#43342F"/><path d="M16 5v7M12.5 8.5h7" stroke="#D99A91" stroke-width="2.2" stroke-linecap="round"/></symbol>
+<symbol id="u-autosrv" viewBox="0 0 32 32"><path d="M8 19q0-8 8-8t8 8Z" fill="#E8BD70" stroke="#875C43" stroke-width="1.5"/><circle cx="16" cy="9.5" r="1.7" fill="#875C43"/><path d="M4 19.5h24" stroke="#875C43" stroke-width="2" stroke-linecap="round"/><path d="M8 26h14m-4-3 4 3-4 3" stroke="#7E9467" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+<symbol id="i-cup" viewBox="0 0 32 32"><path d="M10 4h12v7q0 7-6 7t-6-7Z" fill="#E8BD70" stroke="#A97B2E" stroke-width="1.5"/><path d="M10 6.5H6q0 6 5 6.5M22 6.5h4q0 6-5 6.5" stroke="#A97B2E" stroke-width="1.5" fill="none"/><path d="M14 18h4v4h-4Z" fill="#E8BD70" stroke="#A97B2E"/><rect x="9.5" y="22" width="13" height="5.5" rx="1.5" fill="#875C43"/><path d="M13.5 7v4.5" stroke="#fff" stroke-width="1.6" stroke-linecap="round" opacity=".75"/></symbol>
+<clipPath id="cBody"><path d="M20 66Q24 150 120 156Q216 150 220 66Z"/></clipPath>
+<symbol id="t-taro" viewBox="0 0 32 32"><rect x="5" y="7" width="22" height="19" rx="6" fill="url(#gTaro)" stroke="#6B5884" stroke-width="1.4"/><rect x="9" y="10" width="9" height="3.5" rx="1.75" fill="#fff" opacity=".65"/></symbol>
+<symbol id="t-sweet" viewBox="0 0 32 32"><rect x="5" y="7" width="22" height="19" rx="6" fill="url(#gSweet)" stroke="#94582A" stroke-width="1.4"/><rect x="9" y="10" width="9" height="3.5" rx="1.75" fill="#fff" opacity=".6"/></symbol>
+<symbol id="t-pearl" viewBox="0 0 32 32"><circle cx="16" cy="16" r="10.5" fill="url(#gPearl)" stroke="#2B1F1B" stroke-width="1.4"/><ellipse cx="12.5" cy="12" rx="3" ry="2" fill="#fff" opacity=".5"/></symbol>
+<symbol id="t-tang" viewBox="0 0 32 32"><circle cx="16" cy="16" r="10" fill="url(#gTang)" stroke="#B48F86" stroke-width="1.4"/><ellipse cx="12.5" cy="12" rx="3" ry="2" fill="#fff"/></symbol>
+<symbol id="t-peanut" viewBox="0 0 32 32"><path d="M16 4C21 4 23 9 22 13C21.5 15.5 22.5 17 22.5 19.5C22.5 25 19.5 28 16 28C12.5 28 9.5 25 9.5 19.5C9.5 17 10.5 15.5 10 13C9 9 11 4 16 4Z" fill="url(#gNut)" stroke="#8A6038" stroke-width="1.4"/><path d="M16 6.5V25.5" stroke="#B98B55" stroke-width="1" opacity=".6"/><ellipse cx="13" cy="10.5" rx="1.6" ry="3" fill="#fff" opacity=".55"/></symbol>
+<symbol id="t-bean" viewBox="0 0 32 32"><path d="M6.5 17C5.5 11 11 8 16 9C19 9.6 20 11.5 22.5 11C26 10.5 27.5 14 26.5 17.5C25 23 19 25 13.5 24C9.5 23.3 7 20.5 6.5 17Z" fill="url(#gBean)" stroke="#55201F" stroke-width="1.4"/><ellipse cx="12.5" cy="13.5" rx="3" ry="1.6" fill="#fff" opacity=".5"/></symbol>
+<symbol id="t-mung" viewBox="0 0 32 32"><ellipse cx="16" cy="17" rx="9.5" ry="7.5" fill="url(#gMung)" stroke="#4A5A33" stroke-width="1.4"/><ellipse cx="12.8" cy="14.3" rx="2.6" ry="1.4" fill="#fff" opacity=".55"/><path d="M19 20h3" stroke="#F4F8EC" stroke-width="1.4" stroke-linecap="round"/></symbol>
+<symbol id="t-pud" viewBox="0 0 32 32"><path d="M8 26L10.5 9.5Q16 7 21.5 9.5L24 26Z" fill="url(#gPud)" stroke="#94672C" stroke-width="1.4" stroke-linejoin="round"/><path d="M10.5 9.5Q16 7 21.5 9.5L22.1 13.5Q16 11.5 9.9 13.5Z" fill="#8A4E21"/><path d="M12.5 16l-.8 7" stroke="#fff" stroke-width="1.6" stroke-linecap="round" opacity=".65"/></symbol>
+<symbol id="i-hot" viewBox="0 0 32 32"><path d="M5 15h22q-1 10-11 11Q6 25 5 15Z" fill="#FFF8EE" stroke="#875C43" stroke-width="1.4"/><ellipse cx="16" cy="15" rx="11" ry="3" fill="#43342F" stroke="#875C43" stroke-width="1.4"/><path d="M11 11q-2-2.5 0-5M16 10q-2-2.5 0-5M21 11q-2-2.5 0-5" stroke="#C9B39F" stroke-width="1.5" fill="none" stroke-linecap="round"/></symbol>
+<symbol id="i-ice" viewBox="0 0 32 32"><path d="M5 17h22q-1 9-11 10Q6 26 5 17Z" fill="#FFF8EE" stroke="#875C43" stroke-width="1.4"/><path d="M7 17Q8 5 16 5Q24 5 25 17Z" fill="url(#gIce)" stroke="#9DB6C3" stroke-width="1.4"/><path d="M10 11q3 2 6 0t6 0" stroke="#8A5530" stroke-width="1.6" fill="none" stroke-linecap="round"/></symbol>
+<symbol id="i-milk" viewBox="0 0 32 32"><path d="M13 5h6v3.5l3 4v13.5q0 2-2 2h-8q-2 0-2-2V12.5l3-4Z" fill="#FFFDF8" stroke="#875C43" stroke-width="1.4" stroke-linejoin="round"/><rect x="12.5" y="3.5" width="7" height="3" rx="1" fill="#9FC0CF"/><path d="M10.7 18h10.6" stroke="#9FC0CF" stroke-width="2.4"/></symbol>
+<symbol id="i-lock" viewBox="0 0 32 32"><rect x="8" y="14" width="16" height="12" rx="3" fill="#E9DCCD" stroke="#A08A7A" stroke-width="1.6"/><path d="M11 14v-3a5 5 0 0 1 10 0v3" fill="none" stroke="#A08A7A" stroke-width="1.8"/><circle cx="16" cy="20" r="1.6" fill="#A08A7A"/></symbol>
+</defs></svg>
 <div class="wrap">
  <header>
   <h1>圓圓燒仙草</h1>
@@ -215,7 +372,11 @@ body{--aw:#ff7aa2}[data-skin=sky]{--aw:#6cb8f0}[data-skin=lemon]{--aw:#ffc21a}[d
  <div class="timebar"><i id="tbar"></i></div>
 
  <div class="stage">
+  <div class="tiles"></div>
   <div id="deco"></div>
+  <div class="shelf" aria-hidden="true"></div>
+  <div class="pot" aria-hidden="true"></div>
+  <div class="rain" aria-hidden="true"></div>
   <div id="decor"></div>
   <div class="awning"></div>
   <div class="menu" id="menu"></div>
@@ -257,8 +418,8 @@ body{--aw:#ff7aa2}[data-skin=sky]{--aw:#6cb8f0}[data-skin=lemon]{--aw:#ffc21a}[d
 
 <script>
 {
-const VER='v7.4';
-const NOTES={'v7.4':['一天不再限時 75 秒，改成服務完當天的客人才打烊。天氣和祭典會影響來客數，例如寒流 +30%、秋颱 −30%','網紅發文爆紅時，當天會多來 2 位客人','星星改看「客人滿意度」：50% 一顆、75% 兩顆、90% 三顆','打烊時新增「今日結算」：賣出幾碗、收入、小費、最熱門配料','剛買第二個碗位的那天，第一位客人就會點 2 碗，馬上一步一步教學','配料按鈕兩排高度一致','新增這個更新公告']};
+const VER='v8.0';
+const NOTES={'v8.0':['美術全面改版：奶油米白、焦糖棕、仙草深褐的溫暖配色，按鈕和介面統一成同一套風格','碗、配料、客人、仙草貓重畫成柔和插畫風，客人會眨眼、穿不同顏色的毛衣，表情跟著耐心變化','新的懷舊甜品店背景：花磚、木紋櫃台、黑板菜單、玻璃罐和鐵湯鍋，下雨天還會下雨','加料時配料會掉進碗裡、出餐時冒星星、發現招牌組合有專屬動畫','每個碗下面都有自己的小訂單，多碗訂單不用再捲動對話框','加奶改成奶茶色的效果；裝飾品和設備店圖示也換成新畫風'],'v7.4':['一天不再限時 75 秒，改成服務完當天的客人才打烊。天氣和祭典會影響來客數，例如寒流 +30%、秋颱 −30%','網紅發文爆紅時，當天會多來 2 位客人','星星改看「客人滿意度」：50% 一顆、75% 兩顆、90% 三顆','打烊時新增「今日結算」：賣出幾碗、收入、小費、最熱門配料','剛買第二個碗位的那天，第一位客人就會點 2 碗，馬上一步一步教學','配料按鈕兩排高度一致','新增這個更新公告']};
 const TOPS=[
  {id:'taro',n:'芋圓',c:'#b79ad8',s:'cube',d:1},
  {id:'pearl',n:'粉圓',c:'#8a5a3e',s:'ball',d:1},
@@ -325,7 +486,7 @@ const UP=[
  {id:'helper',n:'打工小幫手',d:'阿福的弟弟會照客人的單，幫空碗先盛好湯底',p:[2500]},
  {id:'slots',n:'工作台',ns:['第二個碗位','僱用工讀生小美','僱用工讀生阿傑'],ds:['可以同時做 2 碗，也會開始有客人一次點 2 碗','小美會自動幫你做訂單上的第 3 碗，你只要做好第 1、2 碗','阿傑也來幫忙，自動做第 4 碗，可以接 4 碗的大單'],p:[1500,3000,5000],req:[3,5,7]},
  {id:'autosrv',n:'自動出餐',d:'工讀生看到整單都做好，會自動幫你送給客人，不用再按出餐。要先在上面的「工作台」買到第 2 級（僱用工讀生小美）',p:[2000],need:['slots',2,'工作台 Lv2 後']}];
-const SKINS=[{id:'pink',n:'草莓粉',c:'#ff7aa2',p:0},{id:'sky',n:'汽水藍',c:'#6cb8f0',p:300},{id:'lemon',n:'檸檬黃',c:'#ffc21a',p:300},{id:'grape',n:'葡萄紫',c:'#a98be0',p:400},{id:'wood',n:'原木',c:'#b07a4f',p:null},{id:'tomato',n:'番茄紅',c:'#ff6a55',p:400}];
+const SKINS=[{id:'pink',n:'紅豆粉',c:'#D99A91',p:0},{id:'sky',n:'汽水藍',c:'#6cb8f0',p:300},{id:'lemon',n:'檸檬黃',c:'#ffc21a',p:300},{id:'grape',n:'葡萄紫',c:'#a98be0',p:400},{id:'wood',n:'原木',c:'#b07a4f',p:null},{id:'tomato',n:'番茄紅',c:'#ff6a55',p:400}];
 const COMBOS=[
  {id:'old',n:'古早味燒仙草',b:'hot',t:['peanut','bean'],m:false,h:'熱的・兩種「豆」'},
  {id:'grandma',n:'阿嬤招牌',b:'hot',t:['taro','pearl','peanut','bean'],m:false,h:'熱的・第一天的四種配料全加'},
@@ -358,7 +519,9 @@ function snd(k){if(S.muted)return;const m={add:()=>tone(880,.07,'triangle'),good
 
 /* 繪圖 */
 function mkPts(seed,n,cx,cy,rx,ry){let r=seed;const rr=()=>(r=(r*9301+49297)%233280)/233280,a=[];for(let i=0;i<n;i++){const t=rr()*Math.PI*2,d=Math.sqrt(rr())*.86;a.push([cx+Math.cos(t)*d*rx,cy+Math.sin(t)*d*ry])}return a}
-const PH=mkPts(11,128,120,64,84,19),PIC=mkPts(5,128,120,42,58,15);
+const PH=mkPts(11,128,120,67,68,11),PIC=mkPts(5,128,120,38,52,13);
+/* ===== 插畫圖示（共用 #gdefs 裡的 symbol） ===== */
+const useI=(id,w)=>`<svg viewBox="0 0 32 32"${w?` width="${w}" height="${w}"`:''} aria-hidden="true"><use href="#${id}"/></svg>`;
 function piece(t,x,y){
  x=r1(x);y=r1(y);
  if(t.s=='cube')return `<rect x="${x-6}" y="${y-5}" width="12" height="10" rx="3" fill="${t.c}" stroke="rgba(0,0,0,.2)"/><rect x="${x-4}" y="${y-3.5}" width="5" height="2.6" rx="1.3" fill="#fff" opacity=".5"/>`;
@@ -367,82 +530,97 @@ function piece(t,x,y){
  if(t.s=='pud')return `<path d="M${x-6} ${y+5}L${x-4} ${y-4}H${x+4}L${x+6} ${y+5}Z" fill="${t.c}" stroke="rgba(0,0,0,.15)"/><path d="M${x-4} ${y-4}H${x+4}L${x+4.7} ${y-1}H${x-4.7}Z" fill="#9a5a1e"/>`;
  return `<ellipse cx="${x}" cy="${y}" rx="3.8" ry="2.9" fill="${t.c}"/><circle cx="${x-1.2}" cy="${y-1}" r="1" fill="#fff" opacity=".75"/>`;
 }
-const icon=(t,w)=>`<svg viewBox="0 0 24 24" ${w?`width="${w}" height="${w}"`:''} aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#3a2216"/><g transform="translate(12 12) scale(1.5) translate(-12 -12)">${piece(t,12,12)}</g></svg>`;
-const baseIcon=b=>`<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="${b=='ice'?'#dff1ff':'#5a3524'}"/>${b=='ice'?'<path d="M5 15 Q7 5 12 5 Q17 5 19 15Z" fill="#fff"/><path d="M7 11 q3 2 5 0 q3 -2 5 0" stroke="#7a3e1a" stroke-width="1.6" fill="none"/>':'<path d="M8 9 q-2 -3 0 -5 M12 9 q-2 -3 0 -5 M16 9 q-2 -3 0 -5" stroke="#ffe9d6" stroke-width="1.6" fill="none" stroke-linecap="round"/><ellipse cx="12" cy="15" rx="7" ry="3" fill="#3a2216"/>'}</svg>`;
-const milkIcon='<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#fff6dc"/><path d="M12 5 q6 7 0 13 q-6 -6 0 -13z" fill="#fff" stroke="#e8d2a6" stroke-width="1.4"/></svg>';
+const icon=(t,w)=>useI('t-'+t.id,w);
+const baseIcon=b=>useI(b=='ice'?'i-ice':'i-hot');
+const milkIcon=useI('i-milk');
 
-function face(k,m){
- const [b,l]=KC[k],ink=k=='kuro'?'#ffe066':'#3a2418';let s='';
- if(k=='bear')s+=`<circle cx="26" cy="34" r="16" fill="${b}"/><circle cx="94" cy="34" r="16" fill="${b}"/><circle cx="26" cy="34" r="8" fill="${l}"/><circle cx="94" cy="34" r="8" fill="${l}"/>`;
- if(k=='cat'||k=='kuro')s+=`<path d="M16 54L24 10L54 34Z" fill="${b}"/><path d="M104 54L96 10L66 34Z" fill="${b}"/><path d="M25 42L28 20L44 34Z" fill="${l}"/><path d="M95 42L92 20L76 34Z" fill="${l}"/>`;
- if(k=='bunny')s+=`<ellipse cx="42" cy="22" rx="11" ry="28" fill="${b}" stroke="#ead8cf" stroke-width="2"/><ellipse cx="78" cy="22" rx="11" ry="28" fill="${b}" stroke="#ead8cf" stroke-width="2"/><ellipse cx="42" cy="24" rx="5" ry="19" fill="${l}"/><ellipse cx="78" cy="24" rx="5" ry="19" fill="${l}"/>`;
- if(k=='chick')s+=`<path d="M58 30Q52 12 60 16Q64 8 66 24" fill="none" stroke="#e8a82a" stroke-width="4" stroke-linecap="round"/>`;
- s+=`<ellipse cx="60" cy="150" rx="42" ry="30" fill="${b}" stroke="rgba(0,0,0,.08)" stroke-width="2"/><ellipse cx="60" cy="76" rx="50" ry="45" fill="${b}" stroke="rgba(0,0,0,.08)" stroke-width="2"/>`;
- if(k!='chick')s+=`<ellipse cx="60" cy="92" rx="20" ry="14" fill="${l}" opacity=".8"/>`;
- s+=`<ellipse cx="30" cy="90" rx="9" ry="6" fill="#ff8fab" opacity=".55"/><ellipse cx="90" cy="90" rx="9" ry="6" fill="#ff8fab" opacity=".55"/>`;
- const st=`stroke="${ink}" stroke-width="4" fill="none" stroke-linecap="round"`;
- if(m=='happy')s+=`<path d="M36 74q7-9 14 0M70 74q7-9 14 0" ${st}/>`;
- else s+=`<circle cx="43" cy="72" r="5.5" fill="${ink}"/><circle cx="77" cy="72" r="5.5" fill="${ink}"/><circle cx="45" cy="70" r="1.8" fill="#fff"/><circle cx="79" cy="70" r="1.8" fill="#fff"/>`;
- if(m=='angry')s+=`<path d="M32 58L52 64M88 58L68 64" ${st}/><path d="M100 40l6-6m-6 0l6 6" stroke="#e2536f" stroke-width="3" stroke-linecap="round"/>`;
- if(m=='worried')s+=`<path d="M34 62L50 58M86 62L70 58" ${st}/><path d="M100 50q7 11 0 15q-7-4 0-15z" fill="#8fd3ff"/>`;
- if(k=='chick')s+=`<path d="M51 86L60 97L69 86Z" fill="#f59a2a"/>`;
+const FUR={bear:['url(#fBear)','#F2D6B4','#7A5235'],cat:['url(#fCat)','#FFE0BE','#A8602C'],bunny:['url(#fBunny)','#FFE3E6','#B5A097'],chick:['url(#fChick)','#FFF4C4','#C2922A'],kuro:['url(#fKuro)','#7E7088','#1E1A22']};
+const OUTFIT=[['#A4B58C','#7E9467'],['#D99A91','#B9766C'],['#E8BD70','#C3964A'],['#9FC0CF','#7A9EAE'],['#C7B2E3','#9F86C4']];
+function face(k,m,o){
+ const [fur,lt,ol]=FUR[k],[oc,od]=OUTFIT[(o||0)%OUTFIT.length],ink=k=='kuro'?'#FFE38A':'#3A2A24',bw=k=='kuro'?'#B9AEC4':'#3A2A24';
+ const sw=`stroke="${ol}" stroke-width="2.4" stroke-linejoin="round"`,ln=(c,w)=>`stroke="${c}" stroke-width="${w}" fill="none" stroke-linecap="round"`;
+ let s='';
+ if(k=='kuro')s+=`<ellipse cx="60" cy="150" rx="38" ry="28" fill="${fur}" ${sw}/><path d="M88 150q22-4 20-28" ${ln(ol,7)}/><path d="M88 150q22-4 20-28" ${ln('#4A4252',4)}/>`;
+ else s+=`<path d="M18 172Q20 124 60 121Q100 124 102 172Z" fill="${oc}" stroke="${od}" stroke-width="2.4" stroke-linejoin="round"/><path d="M44 124Q60 142 76 124" fill="#FFF8EE" stroke="${od}" stroke-width="2"/><circle cx="60" cy="150" r="2.6" fill="${od}"/><circle cx="60" cy="162" r="2.6" fill="${od}"/><path d="M30 140q4 14 2 30" ${ln(od,2)} opacity=".5"/>`;
+ if(k=='bear')s+=`<circle cx="25" cy="40" r="15" fill="${fur}" ${sw}/><circle cx="95" cy="40" r="15" fill="${fur}" ${sw}/><circle cx="25" cy="40" r="7.5" fill="${lt}"/><circle cx="95" cy="40" r="7.5" fill="${lt}"/>`;
+ if(k=='cat'||k=='kuro')s+=`<path d="M17 62L23 15Q25 10 30 13L56 37Z" fill="${fur}" ${sw}/><path d="M103 62L97 15Q95 10 90 13L64 37Z" fill="${fur}" ${sw}/><path d="M26 50L28 24L46 39Z" fill="${k=='kuro'?'#8E7690':'#FFC9B8'}"/><path d="M94 50L92 24L74 39Z" fill="${k=='kuro'?'#8E7690':'#FFC9B8'}"/>`;
+ if(k=='bunny')s+=`<g transform="rotate(-8 42 52)"><ellipse cx="42" cy="26" rx="11.5" ry="28" fill="${fur}" ${sw}/><ellipse cx="42" cy="28" rx="5.5" ry="19" fill="${lt}"/></g><g transform="rotate(8 78 52)"><ellipse cx="78" cy="26" rx="11.5" ry="28" fill="${fur}" ${sw}/><ellipse cx="78" cy="28" rx="5.5" ry="19" fill="${lt}"/></g>`;
+ if(k=='chick')s+=`<path d="M56 38Q48 16 60 21Q64 8 69 30" ${ln('#D9A033',4.5)}/>`;
+ s+=`<ellipse cx="60" cy="78" rx="49" ry="44" fill="${fur}" ${sw}/><ellipse cx="40" cy="55" rx="16" ry="8" fill="#fff" opacity=".3" transform="rotate(-22 40 55)"/>`;
+ if(k!='chick')s+=`<ellipse cx="60" cy="94" rx="20" ry="14" fill="${lt}"/>`;
+ s+=`<ellipse cx="28" cy="93" rx="9" ry="5.5" fill="#F1A9A0" opacity=".65"/><ellipse cx="92" cy="93" rx="9" ry="5.5" fill="#F1A9A0" opacity=".65"/>`;
+ if(m=='happy')s+=`<path d="M35 77q8-10 16 0M69 77q8-10 16 0" ${ln(ink,3.6)}/>`;
+ else s+=`<g class="eyes" style="animation-delay:-${(Math.random()*4).toFixed(2)}s"><ellipse cx="43" cy="75" rx="5.2" ry="6.4" fill="${ink}"/><ellipse cx="77" cy="75" rx="5.2" ry="6.4" fill="${ink}"/><circle cx="45" cy="72" r="1.9" fill="#fff"/><circle cx="79" cy="72" r="1.9" fill="#fff"/></g>`;
+ if(m=='worried')s+=`<path d="M34 64L50 59M86 64L70 59" ${ln(bw,3.2)}/><path d="M101 52q7 11 0 15q-7-4 0-15z" fill="#C6E4F2" stroke="#7FB3CE" stroke-width="1.5"/>`;
+ if(m=='angry')s+=`<path d="M33 58L51 65M87 58L69 65" ${ln(bw,3.4)}/><path d="M98 36q5 5 0 10M108 36q-5 5 0 10M97 41h12" ${ln('#D9706E',2.6)}/>`;
+ if(k=='chick')s+=`<path d="M49 88Q60 81 71 88Q60 101 49 88Z" fill="#F2A24A" stroke="#C47A2C" stroke-width="2" stroke-linejoin="round"/>`;
  else{
-  s+=`<ellipse cx="60" cy="86" rx="4.5" ry="3.2" fill="${k=='kuro'?'#ff8fab':ink}"/>`;
-  s+={happy:`<path d="M50 94q10 13 20 0z" fill="#e0607e" stroke="${ink}" stroke-width="3" stroke-linejoin="round"/>`,ok:`<path d="M51 95q9 7 18 0" ${st}/>`,worried:`<path d="M52 99h16" ${st}/>`,angry:`<path d="M50 102q10-10 20 0" ${st}/>`}[m];
+  s+=`<ellipse cx="60" cy="87" rx="5" ry="3.6" fill="${k=='kuro'?'#F1A9A0':'#5A3A2E'}"/><ellipse cx="58.5" cy="86" rx="1.6" ry="1" fill="#fff" opacity=".6"/>`;
+  s+={happy:`<path d="M50 95q10 13 20 0Z" fill="#D9706E" stroke="${ink}" stroke-width="2.6" stroke-linejoin="round"/>`,ok:`<path d="M51 96q9 7 18 0" ${ln(ink,3)}/>`,worried:`<path d="M53 101q7-4 14 0" ${ln(ink,3)}/>`,angry:`<path d="M50 104q10-10 20 0" ${ln(ink,3)}/>`}[m];
  }
- return `<svg viewBox="0 0 120 170" aria-hidden="true">${s}</svg>`;
+ return `<svg viewBox="0 0 120 172" aria-hidden="true">${s}</svg>`;
 }
 const mood=c=>c.react||(c.p/c.max>.6?'ok':c.p/c.max>.3?'worried':'angry');
 
 function drawDeco(){
  const s=season(S.day);let g='';
- if(s=='winter'&&!S.place.eave)g=[150,300,450,600,750].map(x=>`<line x1="${x}" y1="56" x2="${x}" y2="74" stroke="#7a4a2a" stroke-width="2"/><ellipse cx="${x}" cy="90" rx="13" ry="16" fill="#ff5a5a"/><rect x="${x-6}" y="72" width="12" height="4" fill="#e8b23a"/><rect x="${x-6}" y="104" width="12" height="4" fill="#e8b23a"/>`).join('');
- if(s=='summer')g=`<g transform="translate(720 100)"><circle r="26" fill="#ffc93c"/>${[0,45,90,135,180,225,270,315].map(a=>`<rect x="-3" y="-44" width="6" height="12" rx="3" fill="#ffc93c" transform="rotate(${a})"/>`).join('')}</g>`;
- if(s=='spring'||s=='autumn'){const c=s=='spring'?'#ff9fbd':'#f08a3c';g=[[180,90],[260,130],[520,84],[640,140],[760,96],[880,128]].map(([x,y],i)=>`<ellipse cx="${x}" cy="${y}" rx="7" ry="4" fill="${c}" transform="rotate(${i*40} ${x} ${y})"/>`).join('')}
+ if(s=='winter'&&!S.place.eave)g=[150,300,450,600,750].map(x=>`<line x1="${x}" y1="56" x2="${x}" y2="74" stroke="#7a4a2a" stroke-width="2"/><ellipse cx="${x}" cy="90" rx="13" ry="16" fill="#E2786C" stroke="#B5574A" stroke-width="1.5"/><rect x="${x-6}" y="72" width="12" height="4" rx="1" fill="#E8BD70"/><rect x="${x-6}" y="104" width="12" height="4" rx="1" fill="#E8BD70"/>`).join('');
+ if(s=='summer')g=`<g transform="translate(720 100)"><circle r="40" fill="#FFE2A6" opacity=".45"/><circle r="26" fill="#F4C86F" stroke="#E2A94A" stroke-width="2"/>${[0,45,90,135,180,225,270,315].map(a=>`<rect x="-3" y="-44" width="6" height="12" rx="3" fill="#F4C86F" transform="rotate(${a})"/>`).join('')}</g>`;
+ if(s=='spring'||s=='autumn'){const c=s=='spring'?'#EFAFB4':'#D98B4E';g=[[180,90],[260,130],[520,84],[640,140],[760,96],[880,128]].map(([x,y],i)=>`<ellipse cx="${x}" cy="${y}" rx="7" ry="4" fill="${c}" transform="rotate(${i*40} ${x} ${y})"/>`).join('')}
  $('deco').innerHTML=`<svg viewBox="0 0 1000 280" preserveAspectRatio="xMidYMin slice">${g}</svg>`;
  document.body.dataset.season=s;document.body.dataset.skin=S.skin;renderDecor();
  $('menu').innerHTML=`<b>菜 單</b>燒仙草 $45<br>${iceOn()?'仙草冰 $50<br>':''}配料 每勺 +$10<br>${iceOn()?'鮮奶／煉乳':'鮮奶'} +$10`;
 }
 
+/* ===== 插畫風的碗 ===== */
+const BOWLC={},LA={b:null,id:null};
+function bowlBase(k,mk){
+ const key=(k||'e')+(mk?1:0);if(BOWLC[key])return BOWLC[key];
+ const O='#875C43';let s=`<ellipse cx="120" cy="167" rx="64" ry="7" fill="#43342F" opacity=".13"/>`;
+ if(k=='hot')s+=[[92,''],[120,' s2'],[148,' s3']].map(([x,c])=>`<g class="steam${c}"><path d="M${x} 40q-8-8 0-16t0-16" stroke="#CDB8A4" stroke-width="4.5" fill="none" stroke-linecap="round" opacity=".85"/></g>`).join('');
+ s+=`<path d="M94 150h52l-4 13h-44Z" fill="#EFE1CF" stroke="${O}" stroke-width="2.5" stroke-linejoin="round"/>
+ <path d="M20 66Q24 150 120 156Q216 150 220 66Z" fill="url(#gBowl)" stroke="${O}" stroke-width="3"/>
+ <g clip-path="url(#cBody)"><path d="M10 104Q120 128 230 104" stroke="#D99A91" stroke-width="10" fill="none"/>${[30,50,70,90,110,130,150,170,190,210].map(x=>`<circle cx="${x}" cy="${(104+12*(1-((x-120)/110)**2)).toFixed(1)}" r="2" fill="#FFF3DF"/>`).join('')}
+ <path d="M30 78Q34 120 70 140" stroke="#fff" stroke-width="6" fill="none" stroke-linecap="round" opacity=".7"/></g>
+ <path d="M98 129q6-6 12 0M130 129q6-6 12 0" stroke="#43342F" stroke-width="3.2" fill="none" stroke-linecap="round"/>
+ <path d="M114 136q6 5 12 0" stroke="#43342F" stroke-width="2.8" fill="none" stroke-linecap="round"/>
+ <ellipse cx="88" cy="137" rx="8" ry="4.5" fill="#F1B9AE" opacity=".85"/><ellipse cx="152" cy="137" rx="8" ry="4.5" fill="#F1B9AE" opacity=".85"/>
+ <ellipse cx="120" cy="66" rx="100" ry="24" fill="#FFFDF7" stroke="${O}" stroke-width="3"/>`;
+ if(!k)s+=`<ellipse cx="120" cy="67" rx="88" ry="18" fill="url(#gInner)"/>`;
+ else{
+  s+=`<ellipse cx="120" cy="67" rx="88" ry="18" fill="url(#${k=='hot'&&mk?'gJellyMilk':'gJelly'})"/>`;
+  if(k=='hot'){s+=`<ellipse cx="96" cy="61" rx="34" ry="4.5" fill="#fff" opacity=".16"/>`;
+   if(mk)s+=`<ellipse cx="112" cy="66" rx="60" ry="11" fill="url(#gMilk)"/><path d="M60 70q22-12 50-5t52-1q8 6-6 10q-26 6-52 1t-44-5Z" fill="#FBF3E8" opacity=".6" filter="url(#fSoft)"/>`}
+  else{s+=`<path d="M40 70Q46 12 120 8Q194 12 200 70Z" fill="url(#gIce)" stroke="#9DB6C3" stroke-width="2"/>
+   <path d="M150 17Q192 24 197 68L162 70Q170 40 150 17Z" fill="#D2E3EC" opacity=".7"/>
+   ${[[70,52],[92,30],[140,26],[160,52],[110,58],[128,44],[82,62],[176,40]].map(([x,y])=>`<circle cx="${x}" cy="${y}" r="2.2" fill="#C9DCE6"/>`).join('')}
+   <path d="M58 46q15 9 30 0t32 2t30-2t28 7" stroke="#8A5530" stroke-width="5" fill="none" stroke-linecap="round" opacity=".88"/>
+   ${mk?`<path d="M86 22Q120 2 154 22Q151 29 146 27Q145 40 139 29Q131 35 125 29Q120 43 114 29Q106 34 100 28Q97 37 93 27Q88 29 86 22Z" fill="#FFF0C8" stroke="#D9BE8A" stroke-width="1.6" stroke-linejoin="round"/><ellipse cx="108" cy="16" rx="9" ry="2.4" fill="#fff" opacity=".8"/>`:''}
+   ${[[86,22,''],[156,34,' t2'],[118,16,'']].map(([x,y,c])=>`<g class="twk${c}"><path transform="translate(${x} ${y})" d="M0-7L1.6-1.6 7 0 1.6 1.6 0 7-1.6 1.6-7 0-1.6-1.6Z" fill="#fff" stroke="#B6CEDA" stroke-width=".8"/></g>`).join('')}`}
+ }
+ return BOWLC[key]=s;
+}
 function bowlSVG(B){
- let s='';
- if(B.base=='hot')s+=`<g fill="none" style="stroke:light-dark(#d9b3bf,#7a5a68)" stroke-width="4" stroke-linecap="round" opacity=".7"><path d="M90 30q-8-8 0-16q8-8 0-14"/><path d="M120 26q-8-8 0-16q8-8 0-12"/><path d="M150 30q-8-8 0-16q8-8 0-14"/></g>`;
- s+=`<ellipse cx="120" cy="168" rx="72" ry="8" fill="rgba(80,30,40,.15)"/>
- <path d="M18 64Q24 152 120 158Q216 152 222 64Z" fill="#fff" stroke="#f0c2cf" stroke-width="3"/>
- <path d="M28 100Q120 124 212 100" stroke="#ffc2d1" stroke-width="9" fill="none"/>
- <path d="M98 128q6-6 12 0M130 128q6-6 12 0" stroke="#4a2a20" stroke-width="3.5" fill="none" stroke-linecap="round"/>
- <path d="M114 136q6 6 12 0" stroke="#4a2a20" stroke-width="3" fill="none" stroke-linecap="round"/>
- <ellipse cx="88" cy="138" rx="8" ry="5" fill="#ff9ab4" opacity=".6"/><ellipse cx="152" cy="138" rx="8" ry="5" fill="#ff9ab4" opacity=".6"/>
- <ellipse cx="120" cy="64" rx="102" ry="26" fill="#f7dce3" stroke="#f0c2cf" stroke-width="3"/>`;
- const ps=[];
- if(B.base=='hot'){
-  s+=`<ellipse cx="120" cy="66" rx="92" ry="21" fill="#3a2216"/><ellipse cx="96" cy="60" rx="34" ry="5" fill="#fff" opacity=".12"/>`;
-  if(B.milk)s+=`<path d="M70 64q20-12 46-2q24 10 50-4M84 72q30 6 64-2" stroke="#fff6ee" stroke-width="6" fill="none" stroke-linecap="round" opacity=".85"/>`;
-  TOPS.forEach((t,i)=>{const q=B.tops.get(t.id)||0;for(let j=0;j<7*q;j++){const [x,y]=PH[i*16+j];ps.push([y,piece(t,x,y)])}});
- }else if(B.base=='ice'){
-  s+=`<ellipse cx="120" cy="66" rx="92" ry="21" fill="#3a2216"/>${[50,70,170,188].map(x=>`<rect x="${x}" y="60" width="13" height="11" rx="2" fill="#24140c"/>`).join('')}
-  <path d="M38 70Q50 8 120 6Q190 8 202 70Z" fill="#f2f9ff" stroke="#cfe5f3" stroke-width="2"/>
-  <path d="M62 58Q70 22 108 14" stroke="#fff" stroke-width="7" fill="none" stroke-linecap="round" opacity=".9"/>
-  <path d="M60 44q15 10 30 0q16-10 32 2q16 10 30-2q14-8 26 4" stroke="#7a3e1a" stroke-width="5" fill="none" opacity=".7" stroke-linecap="round"/>`;
-  if(B.milk)s+=`<path d="M72 30q10 8 20 0q10-8 20 0q10 8 20 0q10-8 20 0" stroke="#fff3cf" stroke-width="5" fill="none" stroke-linecap="round"/>`;
-  TOPS.forEach((t,i)=>{const q=B.tops.get(t.id)||0;for(let j=0;j<5*q;j++){const [x,y]=PIC[i*16+j];ps.push([y,piece(t,x,y)])}});
- }else s+=`<text x="120" y="70" text-anchor="middle" font-size="14" fill="#c9909f">空碗</text>`;
- s+=ps.sort((a,b)=>a[0]-b[0]).map(p=>p[1]).join('');
+ let s=bowlBase(B.base,B.milk);
+ if(B.base){const P=B.base=='ice'?PIC:PH,per=B.base=='ice'?4:5,sz=B.base=='ice'?20:22,ps=[];
+  TOPS.forEach((t,i)=>{const q=B.tops.get(t.id)||0,an=LA.b===B&&LA.id===t.id;for(let j=0;j<per*q;j++){const [x,y]=P[i*16+j];ps.push([y,`<use href="#t-${t.id}" x="${(x-sz/2).toFixed(1)}" y="${(y-sz/2).toFixed(1)}" width="${sz}" height="${sz}"/>`,an])}});
+  ps.sort((a,b)=>a[0]-b[0]);s+=ps.map(p=>p[2]?`<g class="drop">${p[1]}</g>`:p[1]).join('')}
+ else s+=`<text x="120" y="72" text-anchor="middle" font-size="14" fill="#A08A7A">空碗</text>`;
  return s;
 }
 const DART={
- lantern:'<svg viewBox="0 0 30 50"><line x1="15" y1="0" x2="15" y2="9" stroke="#7a4a2a" stroke-width="2"/><rect x="9" y="8" width="12" height="4" fill="#e8b23a"/><ellipse cx="15" cy="24" rx="11" ry="13" fill="#ff5a5a"/><path d="M6 24h18" stroke="#d6403f" stroke-width="1.5"/><rect x="9" y="36" width="12" height="4" fill="#e8b23a"/><path d="M13 40v8M17 40v8" stroke="#e8b23a" stroke-width="1.5"/></svg>',
- chime:'<svg viewBox="0 0 30 56"><line x1="15" y1="0" x2="15" y2="8" stroke="#999"/><path d="M5 22Q5 8 15 8Q25 8 25 22Z" fill="#bfe6ff" stroke="#7fbfe8"/><path d="M8 14q4-3 7 0" stroke="#ff7aa2" stroke-width="1.5" fill="none"/><line x1="15" y1="22" x2="15" y2="34" stroke="#999"/><rect x="10" y="34" width="10" height="18" rx="1" fill="#fff6c9" stroke="#e8d28a"/></svg>',
- photo:'<svg viewBox="0 0 70 80"><rect x="2" y="2" width="66" height="76" rx="4" fill="#8a5634"/><rect x="9" y="9" width="52" height="62" fill="#fbeed8"/><ellipse cx="35" cy="64" rx="17" ry="9" fill="#d9a3b2"/><circle cx="35" cy="36" r="15" fill="#fbf6f2"/><path d="M20 33Q20 17 35 17Q50 17 50 33Q46 24 35 24Q24 24 20 33Z" fill="#c9c3c7"/><circle cx="30" cy="36" r="2" fill="#3a2418"/><circle cx="40" cy="36" r="2" fill="#3a2418"/><path d="M31 42q4 3 8 0" stroke="#3a2418" stroke-width="1.5" fill="none"/><ellipse cx="25" cy="41" rx="3" ry="2" fill="#ff9ab4" opacity=".6"/><ellipse cx="45" cy="41" rx="3" ry="2" fill="#ff9ab4" opacity=".6"/></svg>',
- iceflag:'<svg viewBox="0 0 70 92"><line x1="6" y1="2" x2="6" y2="90" stroke="#7a4a2a" stroke-width="3"/><rect x="8" y="6" width="56" height="66" fill="#fff" stroke="#dfe8ef"/><path d="M8 56q7-6 14 0t14 0t14 0t14 0V72H8Z" fill="#4aa3df"/><text x="36" y="45" font-size="30" text-anchor="middle" fill="#e23a3a" font-weight="700" font-family="sans-serif">冰</text></svg>',
- neon:'<svg viewBox="0 0 120 54"><rect x="2" y="2" width="116" height="50" rx="10" fill="#2a1b2e" stroke="#5a3a58" stroke-width="2"/><text x="60" y="35" font-size="21" text-anchor="middle" fill="#ffb3d6" font-family="sans-serif" style="filter:drop-shadow(0 0 3px #ff4fa0) drop-shadow(0 0 6px #ff4fa0)">燒仙草</text></svg>',
- radio:'<svg viewBox="0 -8 70 54"><line x1="58" y1="6" x2="68" y2="-6" stroke="#666" stroke-width="2"/><rect x="2" y="6" width="66" height="38" rx="6" fill="#b5713f"/><circle cx="22" cy="25" r="12" fill="#5a3524"/><circle cx="22" cy="25" r="8" fill="none" stroke="#8a5634" stroke-width="2" stroke-dasharray="2 2"/><rect x="40" y="14" width="22" height="8" rx="2" fill="#fff3cf"/><circle cx="45" cy="33" r="3.5" fill="#fff3cf"/><circle cx="57" cy="33" r="3.5" fill="#fff3cf"/></svg>',
- fan:'<svg viewBox="0 0 50 60"><rect x="21" y="40" width="8" height="12" fill="#9cc8e2"/><ellipse cx="25" cy="55" rx="16" ry="4" fill="#7fb5d6"/><circle cx="25" cy="24" r="20" fill="#eaf6ff" stroke="#7fb5d6" stroke-width="3"/><path d="M25 24L25 8Q33 12 25 24L40 27Q36 35 25 24L13 35Q9 27 25 24Z" fill="#9fd3f5"/><circle cx="25" cy="24" r="3" fill="#4a90c0"/></svg>',
- tray:'<svg viewBox="0 0 80 34"><ellipse cx="40" cy="28" rx="38" ry="6" fill="#e8d2c0"/><path d="M10 10h16l-2 16H12zM32 10h16l-2 16H34zM54 10h16l-2 16H56z" fill="#fff" stroke="#e0c0c8"/><ellipse cx="18" cy="12" rx="7" ry="2.5" fill="#3a2216"/><ellipse cx="40" cy="12" rx="7" ry="2.5" fill="#3a2216"/><ellipse cx="62" cy="12" rx="7" ry="2.5" fill="#3a2216"/></svg>',
- stool:'<svg viewBox="0 0 60 50"><path d="M8 12L11 47M52 12L49 47M22 15L24 47M38 15L36 47" stroke="#c4262c" stroke-width="6" stroke-linecap="round"/><ellipse cx="30" cy="10" rx="26" ry="8" fill="#e8343a"/><ellipse cx="30" cy="9" rx="8" ry="2.5" fill="#ff7b7f"/></svg>',
- icebox:'<svg viewBox="0 0 70 48"><rect x="2" y="12" width="66" height="34" rx="5" fill="#4aa3df"/><rect x="0" y="4" width="70" height="12" rx="4" fill="#fff"/><rect x="26" y="7" width="18" height="4" rx="2" fill="#4aa3df"/><rect x="8" y="22" width="20" height="6" rx="3" fill="#fff" opacity=".7"/></svg>',
- catbed:'<svg viewBox="0 0 80 44"><ellipse cx="40" cy="32" rx="38" ry="11" fill="#ff9fbd"/><ellipse cx="40" cy="28" rx="28" ry="8" fill="#ffd3e0"/><ellipse cx="38" cy="24" rx="18" ry="9" fill="#3b3340"/><circle cx="52" cy="20" r="7" fill="#3b3340"/><path d="M47 16l2-7 4 5zM54 14l4-5 1 7z" fill="#3b3340"/><path d="M49 21q2 1.5 4 0M54 21q2 1.5 4 0" stroke="#ffe066" stroke-width="1.2" fill="none"/></svg>'};
-function flagsArt(){let s='';for(let i=0;i<20;i++){const x=i*20+2,y=2+10*(1-((x+8-200)/200)**2),c=['#ff7aa2','#ffc93c','#6cb8f0','#7cd992','#a98be0'][i%5];s+=`<path d="M${x} ${y}L${x+16} ${y}L${x+8} ${y+16}Z" fill="${c}"/>`}return `<svg viewBox="0 0 400 30" preserveAspectRatio="none" style="height:30px"><path d="M0 2Q200 22 400 2" stroke="#7a4a2a" fill="none" stroke-width="1.5"/>${s}</svg>`}
+ lantern:'<svg viewBox="0 0 30 50"><line x1="15" y1="0" x2="15" y2="8" stroke="#875C43" stroke-width="1.5"/><rect x="9" y="7" width="12" height="4" rx="1.5" fill="#E8BD70" stroke="#875C43" stroke-width="1.2"/><ellipse cx="15" cy="24" rx="11" ry="13" fill="url(#dLan)" stroke="#A8483F" stroke-width="1.5"/><path d="M8 17q7 3 14 0M5 24h20M8 31q7-3 14 0" stroke="#B5574A" stroke-width="1" fill="none" opacity=".55"/><ellipse cx="11" cy="20" rx="2.5" ry="4" fill="#fff" opacity=".35"/><rect x="9" y="36" width="12" height="4" rx="1.5" fill="#E8BD70" stroke="#875C43" stroke-width="1.2"/><path d="M13 40v8M15 40v9M17 40v8" stroke="#E8BD70" stroke-width="1.3" stroke-linecap="round"/></svg>',
+ chime:'<svg viewBox="0 0 30 56"><line x1="15" y1="0" x2="15" y2="8" stroke="#875C43" stroke-width="1.2"/><path d="M5 22Q5 8 15 8Q25 8 25 22Z" fill="url(#dGlass)" stroke="#7A9EAE" stroke-width="1.4"/><path d="M8 16q3-3 7 0t7 0" stroke="#D99A91" stroke-width="1.5" fill="none"/><ellipse cx="10" cy="13" rx="1.5" ry="3" fill="#fff" opacity=".8"/><line x1="15" y1="22" x2="15" y2="33" stroke="#875C43" stroke-width="1"/><rect x="10" y="33" width="10" height="20" rx="1.5" fill="#FFF8EE" stroke="#C9A97A" stroke-width="1.2"/><path d="M13 38h4M13 42h4" stroke="#D99A91" stroke-width="1.2"/></svg>',
+ photo:'<svg viewBox="0 0 70 80"><rect x="2" y="2" width="66" height="76" rx="6" fill="url(#gWood)" stroke="#6E4A30" stroke-width="1.5"/><rect x="9" y="9" width="52" height="62" rx="3" fill="#FBEFDC"/><path d="M17 71Q18 55 35 54Q52 55 53 71Z" fill="#C7B2E3" stroke="#9F86C4" stroke-width="1.2"/><path d="M29 55Q35 62 41 55" fill="#FFF8EE" stroke="#9F86C4" stroke-width="1"/><g transform="rotate(-12 28 30)"><ellipse cx="28" cy="20" rx="4.5" ry="11" fill="url(#fBunny)" stroke="#B5A097" stroke-width="1.2"/></g><g transform="rotate(12 42 30)"><ellipse cx="42" cy="20" rx="4.5" ry="11" fill="url(#fBunny)" stroke="#B5A097" stroke-width="1.2"/></g><ellipse cx="35" cy="39" rx="15" ry="13.5" fill="url(#fBunny)" stroke="#B5A097" stroke-width="1.2"/><circle cx="35" cy="26.5" r="5" fill="#D8D1D5" stroke="#A89FA5"/><circle cx="30" cy="39" r="3.6" fill="none" stroke="#875C43" stroke-width="1.2"/><circle cx="40" cy="39" r="3.6" fill="none" stroke="#875C43" stroke-width="1.2"/><path d="M33.6 39h2.8" stroke="#875C43" stroke-width="1.2"/><circle cx="30" cy="39" r="1.2" fill="#3A2A24"/><circle cx="40" cy="39" r="1.2" fill="#3A2A24"/><path d="M32 45q3 2.5 6 0" stroke="#3A2A24" stroke-width="1.3" fill="none" stroke-linecap="round"/><ellipse cx="25" cy="44" rx="2.6" ry="1.6" fill="#F1A9A0" opacity=".7"/><ellipse cx="45" cy="44" rx="2.6" ry="1.6" fill="#F1A9A0" opacity=".7"/></svg>',
+ iceflag:'<svg viewBox="0 0 70 92"><line x1="6" y1="2" x2="6" y2="90" stroke="#875C43" stroke-width="3" stroke-linecap="round"/><path d="M8 6h56v66H8Z" fill="#FFFDF8" stroke="#875C43" stroke-width="1.5"/><path d="M8 56q7-6 14 0t14 0 14 0 14 0V72H8Z" fill="#7FB3CE"/><path d="M8 62q7-5 14 0t14 0 14 0 14 0" stroke="#fff" stroke-width="1.5" fill="none" opacity=".7"/><text x="36" y="45" font-size="30" text-anchor="middle" fill="#C8574C" font-weight="700" font-family="serif">冰</text></svg>',
+ neon:'<svg viewBox="0 0 120 54"><rect x="2" y="2" width="116" height="50" rx="10" fill="#3A2E3A" stroke="#875C43" stroke-width="3"/><text x="60" y="35" font-size="21" text-anchor="middle" fill="#FFD9E6" font-family="sans-serif" style="filter:drop-shadow(0 0 3px #F28CB8) drop-shadow(0 0 7px #E86A9E)">燒仙草</text><circle cx="12" cy="12" r="2" fill="#E8BD70"/><circle cx="108" cy="12" r="2" fill="#E8BD70"/></svg>',
+ radio:'<svg viewBox="0 -8 70 54"><line x1="58" y1="6" x2="68" y2="-6" stroke="#875C43" stroke-width="2" stroke-linecap="round"/><rect x="2" y="6" width="66" height="38" rx="8" fill="url(#dRadio)" stroke="#6E4A30" stroke-width="1.6"/><circle cx="22" cy="25" r="12" fill="#5A3D31" stroke="#6E4A30"/><circle cx="22" cy="25" r="8" fill="none" stroke="#8A6250" stroke-width="2" stroke-dasharray="2 2"/><rect x="40" y="14" width="22" height="8" rx="2" fill="#FFF3CF" stroke="#C9A97A"/><path d="M46 14v8" stroke="#D99A91" stroke-width="1.5"/><circle cx="45" cy="33" r="3.5" fill="#FFF3CF" stroke="#C9A97A"/><circle cx="57" cy="33" r="3.5" fill="#FFF3CF" stroke="#C9A97A"/><path d="M8 12q6-4 14-4" stroke="#fff" stroke-width="2" fill="none" opacity=".35" stroke-linecap="round"/></svg>',
+ fan:'<svg viewBox="0 0 50 60"><rect x="21" y="40" width="8" height="12" rx="2" fill="#9FC0CF" stroke="#5E7F8E"/><ellipse cx="25" cy="54" rx="15" ry="4" fill="#9FC0CF" stroke="#5E7F8E"/><circle cx="25" cy="24" r="20" fill="#F2FAFD" stroke="#7A9EAE" stroke-width="2"/><path d="M25 24L25 8Q33 12 25 24L40 27Q36 35 25 24L13 35Q9 27 25 24Z" fill="#BFE0F0" stroke="#7A9EAE" stroke-width="1"/><circle cx="25" cy="24" r="3.5" fill="#E8BD70" stroke="#875C43"/></svg>',
+ tray:'<svg viewBox="0 0 80 34"><ellipse cx="40" cy="28" rx="38" ry="6" fill="#F3E3CF" stroke="#875C43" stroke-width="1.3"/><path d="M10 10h16l-2 16H12zM32 10h16l-2 16H34zM54 10h16l-2 16H56z" fill="#FFFDF8" stroke="#875C43" stroke-width="1.2" stroke-linejoin="round"/><ellipse cx="18" cy="11" rx="7.5" ry="2.5" fill="#43342F"/><ellipse cx="40" cy="11" rx="7.5" ry="2.5" fill="#43342F"/><ellipse cx="62" cy="11" rx="7.5" ry="2.5" fill="#43342F"/><circle cx="16" cy="10" r="1.6" fill="#A68ACB"/><circle cx="20" cy="11" r="1.4" fill="#9A2F38"/><circle cx="40" cy="10" r="1.6" fill="#E99C4C"/><circle cx="62" cy="10" r="1.6" fill="#F7EDEA"/></svg>',
+ stool:'<svg viewBox="0 0 60 50"><path d="M10 13L13 46M50 13L47 46M22 16L24 46M38 16L36 46" stroke="#A8483F" stroke-width="6.5" stroke-linecap="round"/><path d="M10 13L13 46M50 13L47 46M22 16L24 46M38 16L36 46" stroke="#E07A70" stroke-width="3.5" stroke-linecap="round"/><ellipse cx="30" cy="11" rx="26" ry="8" fill="#E57B72" stroke="#A8483F" stroke-width="1.5"/><ellipse cx="30" cy="10" rx="9" ry="2.6" fill="#F7B3AB"/></svg>',
+ icebox:'<svg viewBox="0 0 70 48"><rect x="2" y="12" width="66" height="34" rx="6" fill="url(#dBox)" stroke="#5E7F8E" stroke-width="1.6"/><rect x="0" y="4" width="70" height="12" rx="5" fill="#FFFDF8" stroke="#5E7F8E" stroke-width="1.6"/><rect x="26" y="7" width="18" height="4" rx="2" fill="#7FB3CE"/><rect x="8" y="22" width="20" height="6" rx="3" fill="#fff" opacity=".55"/></svg>',
+ catbed:'<svg viewBox="0 0 80 44"><ellipse cx="40" cy="32" rx="38" ry="11" fill="#D99A91" stroke="#A8483F" stroke-width="1.5"/><ellipse cx="40" cy="28" rx="28" ry="8" fill="#F7D7D0"/><path d="M22 27q-7 2-4 8" stroke="#2E2934" stroke-width="3.5" fill="none" stroke-linecap="round"/><ellipse cx="38" cy="23" rx="18" ry="9" fill="url(#fKuro)" stroke="#1E1A22" stroke-width="1.2"/><circle cx="52" cy="19" r="7.5" fill="url(#fKuro)" stroke="#1E1A22" stroke-width="1.2"/><path d="M46 14l2-7 4 5zM54 13l4-5 1 7z" fill="#4A4252" stroke="#1E1A22" stroke-width="1"/><path d="M48.5 20q2 1.5 4 0M54 20q2 1.5 4 0" stroke="#FFE38A" stroke-width="1.3" fill="none" stroke-linecap="round"/><text x="63" y="11" font-size="9" fill="#875C43" font-family="sans-serif">z</text></svg>'};
+function flagsArt(){let s='';for(let i=0;i<20;i++){const x=i*20+2,y=2+10*(1-((x+8-200)/200)**2),c=['#D99A91','#E8BD70','#9FC0CF','#A4B58C','#C7B2E3'][i%5];s+=`<path d="M${x} ${y}L${x+16} ${y}L${x+8} ${y+16}Z" fill="${c}" stroke="#875C43" stroke-width=".8" stroke-linejoin="round"/>`}return `<svg viewBox="0 0 400 30" preserveAspectRatio="none" style="height:30px"><path d="M0 2Q200 22 400 2" stroke="#875C43" fill="none" stroke-width="1.5"/>${s}</svg>`}
 function renderDecor(){
  const P=S.place,el=$('decor');if(!el)return;let s='';
  if(P.eave)s+=P.eave=='flags'?`<div class="dc s-eave wide">${flagsArt()}</div>`:`<div class="dc s-eave">${Array(9).fill(DART[P.eave]).join('')}</div>`;
@@ -453,7 +631,7 @@ function renderDecor(){
 }
 function drawBowl(){
  const n=BW.length,el=$('bowls');el.style.setProperty('--n',Math.min(n,2));el.style.setProperty('--m',n);
- el.innerHTML=BW.map((b,i)=>`<button class="bw${n==1?' solo':isW(i)?' wk':i==act?' on':''}" data-i="${i}" aria-pressed="${i==act}" aria-label="第${i+1}碗">${n>1?`<span>${isW(i)?wLabel(i):`第${i+1}碗${i==act?'・做中':''}`}</span>`:''}<svg viewBox="0 0 240 180" aria-hidden="true">${bowlSVG(b)}</svg></button>`).join('');
+ el.innerHTML=BW.map((b,i)=>`<button class="bw${n==1?' solo':isW(i)?' wk':i==act?' on':''}" data-i="${i}" aria-pressed="${i==act}" aria-label="第${i+1}碗">${n>1?`<span>${isW(i)?wLabel(i):`第${i+1}碗${i==act?'・做中':''}`}</span>`:''}<svg viewBox="0 0 240 180" aria-hidden="true">${bowlSVG(b)}</svg></button>`).join('');LA.b=null;
  $('hot').setAttribute('aria-pressed',B.base=='hot');
  $('ice').setAttribute('aria-pressed',B.base=='ice');
  $('milk').setAttribute('aria-pressed',B.milk);
@@ -461,11 +639,11 @@ function drawBowl(){
  document.querySelectorAll('.tp').forEach(b=>{const q=B.tops.get(b.dataset.id)||0;b.setAttribute('aria-pressed',q>0);const g=b.querySelector('.qb');if(g){g.textContent='×'+q;g.hidden=q<1}});
  renderBubble();
  if(S.running&&B.base){const c=COMBOS.find(c=>!S.combos.includes(c.id)&&c.b==B.base&&c.m==B.milk&&sameTops(B.tops,c.t));
-  if(c){S.combos.push(c.id);S.money+=50;S.stat.bonus+=50;save();hud();snd('good');pop(`發現招牌組合「${c.n}」！+$50`,'good')}}
+  if(c){S.combos.push(c.id);S.money+=50;S.stat.bonus+=50;save();hud();snd('good');pop(`發現招牌組合「${c.n}」！+$50`,'good');unlockFx(c)}}
 }
 function renderTops(){
  $('tops').innerHTML=TOPS.map((t,i)=>{const lock=!unlocked(t),out=S.out[t.id],rf=S.refill[t.id];
-  return `<button class="tp${out?' out':''}" data-id="${t.id}" aria-pressed="${B.tops.has(t.id)}"${lock?' disabled':''}><b class="qb"${(B.tops.get(t.id)||0)?'':' hidden'}>×${B.tops.get(t.id)||0}</b>${lock?'<svg viewBox="0 0 24 24" width="34" height="34" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#e9d7dc"/><rect x="7" y="11" width="10" height="7" rx="2" fill="#b89aa3"/><path d="M9 11V9a3 3 0 0 1 6 0v2" stroke="#b89aa3" stroke-width="2" fill="none"/></svg>':icon(t,34)}<span>${lock?'？？':t.n}</span><small>${lock?`第${t.d}天`:rf?'補貨中…':out?'缺貨・點我':`<span class="pr">+$10・${i+1}</span>`}</small></button>`}).join('');
+  return `<button class="tp${out?' out':''}" data-id="${t.id}" aria-pressed="${B.tops.has(t.id)}"${lock?' disabled':''}><b class="qb"${(B.tops.get(t.id)||0)?'':' hidden'}>×${B.tops.get(t.id)||0}</b>${lock?useI('i-lock',32):icon(t,32)}<span>${lock?'？？':t.n}</span><small>${lock?`第${t.d}天`:rf?'補貨中…':out?'缺貨・點我':`<span class="pr">+$10・${i+1}</span>`}</small></button>`}).join('');
  const ice=$('ice');ice.disabled=!iceOn();ice.firstChild.nodeValue=iceOn()?'仙草冰 ':'第5天開賣 ';
 }
 function renderFront(){
@@ -475,7 +653,7 @@ function renderFront(){
  const m=mood(f);
  if($('front').dataset.cid!=f.id&&S.running&&!f.react)setTimeout(()=>onFront(f),0);
  if(m!==lastMood||$('front').dataset.cid!=f.id){
-  $('front').innerHTML=`${f.vip?'<span class="vipb">網紅</span>':''}${f.judge?'<span class="vipb">評審</span>':''}${f.bowls.length>1?`<span class="cntb">${f.bowls.length} 碗</span>`:''}<div class="pat"><i id="pbar"></i></div><div class="bob">${face(f.kind,m)}</div>`;
+  $('front').innerHTML=`${f.vip?'<span class="vipb">網紅</span>':''}${f.judge?'<span class="vipb">評審</span>':''}${f.bowls.length>1?`<span class="cntb">${f.bowls.length} 碗</span>`:''}<div class="pat"><i id="pbar"></i></div><div class="bob">${face(f.kind,m,f.outfit)}</div>`;
   $('front').dataset.cid=f.id;lastMood=m;renderBubble();
  }
  const pb=$('pbar');if(pb){const r=Math.max(0,f.p/f.max);pb.style.width=r*100+'%';pb.style.background=r>.6?'#7cd992':r>.3?'#ffc93c':'#ff6b86'}
@@ -487,7 +665,15 @@ function chipsFor(w,b){
   (w.milk?`<span class="oc${has&&b.milk?' done':''}">${milkIcon}<span class="tn">${w.base=='ice'?'淋煉乳':'加鮮奶'}</span></span>`:'');
 }
 function fitStage(){}
-function renderBubble(){_rb();fitStage()}
+function renderBubble(){_rb();fitStage();renderTickets()}
+function renderTickets(){
+ const f=S.queue[0],live=f&&!f.react&&S.running;
+ document.querySelectorAll('.bw').forEach(el=>{const i=+el.dataset.i;let t=el.querySelector('.tk');if(!t){t=document.createElement('div');t.className='tk';el.appendChild(t)}
+  const w=live&&f.bowls[i];if(!w){t.innerHTML='';t.hidden=true;return}
+  const b=BW[i],has=b&&b.base;t.hidden=false;
+  t.innerHTML=`<span class="ti${b&&b.base==w.base?' ok':''}" title="${w.base=='ice'?'仙草冰':'燒仙草'}">${baseIcon(w.base)}</span>`+[...cnt(w.tops)].map(([id,q])=>`<span class="ti${has&&(b.tops.get(id)||0)==q?' ok':''}" title="${TBY[id].n}${q>1?'×2':''}">${icon(TBY[id])}${q>1?'<b>2</b>':''}</span>`).join('')+(w.milk?`<span class="ti${has&&b.milk?' ok':''}" title="${w.base=='ice'?'淋煉乳':'加鮮奶'}">${milkIcon}</span>`:'');
+ });
+}
 function _rb(){
  const f=S.queue[0],el=$('bubble');el.classList.remove('multi');
  if(!f){el.innerHTML='';return}
@@ -500,13 +686,14 @@ function _rb(){
 }
 function renderQueue(){
  const rest=S.queue.slice(1);
- $('queue').innerHTML=rest.slice(0,4).map(c=>face(c.kind,mood(c))).join('');
+ $('queue').innerHTML=rest.slice(0,4).map(c=>face(c.kind,mood(c),c.outfit)).join('');
  $('qn').textContent=`排隊 ${rest.length} 人`;
  const nu=$('nextup'),n=rest[0];nu.hidden=!lv('board')||!S.running;
  if(lv('board'))nu.innerHTML=n?`<span>小白板・下一位${n.bowls.length>1?`（${n.bowls.length} 碗）`:''}：</span>`+n.bowls.map(w=>`${w.name?`<b class="cname">${w.name}</b>`:''}${chipsFor(w)}`).join('<span>｜</span>'):'<span>小白板・下一位：還沒有人排隊</span>';
 }
 function hud(){
  $('day').textContent=S.day;$('wx').innerHTML=`<span class="mhide">${SN[season(S.day)]}・</span>${S.weather?S.weather.n:'晴天'}`;
+ if(S.money>(hud.m??S.money)){const e=$('money');e.classList.remove('bump');void e.offsetWidth;e.classList.add('bump')}hud.m=S.money;
  $('money').textContent='$'+S.money;$('wallet').textContent='$'+S.wallet;$('time').textContent=Math.max(0,(S.custTotal||0)-(S.served||0)-(S.missed||0));
  $('tbar').style.width=(S.custTotal?Math.max(0,S.custTotal-S.served-S.missed)/S.custTotal*100:100)+'%';if(S.practice){$('time').textContent='∞';$('day').textContent='練習'}
  $('combo').innerHTML=`連續 <b>${S.combo}</b>${S.boost>0?'・爆紅中':''}`;
@@ -529,7 +716,7 @@ function newCust(){
  if(S.forceMulti&&sl>=2){k=2;S.forceMulti=false}
  const bowls=Array.from({length:k},()=>newBowl(k));
  const max=Math.max(14,30-Math.min(S.day,8)*2)+bowls.reduce((s,w)=>s+w.tops.length*3,0)+(k-1)*12+(iceOn()?2:0)+lv('pot')*3+(eq('lantern')&&season(S.day)=='winter'?2:0)+(eq('chime')&&season(S.day)=='summer'?2:0)+(eq('radio')?1:0);
- return{id:++cid,kind:rnd(KINDS),bowls,p:max,max,vip};
+ return{id:++cid,kind:rnd(KINDS),outfit:Math.floor(Math.random()*5),bowls,p:max,max,vip};
 }
 const gap=()=>Math.max(2.8,8-Math.min(S.day,8)*.65)*S.weather.k*(S.boost>0?.5:1)*(lv('sign')?.87:1)*(eq('neon')?.95:1)*(setOn('lively')?.95:1)*(.7+Math.random()*.6);
 function leave(c,ok,msg){
@@ -591,7 +778,7 @@ function serve(){
   const r=f.p/f.max;S.combo++;let tip=(r>.6?10:r>.3?5:0)+S.weather.tip+(S.combo>=(eq('tray')?2:3)?5:0)+(W.length-1)*10+(setOn('retro')?3:0);
   if(f.vip){tip+=30;S.boost=12;S.custTotal+=2}
   if(S.mile&&S.mile.id=='tv')tip*=2;
-  S.money+=price+tip;S.served++;snd('coin');
+  S.money+=price+tip;S.served++;snd('coin');starFx();
   {const st=S.stat;st.sales+=price;st.tips+=tip;st.bowls+=W.length;W.forEach(w=>{st[w.base]++;w.tops.forEach(t=>st.tops[t]=(st.tops[t]||0)+1)});st.maxc=Math.max(st.maxc,S.combo)}
   pop(f.vip?`網紅發文爆紅！+$${price+tip}，多來 2 位客人`:`+$${price}${W.length>1?`（${W.length} 碗）`:''}${tip?`　小費 +$${tip}`:''}`,'good');
   if(f.judge){S.judgeOK++;pop(`評審滿意！（${S.judgeOK}/3）　+$${price+tip}`,'good')}
@@ -623,7 +810,7 @@ function pracNext(){
  if(S.pi>=PRAC.length){finishPractice();return}
  const c=PRAC[S.pi++];S.spawnIn=1.2;
  if(c.two&&BW.length<2){BW.push(emptyB());qs('.stage').dataset.sl=2;drawBowl()}
- S.queue.push({id:++cid,kind:rnd(KINDS),bowls:c.bowls.map(w=>({...w,tops:[...w.tops]})),p:99,max:99,vip:false});
+ S.queue.push({id:++cid,kind:rnd(KINDS),outfit:S.pi%5,bowls:c.bowls.map(w=>({...w,tops:[...w.tops]})),p:99,max:99,vip:false});
  renderQueue();renderFront();
  if(c.g=='milk')setTimeout(()=>once('pmilk',[{el:()=>$('bubble'),text:'這位客人的訂單最後有「<b>加鮮奶</b>」，配料加完別忘了按「加鮮奶」。'}]),400);
  if(c.ev=='stock')setTimeout(()=>{S.stockN=0;EV.stock()},1500);
@@ -644,6 +831,7 @@ function startDay(){
   practice:false,forceMulti:nSlots()>=2&&!S.seen.multi,forgive:eq('photo')?1:0,mile:mileOf(S.day),judgeOK:0,elapsed:0,spawned:0,
   weather:S.day==1?WX.winter[0]:S.day==6?{n:'夏日廟會',k:.6,tip:3,c:1.4}:rnd(WX[sea])});
  if(S.mile&&S.mile.w)S.weather=S.mile.w;
+ qs('.stage').dataset.wx=/雨|颱/.test(S.weather.n)?'rain':'';
  S.custTotal=Math.max(6,Math.round((8+Math.min(S.day,10))*S.weather.c*(lv('sign')?1.15:1)*(eq('neon')?1.05:1)*(setOn('lively')?1.05:1)));
  S.judgeIdx=S.mile&&S.mile.id=='contest'?[.25,.55,.85].map(x=>Math.ceil(S.custTotal*x)):null;
  $('pause').hidden=false;qs('.stage').dataset.sl=nSlots(); hideCat();BW=Array.from({length:nSlots()},emptyB);act=0;WK.length=0;B=BW[0];$('ov').hidden=true;lastMood='';snd('coin');
@@ -665,14 +853,14 @@ function chapter(){
 function shop(tab,back){
  const items=tab=='up'?UP.map(u=>{const l=lv(u.id),max=u.p.length,pr=u.p[l],req=u.req&&l<max?u.req[l]:0,nd=u.need&&lv(u.need[0])<u.need[1]?u.need[2]:'',can=S.wallet>=pr&&S.day>=req&&!nd;
    const nm=u.ns?(l>=max?`${u.n}（${l+1} 碗）`:u.ns[l]):u.n,ds=u.ds?(l>=max?'已經可以同時做 4 碗':u.ds[l]):u.d;
-   return `<div class="item"><b>${nm} ${max>1?`<span class="lv">${'●'.repeat(l)}${'○'.repeat(max-l)}</span>`:''}</b><p>${ds}</p>${l>=max?'<button class="btn" disabled>已擁有</button>':S.day<req?`<button class="btn" disabled>第 ${req} 天起</button>`:nd?`<button class="btn" disabled>${nd}</button>`:`<button class="btn${can?' main':''}" data-buy="${u.id}"${can?'':' disabled'}>$${pr}</button>`}</div>`}).join('')
+   return `<div class="item ic"><span class="ii">${useI('u-'+u.id)}</span><b>${nm} ${max>1?`<span class="lv">${'●'.repeat(l)}${'○'.repeat(max-l)}</span>`:''}</b><p>${ds}</p>${l>=max?'<button class="btn" disabled>已擁有</button>':S.day<req?`<button class="btn" disabled>第 ${req} 天起</button>`:nd?`<button class="btn" disabled>${nd}</button>`:`<button class="btn${can?' main':''}" data-buy="${u.id}"${can?'':' disabled'}>$${pr}</button>`}</div>`}).join('')
   :tab=='skin'?SKINS.map(k=>{const own=S.skins.includes(k.id),on=S.skin==k.id;if(k.p==null&&!own)return `<div class="item"><b><span class="sw" style="background:${k.c}"></span>${k.n}雨棚</b><p>里程碑「店面改裝開幕」的獎勵</p><button class="btn" disabled>未解鎖</button></div>`;
    return `<div class="item"><b><span class="sw" style="background:${k.c}"></span>${k.n}雨棚</b><p>${on?'使用中':own?'已擁有，點一下換上':'換個顏色，換個心情'}</p>${on?'<button class="btn" disabled>使用中</button>':own?`<button class="btn" data-skin="${k.id}">換上</button>`:`<button class="btn${S.wallet>=k.p?' main':''}" data-skin="${k.id}"${S.wallet>=k.p?'':' disabled'}>$${k.p}</button>`}</div>`}).join('')
   :tab=='deco'?`<div class="item" style="grid-template-columns:minmax(0,1fr)"><b>目前擺設</b><p>${Object.entries(SLOTN).map(([s,n])=>`${n}：${S.place[s]?DBY[S.place[s]].n:'（空）'}`).join('<br>')}</p><p>${Object.entries(SETS).map(([k,v])=>`${setOn(k)?'<b>已湊齊</b>・':''}${v.n}｜${v.b}`).join('<br>')}</p></div>`+DECOS.map(x=>{const own=S.decos.includes(x.id),on=S.place[x.s]==x.id;
-   return `<div class="item"><b>${x.n}<span class="tag">${SETS[x.set].n.replace('系列','')}</span></b><p>${SLOTN[x.s]}・${x.e}</p>${on?`<button class="btn" data-off="${x.s}">取下</button>`:own?`<button class="btn main" data-put="${x.id}">擺上</button>`:x.p==null?`<button class="btn" disabled>${x.src}</button>`:`<button class="btn${S.wallet>=x.p?' main':''}" data-dbuy="${x.id}"${S.wallet>=x.p?'':' disabled'}>$${x.p}</button>`}</div>`}).join('')
-  :tab=='cup'?(S.trophies.length?S.trophies.map(t=>`<div class="item"><b>${t}</b><p>里程碑獎勵</p><button class="btn" disabled>已獲得</button></div>`).join(''):`<div class="item"><b>還沒有獎盃</b><p>第 8 天起每 7 天有一個里程碑：美食節、改裝開幕、甜品比賽、電視台採訪。下一個在第 ${mileOf(S.day)?S.day:nextMile(S.day)} 天。</p><button class="btn" disabled>加油</button></div>`)
+   return `<div class="item ic"><span class="ii">${x.id=='flags'?flagsArt():DART[x.id]}</span><b>${x.n}<span class="tag">${SETS[x.set].n.replace('系列','')}</span></b><p>${SLOTN[x.s]}・${x.e}</p>${on?`<button class="btn" data-off="${x.s}">取下</button>`:own?`<button class="btn main" data-put="${x.id}">擺上</button>`:x.p==null?`<button class="btn" disabled>${x.src}</button>`:`<button class="btn${S.wallet>=x.p?' main':''}" data-dbuy="${x.id}"${S.wallet>=x.p?'':' disabled'}>$${x.p}</button>`}</div>`}).join('')
+  :tab=='cup'?(S.trophies.length?S.trophies.map(t=>`<div class="item ic"><span class="ii">${useI('i-cup')}</span><b>${t}</b><p>里程碑獎勵</p><button class="btn" disabled>已獲得</button></div>`).join(''):`<div class="item"><b>還沒有獎盃</b><p>第 8 天起每 7 天有一個里程碑：美食節、改裝開幕、甜品比賽、電視台採訪。下一個在第 ${mileOf(S.day)?S.day:nextMile(S.day)} 天。</p><button class="btn" disabled>加油</button></div>`)
   :COMBOS.map(c=>{const got=S.combos.includes(c.id);
-   return `<div class="item"><b>${got?c.n:'？？？'}</b><p>${got?`${c.b=='ice'?'仙草冰':'燒仙草'}＋${[...cnt(c.t)].map(([id,q])=>TBY[id].n+(q>1?'×2':'')).join('、')}${c.m?(c.b=='ice'?'＋煉乳':'＋鮮奶'):''}・客人點它付 1.5 倍`:`提示：${c.h}`}</p><button class="btn" disabled>${got?'已發現':'未發現'}</button></div>`}).join('');
+   return `<div class="item ic"><span class="ii">${got?baseIcon(c.b):useI('i-lock')}</span><b>${got?c.n:'？？？'}</b><p>${got?`${c.b=='ice'?'仙草冰':'燒仙草'}＋${[...cnt(c.t)].map(([id,q])=>TBY[id].n+(q>1?'×2':'')).join('、')}${c.m?(c.b=='ice'?'＋煉乳':'＋鮮奶'):''}・客人點它付 1.5 倍`:`提示：${c.h}`}</p><button class="btn" disabled>${got?'已發現':'未發現'}</button></div>`}).join('');
  const T=[['up','設備'],['skin','外觀'],['deco','裝飾'],['book',`招牌本 ${S.combos.length}/${COMBOS.length}`],['cup','獎盃']];
  overlay(`<h2>設備店</h2><p class="wallet" style="text-align:center">錢包 <b>$${S.wallet}</b></p>
  <div class="tabs" role="tablist">${T.map(([k,n])=>`<button class="mini" role="tab" data-tab="${k}" aria-selected="${tab==k}">${n}</button>`).join('')}</div>
@@ -792,7 +980,7 @@ function onFront(f){
  if(W.some(x=>x.name))once('combo',[{el:()=>$('bubble'),text:'客人點了你發現過的<b>招牌組合</b>！照下面的配料做，他會付 1.5 倍的錢。'}],al);
  if(W.length>1)once('multi',[
   {el:()=>$('bubble'),text:`這組客人一次要 <b>${W.length} 碗</b>！每一行前面的粉紅數字，就是第幾碗。`},
-  {el:()=>qs('.bw[data-i="0"]'),text:'下面是你的碗，<b>粉紅框＝正在做的那碗</b>。先從第 1 碗開始。'},
+  {el:()=>qs('.bw[data-i="0"]'),text:'下面是你的碗，<b>粉紅框＝正在做的那碗</b>。每個碗下面都有它自己的小訂單，做好的項目會變淡，不用再往上看。先從第 1 碗開始。'},
   {el:()=>$('hot').closest('.card'),text:'照訂單第 1 行，把第 1 碗做好（湯底＋配料）。',wait:()=>eqB(BW[0],W[0])},
   {el:()=>qs('.bw.on'),text:'第 1 碗完成，自動換到下一碗了！照下一行繼續做。想自己換碗，直接點那個碗就可以。'},
   {el:()=>$('serve'),text:'全部的碗都做好之後，再按「出餐」一次送出去。'}],al);
@@ -814,11 +1002,14 @@ function autoNext(){const f=S.queue[0];if(!f||f.react||f.bowls.length<2)return;c
 
 /* 操作 */
 const noBase=()=>{pop('先選燒仙草或仙草冰喔！','warn');snd('warn')};
+function unlockFx(c){const st=qs('.stage');if(!st)return;const d=document.createElement('div');d.className='unl';d.innerHTML=`${baseIcon(c.b)}<div><small>發現招牌組合</small><b>${c.n}</b></div>`;st.appendChild(d);starFx();setTimeout(()=>d.remove(),2400)}
+function burst(el){if(!el)return;const d=document.createElement('span');d.className='burst';d.innerHTML=Array.from({length:6},(_,i)=>{const a=i/6*Math.PI*2;return `<i style="--dx:${Math.round(Math.cos(a)*22)}px;--dy:${Math.round(Math.sin(a)*18)}px"></i>`}).join('');el.appendChild(d);setTimeout(()=>d.remove(),350)}
+function starFx(){const st=qs('.stage'),fr=$('front');if(!st||!fr)return;const d=document.createElement('div');d.className='starfx';d.style.left=(fr.offsetLeft+fr.offsetWidth/2)+'px';d.style.top=(fr.offsetTop+fr.offsetHeight*.35)+'px';d.innerHTML=Array.from({length:7},(_,i)=>{const a=-Math.PI/2+(i-3)*.45;return `<i style="--dx:${Math.round(Math.cos(a)*60)}px;--dy:${Math.round(Math.sin(a)*50)}px;animation-delay:${i*25}ms"></i>`}).join('');st.appendChild(d);setTimeout(()=>d.remove(),700)}
 function toggleTop(id){
  const t=TBY[id];if(!S.running||S.paused||!unlocked(t))return;
  if(S.out[id]){if(!S.refill[id]){S.refill[id]=(lv('box')?.4:1.2)*(eq('icebox')?.7:1);renderTops();snd('add')}return}
  if(!B.base)return noBase();
- const q=B.tops.get(id)||0;if(q>=2){B.tops.delete(id);pop(`最多兩勺，${t.n}先拿掉了`,'warn')}else B.tops.set(id,q+1);snd('add');drawBowl();autoNext();
+ const q=B.tops.get(id)||0;if(q>=2){B.tops.delete(id);pop(`最多兩勺，${t.n}先拿掉了`,'warn')}else{B.tops.set(id,q+1);LA.b=B;LA.id=id;burst(qs(`.tp[data-id="${id}"]`))}snd('add');drawBowl();autoNext();
 }
 function setBase(b){if(!S.running||S.paused||(b=='ice'&&!iceOn()))return;B.base=b;snd('add');drawBowl();autoNext()}
 $('tops').addEventListener('click',e=>{const b=e.target.closest('.tp');if(b)toggleTop(b.dataset.id)});
