@@ -30,7 +30,7 @@ h1{font-size:clamp(26px,4vw,40px);line-height:1.05;margin:0}
 .timebar{height:12px;border-radius:999px;background:var(--card);border:2px solid var(--line);overflow:hidden;margin-bottom:10px}
 .timebar i{display:block;height:100%;width:100%;background:linear-gradient(90deg,var(--sun),var(--pink));transition:width .1s linear}
 .stage{position:relative;height:280px;--top:62px;border-radius:28px;overflow:hidden;background:var(--wall);border:3px solid var(--line);transition:background .6s}
-body{--aw:#ff7aa2}[data-skin=sky]{--aw:#6cb8f0}[data-skin=lemon]{--aw:#ffc21a}[data-skin=grape]{--aw:#a98be0}[data-skin=tomato]{--aw:#ff6a55}
+body{--aw:#ff7aa2}[data-skin=sky]{--aw:#6cb8f0}[data-skin=lemon]{--aw:#ffc21a}[data-skin=grape]{--aw:#a98be0}[data-skin=tomato]{--aw:#ff6a55}[data-skin=wood]{--aw:#b07a4f}
 .awning{position:absolute;inset:0 0 auto;height:40px;background:repeating-linear-gradient(90deg,var(--aw) 0 40px,#fff 40px 80px);z-index:1}
 .awning::after{content:"";position:absolute;top:40px;left:0;right:0;height:20px;background:radial-gradient(circle at 20px 0,var(--aw) 19px,transparent 20px) 0 0/80px 20px repeat-x,radial-gradient(circle at 60px 0,#fff 19px,transparent 20px) 0 0/80px 20px repeat-x}
 #nextup{margin-top:8px;background:var(--card);border:2px dashed var(--line);border-radius:16px;padding:6px 12px;font-size:15px;display:flex;flex-wrap:wrap;gap:4px 8px;align-items:center}
@@ -48,6 +48,15 @@ body{--aw:#ff7aa2}[data-skin=sky]{--aw:#6cb8f0}[data-skin=lemon]{--aw:#ffc21a}[d
 .item .btn{margin:0;width:auto;min-width:96px;min-height:44px;font-size:16px;grid-row:1/3;grid-column:2;padding:0 12px;white-space:nowrap}
 .sw{display:inline-block;width:18px;height:18px;border-radius:50%;vertical-align:-3px;margin-right:6px;border:2px solid #fff;box-shadow:0 0 0 1px var(--line)}
 #deco{position:absolute;inset:0;pointer-events:none}#deco svg{width:100%;height:100%}
+#decor{position:absolute;inset:0;pointer-events:none}
+.dc{position:absolute}.dc svg{display:block;width:100%;height:auto}
+.dc.s-eave{top:50px;left:2%;right:2%;display:flex;justify-content:space-around;align-items:flex-start}
+.dc.s-eave svg{width:24px;flex:none}.dc.s-eave.wide{display:block}.dc.s-eave.wide svg{width:100%}
+.dc.s-wall{right:18px;top:64px;width:76px}.dc.s-wall.big{width:120px}
+.dc.s-counter{bottom:47px;left:58%;width:80px}
+.dc.s-floor{z-index:1;bottom:3px;left:42%;width:72px}
+.tag{font-size:12px;background:var(--line);border-radius:999px;padding:0 7px;margin-left:4px;font-weight:400;white-space:nowrap}
+.tabs{flex-wrap:wrap}.tabs .mini{flex:1 1 28%}
 .menu{position:absolute;left:18px;top:76px;width:128px;background:#3d2a22;color:#fff3e0;border:5px solid #b07a4f;border-radius:12px;padding:8px 10px;font-size:13px;line-height:1.6;transform:rotate(-3deg)}
 .menu b{display:block;font-size:15px;color:var(--sun);text-align:center}
 .counter{position:absolute;left:0;right:0;bottom:0;height:54px;background:var(--wood);border-top:7px solid light-dark(#c9844f,#6a3f25)}
@@ -67,6 +76,7 @@ body{--aw:#ff7aa2}[data-skin=sky]{--aw:#6cb8f0}[data-skin=lemon]{--aw:#ffc21a}[d
 .oc{display:inline-flex;align-items:center;gap:4px;background:#ffeef3;border-radius:999px;padding:2px 10px 2px 3px;font-size:15px;white-space:nowrap}
 .oc.done{background:#dff6e5;text-decoration:line-through;text-decoration-color:#4bb26a}
 .oc svg{width:22px;height:22px;flex:none}
+.x2{color:#c2366a;font-size:.95em;margin-left:1px}
 #queue{position:absolute;right:14px;bottom:36px;display:flex;gap:4px;align-items:flex-end}
 #queue svg{width:64px;height:auto}
 #qn{position:absolute;right:10px;top:54px;display:none;z-index:2}
@@ -108,6 +118,7 @@ body{--aw:#ff7aa2}[data-skin=sky]{--aw:#6cb8f0}[data-skin=lemon]{--aw:#ffc21a}[d
 #ice[aria-pressed=true]{background:#dff1ff;border-color:#8fc6ea;color:#24506e;box-shadow:0 4px 0 #8fc6ea}
 .tops{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
 .tp{display:flex;flex-direction:column;align-items:center;gap:1px;padding:8px 2px 6px;border-radius:16px;background:light-dark(#fff,#2b1b23);border:2px solid var(--line);font:inherit;font-size:16px;color:var(--ink);cursor:pointer;min-height:44px}
+.tp{position:relative}.qb{position:absolute;top:4px;right:6px;background:var(--pink);color:#fff;border-radius:999px;padding:0 7px;font-size:13px;line-height:1.5}.qb[hidden]{display:none}
 .tp[aria-pressed=true]{border-color:var(--pink);background:light-dark(#ffe6ee,#4c2a3a);box-shadow:inset 0 0 0 2px var(--pink)}
 .tp.out{border-style:dashed;border-color:#d43d5e;background:light-dark(#fff1f1,#3a2020)}
 .tp.out svg{opacity:.3}
@@ -164,6 +175,7 @@ body{--aw:#ff7aa2}[data-skin=sky]{--aw:#6cb8f0}[data-skin=lemon]{--aw:#ffc21a}[d
  .tp svg{width:28px;height:28px}
  .cat{width:54px;top:-30px;right:12px;left:auto}
  .cat span{font-size:12px;padding:0 6px}
+ .dc.s-eave{top:46px}.dc.s-eave svg{width:18px}.dc.s-wall{right:8px;top:auto;bottom:60px;width:46px}.dc.s-wall.big{width:82px}.dc.s-counter{left:auto;right:62px;width:48px}.dc.s-floor{z-index:1;left:auto;right:10px;width:44px}
  #qn{top:auto;bottom:5px;right:auto;left:8px;font-size:13px;padding:1px 10px}
 }
 .gskip{background:none;border:0;color:#a07a80;font:inherit;font-size:14px;text-decoration:underline;min-height:44px;cursor:pointer;padding:0}
@@ -201,6 +213,7 @@ body{--aw:#ff7aa2}[data-skin=sky]{--aw:#6cb8f0}[data-skin=lemon]{--aw:#ffc21a}[d
 
  <div class="stage">
   <div id="deco"></div>
+  <div id="decor"></div>
   <div class="awning"></div>
   <div class="menu" id="menu"></div>
   <div id="idle">今天還沒開店</div>
@@ -259,17 +272,43 @@ const WX={winter:[{n:'晴天',k:1,tip:0},{n:'寒流來襲',k:.7,tip:5}],spring:[
 const HAPPY=['好好吃！','暖呼呼～','謝謝老闆！','下次還來！','跟阿嬤做的一樣好吃！'];
 const STORY={
  1:['阿嬤的攤子','老街口那攤賣了四十年的燒仙草，是阿嬤一個人顧起來的。這個冬天阿嬤閃到腰住院，只好打電話叫在台北上班的孫女圓圓回來幫忙。','阿嬤：「仙草要熬夠久才會香。客人點什麼就給什麼，不要偷工喔。」','今日配料：芋圓、粉圓、花生、紅豆'],
- 2:['寒流要來了','隔壁雞排攤的小雞阿福探頭過來：「圓圓！氣象說這幾天有寒流，排隊的人會很多喔！」他還分了你一箱地瓜。','','解鎖配料：地瓜圓｜新狀況：配料偶爾會用完，點一下缺貨的配料就能補貨，補貨時客人會耐心等你'],
+ 2:['寒流要來了','隔壁雞排攤的小雞阿福探頭過來：「圓圓！氣象說這幾天有寒流，排隊的人會很多喔！」他還分了你一箱地瓜。','','解鎖配料：地瓜圓｜客人開始會點「×2」，同一種配料點兩下就是兩勺（最多兩勺）｜新狀況：配料偶爾會用完，點一下缺貨的配料就能補貨，補貨時客人會耐心等你'],
  3:['仙草貓','攤子底下住著一隻小黑貓，阿嬤都叫牠「仙草」。牠很可愛，但超級愛偷吃配料。','阿嬤：「牠跳上來就趕一下，不要真的生氣啦。」','解鎖配料：小湯圓｜新狀況：仙草貓跳上碗邊時，快點牠趕走'],
  4:['春天的老街','天氣回暖，老街開始有網紅來拍美食影片。聽說只要被推薦，攤位就會爆紅。不過也有客人點到一半會改主意。','','新狀況：網紅客人（做對會爆紅，做錯會被留負評）、客人臨時改點'],
  5:['夏天就賣仙草冰','天氣一下子熱起來。阿嬤在電話裡說：「倉庫裡有台老刨冰機，夏天就賣仙草冰啦！」你把它擦得亮晶晶。','','解鎖：仙草冰（可淋煉乳）、新配料布丁'],
  6:['夏日廟會','廟口辦夏日廟會，人潮從傍晚一路排到深夜。阿福說他的雞排已經炸到第三鍋了。','','解鎖配料：綠豆｜今天客人非常多'],
  7:['阿嬤回來了','阿嬤出院了！今天她會坐在攤子旁邊，看你這一週學到了什麼。','阿嬤：「慢慢來，做對比做快重要。」','最後一天：拿到星星就能看到結局']};
+const MILES=[
+ {id:'fest',t:'老街美食節',s:'老街一年一度的美食節開跑！整條街擠滿了人，阿福把雞排攤搬到你隔壁，說今天要一起拚業績。',u:'今天客人特別多、小費加碼｜拿到兩顆星：獎金 $800＋美食節獎盃＋「彩色三角旗」裝飾',w:{n:'美食節人潮',k:.6,tip:5},reward:800,trophy:'美食節獎盃',deco:'flags'},
+ {id:'reno',t:'店面改裝開幕',s:'用這陣子賺的錢，阿嬤決定把攤子整理一下：新的木頭櫃台、新的招牌。今天是改裝後第一天，熟客都跑來捧場，指名要招牌組合。',u:'今天很多客人點招牌組合（付 1.5 倍）｜拿到兩顆星：獎金 $800＋改裝紀念牌＋「原木雨棚」外觀',reward:800,trophy:'改裝紀念牌',skin:'wood'},
+ {id:'contest',t:'甜品比賽',s:'廟口舉辦甜品比賽，三位評審會在營業中途輪流來試吃。阿嬤叮嚀：「評審點什麼就做什麼，一碗都不能錯。」',u:'三位掛「評審」牌的客人會出現｜三位都做對：冠軍獎金 $1,500＋冠軍盃；做對兩位：亞軍 $600'},
+ {id:'tv',t:'電視台來採訪',s:'美食節目來老街拍攝，攝影機就架在攤子對面。消息一傳開，網紅一個接一個跑來朝聖。',u:'網紅客人變很多、小費加倍｜拿到兩顆星：獎金 $1,000＋採訪紀念照',reward:1000,trophy:'採訪紀念照'}];
+const mileOf=d=>d>=8&&(d-8)%7==0?{...MILES[((d-8)/7)%4],ed:Math.floor((d-8)/28)+1}:null;
+const nextMile=d=>{let x=d+1;while(!mileOf(x))x++;return x};
+const SLOTN={eave:'屋簷下',wall:'牆面',counter:'櫃台上',floor:'攤位腳邊'};
+const SETS={retro:{n:'古早味系列',b:'湊齊 4 件：每單小費 +$3'},summer:{n:'夏日系列',b:'湊齊 4 件：仙草冰每碗 +$5'},lively:{n:'熱鬧系列',b:'湊齊 4 件：來客量再 +5%'}};
+const DECOS=[
+ {id:'lantern',n:'紅燈籠串',s:'eave',set:'retro',p:400,e:'冬天客人耐心 +2 秒'},
+ {id:'photo',n:'阿嬤的老照片',s:'wall',set:'retro',p:600,e:'每天第一次做錯，連續紀錄不歸零'},
+ {id:'radio',n:'復古收音機',s:'counter',set:'retro',p:800,e:'所有客人耐心 +1 秒'},
+ {id:'stool',n:'紅色塑膠板凳',s:'floor',set:'retro',p:500,e:'排隊的客人耐心掉得更慢'},
+ {id:'chime',n:'玻璃風鈴',s:'eave',set:'summer',p:400,e:'夏天客人耐心 +2 秒'},
+ {id:'iceflag',n:'刨冰旗',s:'wall',set:'summer',p:500,e:'點仙草冰的客人變多（仙草冰比較貴）'},
+ {id:'fan',n:'桌上小風扇',s:'counter',set:'summer',p:700,e:'工讀生做碗快 15%'},
+ {id:'icebox',n:'冰桶',s:'floor',set:'summer',p:600,e:'補貨時間縮短 30%'},
+ {id:'flags',n:'彩色三角旗',s:'eave',set:'lively',p:null,src:'美食節獎勵',e:'網紅客人比較常出現'},
+ {id:'neon',n:'霓虹燈招牌',s:'wall',set:'lively',p:1200,e:'來客量 +5%'},
+ {id:'tray',n:'試吃杯盤',s:'counter',set:'lively',p:900,e:'連續做對 2 碗就有加碼小費（原本要 3 碗）'},
+ {id:'catbed',n:'仙草貓的小窩',s:'floor',set:'lively',p:800,e:'仙草貓比較少來偷吃'}];
+const DBY=Object.fromEntries(DECOS.map(x=>[x.id,x]));
 const LINES={winter:'冷風一吹，排隊買燒仙草的人又變多了。',spring:'老街的花開了，散步的人走累了就來吃一碗。',summer:'太陽好大，刨冰機從早轉到晚。',autumn:'秋天的傍晚涼涼的，冷熱都有人點。'};
 const $=id=>document.getElementById(id);
 const rnd=a=>a[Math.floor(Math.random()*a.length)];
 const r1=v=>Math.round(v*10)/10;
-const emptyB=()=>({base:null,tops:new Set(),milk:false});
+const emptyB=()=>({base:null,tops:new Map(),milk:false});
+const cnt=a=>{const m=new Map();a.forEach(t=>m.set(t,(m.get(t)||0)+1));return m};
+const sameTops=(m,a)=>{const c=cnt(a);return m.size==c.size&&[...c].every(([k,v])=>m.get(k)==v)};
+const hasAll=(m,a)=>[...cnt(a)].every(([k,v])=>(m.get(k)||0)>=v);
 const UP=[
  {id:'pot',n:'保溫大鍋',d:'客人耐心每級 +3 秒',p:[500,1000,1800]},
  {id:'box',n:'大保鮮盒',d:'每天少缺貨一次，補貨幾乎瞬間完成',p:[700]},
@@ -281,18 +320,22 @@ const UP=[
  {id:'helper',n:'打工小幫手',d:'阿福的弟弟會照客人的單，幫空碗先盛好湯底',p:[2500]},
  {id:'slots',n:'工作台',ns:['第二個碗位','僱用工讀生小美','僱用工讀生阿傑'],ds:['可以同時做 2 碗，也會開始有客人一次點 2 碗','小美會自動幫你做訂單上的第 3 碗，你只要做好第 1、2 碗','阿傑也來幫忙，自動做第 4 碗，可以接 4 碗的大單'],p:[1500,3000,5000],req:[3,5,7]},
  {id:'autosrv',n:'自動出餐',d:'工讀生看到整單都做好，會自動幫你送給客人，不用再按出餐',p:[2000],need:['slots',2,'先僱用小美']}];
-const SKINS=[{id:'pink',n:'草莓粉',c:'#ff7aa2',p:0},{id:'sky',n:'汽水藍',c:'#6cb8f0',p:300},{id:'lemon',n:'檸檬黃',c:'#ffc21a',p:300},{id:'grape',n:'葡萄紫',c:'#a98be0',p:400},{id:'tomato',n:'番茄紅',c:'#ff6a55',p:400}];
+const SKINS=[{id:'pink',n:'草莓粉',c:'#ff7aa2',p:0},{id:'sky',n:'汽水藍',c:'#6cb8f0',p:300},{id:'lemon',n:'檸檬黃',c:'#ffc21a',p:300},{id:'grape',n:'葡萄紫',c:'#a98be0',p:400},{id:'wood',n:'原木',c:'#b07a4f',p:null},{id:'tomato',n:'番茄紅',c:'#ff6a55',p:400}];
 const COMBOS=[
  {id:'old',n:'古早味燒仙草',b:'hot',t:['peanut','bean'],m:false,h:'熱的・兩種「豆」'},
  {id:'grandma',n:'阿嬤招牌',b:'hot',t:['taro','pearl','peanut','bean'],m:false,h:'熱的・第一天的四種配料全加'},
  {id:'milktea',n:'奶茶風燒仙草',b:'hot',t:['pearl'],m:true,h:'熱的・只加一樣黑黑 QQ 的，再加點白白的'},
  {id:'three',n:'三圓燒仙草',b:'hot',t:['taro','sweet','tang'],m:false,h:'熱的・三種「圓」'},
  {id:'pudice',n:'布丁牛奶冰',b:'ice',t:['pud'],m:true,h:'冰的・黃黃軟軟的＋煉乳'},
+ {id:'nutty',n:'花生控燒仙草',b:'hot',t:['peanut','peanut'],m:true,h:'熱的・花生加滿兩勺，再加點白白的'},
  {id:'beanice',n:'雙豆消暑冰',b:'ice',t:['mung','bean'],m:false,h:'冰的・兩種豆子，但不是花生'}];
-let S={day:1,total:0,best:0,wallet:0,up:{},skin:'pink',skins:['pink'],combos:[],seen:{},muted:false,running:false,paused:false,queue:[],out:{},refill:{},money:0,combo:0,timeLeft:75,dayLen:75},B=emptyB(),BW=[B],act=0,timer=null,lastMood='',cid=0;
+let S={day:1,total:0,best:0,wallet:0,up:{},skin:'pink',skins:['pink'],combos:[],seen:{},decos:[],place:{},dayBest:{},run:{},miles:{},trophies:[],pseen:{},muted:false,running:false,paused:false,queue:[],out:{},refill:{},money:0,combo:0,timeLeft:75,dayLen:75},B=emptyB(),BW=[B],act=0,timer=null,lastMood='',cid=0;
 try{Object.assign(S,JSON.parse(localStorage.getItem('ssc2')||'{}'))}catch(e){}
-const save=()=>{try{localStorage.setItem('ssc2',JSON.stringify({day:S.day,total:S.total,best:S.best,muted:S.muted,wallet:S.wallet,up:S.up,skin:S.skin,skins:S.skins,combos:S.combos,seen:S.seen}))}catch(e){}};
-const lv=id=>S.up[id]||0;
+if(S.trophies.some(t=>t.includes('美食節'))&&!S.decos.includes('flags'))S.decos.push('flags');
+const save=()=>{try{localStorage.setItem('ssc2',JSON.stringify({day:S.day,total:S.total,best:S.best,muted:S.muted,wallet:S.wallet,up:S.up,skin:S.skin,skins:S.skins,combos:S.combos,seen:S.seen,dayBest:S.dayBest,run:S.run,miles:S.miles,trophies:S.trophies,decos:S.decos,place:S.place}))}catch(e){}};
+const lv=id=>S.practice?0:(S.up[id]||0);
+const eq=id=>!S.practice&&Object.values(S.place).includes(id);
+const setOn=k=>!S.practice&&Object.keys(SLOTN).every(s=>S.place[s]&&DBY[S.place[s]].set==k);
 const comboAvail=c=>c.t.every(id=>TBY[id].d<=S.day)&&(c.b=='hot'||S.day>=5);
 const season=d=>d<=3?'winter':d==4?'spring':d<=7?'summer':['autumn','winter','spring','summer'][Math.floor((d-8)/2)%4];
 const iceOn=()=>S.day>=5;
@@ -300,7 +343,7 @@ const unlocked=t=>t.d<=S.day;
 const nSlots=()=>1+lv('slots');
 const WN=['小美','阿傑'],WK=[],isW=i=>i>=2;
 const wLabel=i=>{const k=WK[i];return `${WN[i-2]}${k&&k.t>0?` ${Math.round((1-k.t/k.d)*100)}%`:BW[i]&&BW[i].base?' 好了':' 待命'}`};
-const eqB=(b,w)=>b.base==w.base&&b.milk==w.milk&&b.tops.size==w.tops.length&&w.tops.every(t=>b.tops.has(t));
+const eqB=(b,w)=>b.base==w.base&&b.milk==w.milk&&sameTops(b.tops,w.tops);
 function matchAll(W){const used=new Set(),m=W.map(w=>{const i=BW.findIndex((b,j)=>!used.has(j)&&b.base&&eqB(b,w));if(i>=0)used.add(i);return i});return m}
 
 /* 音效 */
@@ -310,7 +353,7 @@ function snd(k){if(S.muted)return;const m={add:()=>tone(880,.07,'triangle'),good
 
 /* 繪圖 */
 function mkPts(seed,n,cx,cy,rx,ry){let r=seed;const rr=()=>(r=(r*9301+49297)%233280)/233280,a=[];for(let i=0;i<n;i++){const t=rr()*Math.PI*2,d=Math.sqrt(rr())*.86;a.push([cx+Math.cos(t)*d*rx,cy+Math.sin(t)*d*ry])}return a}
-const PH=mkPts(11,64,120,64,84,19),PIC=mkPts(5,64,120,42,58,15);
+const PH=mkPts(11,128,120,64,84,19),PIC=mkPts(5,128,120,42,58,15);
 function piece(t,x,y){
  x=r1(x);y=r1(y);
  if(t.s=='cube')return `<rect x="${x-6}" y="${y-5}" width="12" height="10" rx="3" fill="${t.c}" stroke="rgba(0,0,0,.2)"/><rect x="${x-4}" y="${y-3.5}" width="5" height="2.6" rx="1.3" fill="#fff" opacity=".5"/>`;
@@ -348,12 +391,12 @@ const mood=c=>c.react||(c.p/c.max>.6?'ok':c.p/c.max>.3?'worried':'angry');
 
 function drawDeco(){
  const s=season(S.day);let g='';
- if(s=='winter')g=[150,300,450,600,750].map(x=>`<line x1="${x}" y1="56" x2="${x}" y2="74" stroke="#7a4a2a" stroke-width="2"/><ellipse cx="${x}" cy="90" rx="13" ry="16" fill="#ff5a5a"/><rect x="${x-6}" y="72" width="12" height="4" fill="#e8b23a"/><rect x="${x-6}" y="104" width="12" height="4" fill="#e8b23a"/>`).join('');
+ if(s=='winter'&&!S.place.eave)g=[150,300,450,600,750].map(x=>`<line x1="${x}" y1="56" x2="${x}" y2="74" stroke="#7a4a2a" stroke-width="2"/><ellipse cx="${x}" cy="90" rx="13" ry="16" fill="#ff5a5a"/><rect x="${x-6}" y="72" width="12" height="4" fill="#e8b23a"/><rect x="${x-6}" y="104" width="12" height="4" fill="#e8b23a"/>`).join('');
  if(s=='summer')g=`<g transform="translate(720 100)"><circle r="26" fill="#ffc93c"/>${[0,45,90,135,180,225,270,315].map(a=>`<rect x="-3" y="-44" width="6" height="12" rx="3" fill="#ffc93c" transform="rotate(${a})"/>`).join('')}</g>`;
  if(s=='spring'||s=='autumn'){const c=s=='spring'?'#ff9fbd':'#f08a3c';g=[[180,90],[260,130],[520,84],[640,140],[760,96],[880,128]].map(([x,y],i)=>`<ellipse cx="${x}" cy="${y}" rx="7" ry="4" fill="${c}" transform="rotate(${i*40} ${x} ${y})"/>`).join('')}
  $('deco').innerHTML=`<svg viewBox="0 0 1000 280" preserveAspectRatio="xMidYMin slice">${g}</svg>`;
- document.body.dataset.season=s;document.body.dataset.skin=S.skin;
- $('menu').innerHTML=`<b>菜 單</b>燒仙草 $45<br>${iceOn()?'仙草冰 $50<br>':''}配料 每樣 +$10<br>${iceOn()?'鮮奶／煉乳':'鮮奶'} +$10`;
+ document.body.dataset.season=s;document.body.dataset.skin=S.skin;renderDecor();
+ $('menu').innerHTML=`<b>菜 單</b>燒仙草 $45<br>${iceOn()?'仙草冰 $50<br>':''}配料 每勺 +$10<br>${iceOn()?'鮮奶／煉乳':'鮮奶'} +$10`;
 }
 
 function bowlSVG(B){
@@ -370,17 +413,38 @@ function bowlSVG(B){
  if(B.base=='hot'){
   s+=`<ellipse cx="120" cy="66" rx="92" ry="21" fill="#3a2216"/><ellipse cx="96" cy="60" rx="34" ry="5" fill="#fff" opacity=".12"/>`;
   if(B.milk)s+=`<path d="M70 64q20-12 46-2q24 10 50-4M84 72q30 6 64-2" stroke="#fff6ee" stroke-width="6" fill="none" stroke-linecap="round" opacity=".85"/>`;
-  TOPS.forEach((t,i)=>{if(B.tops.has(t.id))for(let j=0;j<7;j++){const [x,y]=PH[i*8+j];ps.push([y,piece(t,x,y)])}});
+  TOPS.forEach((t,i)=>{const q=B.tops.get(t.id)||0;for(let j=0;j<7*q;j++){const [x,y]=PH[i*16+j];ps.push([y,piece(t,x,y)])}});
  }else if(B.base=='ice'){
   s+=`<ellipse cx="120" cy="66" rx="92" ry="21" fill="#3a2216"/>${[50,70,170,188].map(x=>`<rect x="${x}" y="60" width="13" height="11" rx="2" fill="#24140c"/>`).join('')}
   <path d="M38 70Q50 8 120 6Q190 8 202 70Z" fill="#f2f9ff" stroke="#cfe5f3" stroke-width="2"/>
   <path d="M62 58Q70 22 108 14" stroke="#fff" stroke-width="7" fill="none" stroke-linecap="round" opacity=".9"/>
   <path d="M60 44q15 10 30 0q16-10 32 2q16 10 30-2q14-8 26 4" stroke="#7a3e1a" stroke-width="5" fill="none" opacity=".7" stroke-linecap="round"/>`;
   if(B.milk)s+=`<path d="M72 30q10 8 20 0q10-8 20 0q10 8 20 0q10-8 20 0" stroke="#fff3cf" stroke-width="5" fill="none" stroke-linecap="round"/>`;
-  TOPS.forEach((t,i)=>{if(B.tops.has(t.id))for(let j=0;j<5;j++){const [x,y]=PIC[i*8+j];ps.push([y,piece(t,x,y)])}});
+  TOPS.forEach((t,i)=>{const q=B.tops.get(t.id)||0;for(let j=0;j<5*q;j++){const [x,y]=PIC[i*16+j];ps.push([y,piece(t,x,y)])}});
  }else s+=`<text x="120" y="70" text-anchor="middle" font-size="14" fill="#c9909f">空碗</text>`;
  s+=ps.sort((a,b)=>a[0]-b[0]).map(p=>p[1]).join('');
  return s;
+}
+const DART={
+ lantern:'<svg viewBox="0 0 30 50"><line x1="15" y1="0" x2="15" y2="9" stroke="#7a4a2a" stroke-width="2"/><rect x="9" y="8" width="12" height="4" fill="#e8b23a"/><ellipse cx="15" cy="24" rx="11" ry="13" fill="#ff5a5a"/><path d="M6 24h18" stroke="#d6403f" stroke-width="1.5"/><rect x="9" y="36" width="12" height="4" fill="#e8b23a"/><path d="M13 40v8M17 40v8" stroke="#e8b23a" stroke-width="1.5"/></svg>',
+ chime:'<svg viewBox="0 0 30 56"><line x1="15" y1="0" x2="15" y2="8" stroke="#999"/><path d="M5 22Q5 8 15 8Q25 8 25 22Z" fill="#bfe6ff" stroke="#7fbfe8"/><path d="M8 14q4-3 7 0" stroke="#ff7aa2" stroke-width="1.5" fill="none"/><line x1="15" y1="22" x2="15" y2="34" stroke="#999"/><rect x="10" y="34" width="10" height="18" rx="1" fill="#fff6c9" stroke="#e8d28a"/></svg>',
+ photo:'<svg viewBox="0 0 70 80"><rect x="2" y="2" width="66" height="76" rx="4" fill="#8a5634"/><rect x="9" y="9" width="52" height="62" fill="#fbeed8"/><ellipse cx="35" cy="64" rx="17" ry="9" fill="#d9a3b2"/><circle cx="35" cy="36" r="15" fill="#fbf6f2"/><path d="M20 33Q20 17 35 17Q50 17 50 33Q46 24 35 24Q24 24 20 33Z" fill="#c9c3c7"/><circle cx="30" cy="36" r="2" fill="#3a2418"/><circle cx="40" cy="36" r="2" fill="#3a2418"/><path d="M31 42q4 3 8 0" stroke="#3a2418" stroke-width="1.5" fill="none"/><ellipse cx="25" cy="41" rx="3" ry="2" fill="#ff9ab4" opacity=".6"/><ellipse cx="45" cy="41" rx="3" ry="2" fill="#ff9ab4" opacity=".6"/></svg>',
+ iceflag:'<svg viewBox="0 0 70 92"><line x1="6" y1="2" x2="6" y2="90" stroke="#7a4a2a" stroke-width="3"/><rect x="8" y="6" width="56" height="66" fill="#fff" stroke="#dfe8ef"/><path d="M8 56q7-6 14 0t14 0t14 0t14 0V72H8Z" fill="#4aa3df"/><text x="36" y="45" font-size="30" text-anchor="middle" fill="#e23a3a" font-weight="700" font-family="sans-serif">冰</text></svg>',
+ neon:'<svg viewBox="0 0 120 54"><rect x="2" y="2" width="116" height="50" rx="10" fill="#2a1b2e" stroke="#5a3a58" stroke-width="2"/><text x="60" y="35" font-size="21" text-anchor="middle" fill="#ffb3d6" font-family="sans-serif" style="filter:drop-shadow(0 0 3px #ff4fa0) drop-shadow(0 0 6px #ff4fa0)">燒仙草</text></svg>',
+ radio:'<svg viewBox="0 -8 70 54"><line x1="58" y1="6" x2="68" y2="-6" stroke="#666" stroke-width="2"/><rect x="2" y="6" width="66" height="38" rx="6" fill="#b5713f"/><circle cx="22" cy="25" r="12" fill="#5a3524"/><circle cx="22" cy="25" r="8" fill="none" stroke="#8a5634" stroke-width="2" stroke-dasharray="2 2"/><rect x="40" y="14" width="22" height="8" rx="2" fill="#fff3cf"/><circle cx="45" cy="33" r="3.5" fill="#fff3cf"/><circle cx="57" cy="33" r="3.5" fill="#fff3cf"/></svg>',
+ fan:'<svg viewBox="0 0 50 60"><rect x="21" y="40" width="8" height="12" fill="#9cc8e2"/><ellipse cx="25" cy="55" rx="16" ry="4" fill="#7fb5d6"/><circle cx="25" cy="24" r="20" fill="#eaf6ff" stroke="#7fb5d6" stroke-width="3"/><path d="M25 24L25 8Q33 12 25 24L40 27Q36 35 25 24L13 35Q9 27 25 24Z" fill="#9fd3f5"/><circle cx="25" cy="24" r="3" fill="#4a90c0"/></svg>',
+ tray:'<svg viewBox="0 0 80 34"><ellipse cx="40" cy="28" rx="38" ry="6" fill="#e8d2c0"/><path d="M10 10h16l-2 16H12zM32 10h16l-2 16H34zM54 10h16l-2 16H56z" fill="#fff" stroke="#e0c0c8"/><ellipse cx="18" cy="12" rx="7" ry="2.5" fill="#3a2216"/><ellipse cx="40" cy="12" rx="7" ry="2.5" fill="#3a2216"/><ellipse cx="62" cy="12" rx="7" ry="2.5" fill="#3a2216"/></svg>',
+ stool:'<svg viewBox="0 0 60 50"><path d="M8 12L11 47M52 12L49 47M22 15L24 47M38 15L36 47" stroke="#c4262c" stroke-width="6" stroke-linecap="round"/><ellipse cx="30" cy="10" rx="26" ry="8" fill="#e8343a"/><ellipse cx="30" cy="9" rx="8" ry="2.5" fill="#ff7b7f"/></svg>',
+ icebox:'<svg viewBox="0 0 70 48"><rect x="2" y="12" width="66" height="34" rx="5" fill="#4aa3df"/><rect x="0" y="4" width="70" height="12" rx="4" fill="#fff"/><rect x="26" y="7" width="18" height="4" rx="2" fill="#4aa3df"/><rect x="8" y="22" width="20" height="6" rx="3" fill="#fff" opacity=".7"/></svg>',
+ catbed:'<svg viewBox="0 0 80 44"><ellipse cx="40" cy="32" rx="38" ry="11" fill="#ff9fbd"/><ellipse cx="40" cy="28" rx="28" ry="8" fill="#ffd3e0"/><ellipse cx="38" cy="24" rx="18" ry="9" fill="#3b3340"/><circle cx="52" cy="20" r="7" fill="#3b3340"/><path d="M47 16l2-7 4 5zM54 14l4-5 1 7z" fill="#3b3340"/><path d="M49 21q2 1.5 4 0M54 21q2 1.5 4 0" stroke="#ffe066" stroke-width="1.2" fill="none"/></svg>'};
+function flagsArt(){let s='';for(let i=0;i<20;i++){const x=i*20+2,y=2+10*(1-((x+8-200)/200)**2),c=['#ff7aa2','#ffc93c','#6cb8f0','#7cd992','#a98be0'][i%5];s+=`<path d="M${x} ${y}L${x+16} ${y}L${x+8} ${y+16}Z" fill="${c}"/>`}return `<svg viewBox="0 0 400 30" preserveAspectRatio="none" style="height:30px"><path d="M0 2Q200 22 400 2" stroke="#7a4a2a" fill="none" stroke-width="1.5"/>${s}</svg>`}
+function renderDecor(){
+ const P=S.place,el=$('decor');if(!el)return;let s='';
+ if(P.eave)s+=P.eave=='flags'?`<div class="dc s-eave wide">${flagsArt()}</div>`:`<div class="dc s-eave">${Array(9).fill(DART[P.eave]).join('')}</div>`;
+ if(P.wall)s+=`<div class="dc s-wall${P.wall=='neon'?' big':''}">${DART[P.wall]}</div>`;
+ if(P.counter)s+=`<div class="dc s-counter">${DART[P.counter]}</div>`;
+ if(P.floor)s+=`<div class="dc s-floor">${DART[P.floor]}</div>`;
+ el.innerHTML=s;
 }
 function drawBowl(){
  const n=BW.length,el=$('bowls');el.style.setProperty('--n',Math.min(n,2));el.style.setProperty('--m',n);
@@ -389,14 +453,14 @@ function drawBowl(){
  $('ice').setAttribute('aria-pressed',B.base=='ice');
  $('milk').setAttribute('aria-pressed',B.milk);
  $('milk').firstChild.nodeValue=(B.base=='ice'?'淋煉乳':B.base=='hot'?'加鮮奶':iceOn()?'加奶':'加鮮奶')+' ';
- document.querySelectorAll('.tp').forEach(b=>b.setAttribute('aria-pressed',B.tops.has(b.dataset.id)));
+ document.querySelectorAll('.tp').forEach(b=>{const q=B.tops.get(b.dataset.id)||0;b.setAttribute('aria-pressed',q>0);const g=b.querySelector('.qb');if(g){g.textContent='×'+q;g.hidden=q<1}});
  renderBubble();
- if(S.running&&B.base){const c=COMBOS.find(c=>!S.combos.includes(c.id)&&c.b==B.base&&c.m==B.milk&&c.t.length==B.tops.size&&c.t.every(id=>B.tops.has(id)));
+ if(S.running&&B.base){const c=COMBOS.find(c=>!S.combos.includes(c.id)&&c.b==B.base&&c.m==B.milk&&sameTops(B.tops,c.t));
   if(c){S.combos.push(c.id);S.money+=50;save();hud();snd('good');pop(`發現招牌組合「${c.n}」！+$50`,'good')}}
 }
 function renderTops(){
  $('tops').innerHTML=TOPS.map((t,i)=>{const lock=!unlocked(t),out=S.out[t.id],rf=S.refill[t.id];
-  return `<button class="tp${out?' out':''}" data-id="${t.id}" aria-pressed="${B.tops.has(t.id)}"${lock?' disabled':''}>${lock?'<svg viewBox="0 0 24 24" width="34" height="34" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#e9d7dc"/><rect x="7" y="11" width="10" height="7" rx="2" fill="#b89aa3"/><path d="M9 11V9a3 3 0 0 1 6 0v2" stroke="#b89aa3" stroke-width="2" fill="none"/></svg>':icon(t,34)}<span>${lock?'？？':t.n}</span><small>${lock?`第${t.d}天`:rf?'補貨中…':out?'缺貨・點我':`<span class="pr">+$10・${i+1}</span>`}</small></button>`}).join('');
+  return `<button class="tp${out?' out':''}" data-id="${t.id}" aria-pressed="${B.tops.has(t.id)}"${lock?' disabled':''}><b class="qb"${(B.tops.get(t.id)||0)?'':' hidden'}>×${B.tops.get(t.id)||0}</b>${lock?'<svg viewBox="0 0 24 24" width="34" height="34" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#e9d7dc"/><rect x="7" y="11" width="10" height="7" rx="2" fill="#b89aa3"/><path d="M9 11V9a3 3 0 0 1 6 0v2" stroke="#b89aa3" stroke-width="2" fill="none"/></svg>':icon(t,34)}<span>${lock?'？？':t.n}</span><small>${lock?`第${t.d}天`:rf?'補貨中…':out?'缺貨・點我':`<span class="pr">+$10・${i+1}</span>`}</small></button>`}).join('');
  const ice=$('ice');ice.disabled=!iceOn();ice.firstChild.nodeValue=iceOn()?'仙草冰 ':'仙草冰（第5天） ';
 }
 function renderFront(){
@@ -406,7 +470,7 @@ function renderFront(){
  const m=mood(f);
  if($('front').dataset.cid!=f.id&&S.running&&!f.react)setTimeout(()=>onFront(f),0);
  if(m!==lastMood||$('front').dataset.cid!=f.id){
-  $('front').innerHTML=`${f.vip?'<span class="vipb">網紅</span>':''}${f.bowls.length>1?`<span class="cntb">${f.bowls.length} 碗</span>`:''}<div class="pat"><i id="pbar"></i></div><div class="bob">${face(f.kind,m)}</div>`;
+  $('front').innerHTML=`${f.vip?'<span class="vipb">網紅</span>':''}${f.judge?'<span class="vipb">評審</span>':''}${f.bowls.length>1?`<span class="cntb">${f.bowls.length} 碗</span>`:''}<div class="pat"><i id="pbar"></i></div><div class="bob">${face(f.kind,m)}</div>`;
   $('front').dataset.cid=f.id;lastMood=m;renderBubble();
  }
  const pb=$('pbar');if(pb){const r=Math.max(0,f.p/f.max);pb.style.width=r*100+'%';pb.style.background=r>.6?'#7cd992':r>.3?'#ffc93c':'#ff6b86'}
@@ -414,7 +478,7 @@ function renderFront(){
 function chipsFor(w,b){
  const has=b&&b.base;
  return `<span class="oc${b&&b.base==w.base?' done':''}">${baseIcon(w.base)}<span class="tn">${w.base=='ice'?'仙草冰':'燒仙草'}</span></span>`+
-  w.tops.map(id=>`<span class="oc${has&&b.tops.has(id)?' done':''}">${icon(TBY[id])}<span class="tn">${TBY[id].n}</span></span>`).join('')+
+  [...cnt(w.tops)].map(([id,q])=>`<span class="oc${has&&(b.tops.get(id)||0)==q?' done':''}">${icon(TBY[id])}<span class="tn">${TBY[id].n}</span>${q>1?'<b class="x2">×2</b>':''}</span>`).join('')+
   (w.milk?`<span class="oc${has&&b.milk?' done':''}">${milkIcon}<span class="tn">${w.base=='ice'?'淋煉乳':'加鮮奶'}</span></span>`:'');
 }
 function fitStage(){}
@@ -423,7 +487,7 @@ function _rb(){
  const f=S.queue[0],el=$('bubble');el.classList.remove('multi');
  if(!f){el.innerHTML='';return}
  if(f.react){el.innerHTML=`<b>${f.msg}</b>`;return}
- const W=f.bowls,head=`${f.vip?'<span class="vip">網紅</span>':''}${f.note?`<b class="note">${f.note}</b><br>`:''}`;
+ const W=f.bowls,head=`${f.vip?'<span class="vip">網紅</span>':''}${f.judge?'<span class="vip">評審</span>':''}${f.note?`<b class="note">${f.note}</b><br>`:''}`;
  if(W.length==1){const w=W[0];el.innerHTML=head+(w.name?`我要一碗<b class="cname">「${w.name}」</b>！`:'我要這樣：')+`<div class="order">${chipsFor(w,B)}</div>`;return}
  el.classList.add('multi');
  const m=matchAll(W);
@@ -439,35 +503,36 @@ function renderQueue(){
 function hud(){
  $('day').textContent=S.day;$('wx').textContent=`${SN[season(S.day)]}・${S.weather?S.weather.n:'晴天'}`;
  $('money').textContent='$'+S.money;$('wallet').textContent='$'+S.wallet;$('time').textContent=Math.ceil(S.timeLeft);
- $('tbar').style.width=(S.timeLeft/S.dayLen*100)+'%';
+ $('tbar').style.width=(S.timeLeft/S.dayLen*100)+'%';if(S.practice){$('time').textContent='∞';$('day').textContent='練習'}
  $('combo').innerHTML=`連續 <b>${S.combo}</b>${S.boost>0?'・爆紅中':''}`;
 }
 function pop(t,cls){const p=$('pop');p.textContent=t;p.className=cls+($('ov').hidden?'':' float');void p.offsetWidth;p.classList.add('show')}
 
 /* 客人與事件 */
+const dbl=a=>{if(S.day<2)return a;const o=[];a.forEach(t=>{o.push(t);if(Math.random()<.22)o.push(t)});return o};
 function newBowl(k){
  const pool=TOPS.filter(unlocked),lo=S.day>=3?2:1,hi=Math.max(lo,Math.min(4,S.day+1)-(k>1?1:0)),n=lo+Math.floor(Math.random()*(hi-lo+1));
  const known=COMBOS.filter(c=>S.combos.includes(c.id)&&comboAvail(c));
- const c=known.length&&Math.random()<.25?rnd(known):null;
+ const c=known.length&&Math.random()<(S.mile&&S.mile.id=='reno'?.6:.25)?rnd(known):null;
  if(c)return{base:c.b,tops:[...c.t],milk:c.m,name:c.n};
- return{base:iceOn()&&Math.random()>HOT[season(S.day)]?'ice':'hot',tops:[...pool].sort(()=>Math.random()-.5).slice(0,n).map(t=>t.id),milk:Math.random()<(S.day>=2?.4:.25)};
+ return{base:iceOn()&&Math.random()>HOT[season(S.day)]-(eq('iceflag')?.15:0)?'ice':'hot',tops:dbl([...pool].sort(()=>Math.random()-.5).slice(0,n).map(t=>t.id)),milk:Math.random()<(S.day>=2?.4:.25)};
 }
 function newCust(){
- const vip=S.nextVip;S.nextVip=false;
+ const vip=S.nextVip||(S.mile&&S.mile.id=='tv'&&Math.random()<.3)||(eq('flags')&&Math.random()<.06);S.nextVip=false;
  const sl=nSlots(),r=Math.random();let k=1;
  if(sl>=2&&r<.3)k=2;if(sl>=3&&r<.13)k=3;if(sl>=4&&r<.06)k=4;
  const bowls=Array.from({length:k},()=>newBowl(k));
- const max=Math.max(14,30-Math.min(S.day,8)*2)+bowls.reduce((s,w)=>s+w.tops.length*3,0)+(k-1)*12+(iceOn()?2:0)+lv('pot')*3;
+ const max=Math.max(14,30-Math.min(S.day,8)*2)+bowls.reduce((s,w)=>s+w.tops.length*3,0)+(k-1)*12+(iceOn()?2:0)+lv('pot')*3+(eq('lantern')&&season(S.day)=='winter'?2:0)+(eq('chime')&&season(S.day)=='summer'?2:0)+(eq('radio')?1:0);
  return{id:++cid,kind:rnd(KINDS),bowls,p:max,max,vip};
 }
-const gap=()=>Math.max(2.8,8-Math.min(S.day,8)*.65)*S.weather.k*(S.boost>0?.5:1)*(lv('sign')?.87:1)*(.7+Math.random()*.6);
+const gap=()=>Math.max(2.8,8-Math.min(S.day,8)*.65)*S.weather.k*(S.boost>0?.5:1)*(lv('sign')?.87:1)*(eq('neon')?.95:1)*(setOn('lively')?.95:1)*(.7+Math.random()*.6);
 function leave(c,ok,msg){
  c.react=ok?'happy':'angry';c.msg=msg;lastMood='';renderFront();
  setTimeout(()=>{const i=S.queue.indexOf(c);if(i>=0)S.queue.splice(i,1);lastMood='';renderFront();renderQueue()},850);
 }
 const EV={
  stock(){const cap=(S.day>=6?3:2)-(lv('box')?1:0);if(S.stockN>=cap||Object.keys(S.out).length)return;const c=TOPS.filter(t=>unlocked(t)&&!S.out[t.id]);if(c.length<2)return;S.stockN++;const f0=S.queue[0];if(f0&&!f0.react)f0.p=Math.min(f0.max,f0.p+4);const f=S.queue[0];const t=(f&&!f.react&&c.find(t=>f.bowls.some(w=>w.tops.includes(t.id))))||rnd(c);S.out[t.id]=true;pop(`${t.n}用完了！點它補貨`,'warn');snd('warn');renderTops();drawBowl();once('stock',[{el:()=>qs('.tp.out'),text:`<b>${t.n}用完了！</b>點一下就會補貨，補貨的時候客人會耐心等你。`,wait:'click'}])},
- cat(){if(S.cat)return;const lucky=lv('cat')>=2;if(lv('cat')==1&&Math.random()<.5)return;
+ cat(){if(S.cat)return;const lucky=lv('cat')>=2;if(!lucky&&eq('catbed')&&Math.random()<.5)return;if(lv('cat')==1&&Math.random()<.5)return;
   S.cat={t:lucky?4:lv('cat')?6:4.5,lucky};const c=$('cat');c.innerHTML=face('kuro',lucky?'happy':'ok')+`<span>${lucky?'招財貓':'點我！'}</span>`;c.hidden=false;snd('meow');
   pop(lucky?'招財貓叼著小費來了！快點牠':'仙草貓跳上碗邊了！快點牠','warn');
   once(lucky?'lucky':'cat',[{el:()=>$('cat'),text:lucky?'仙草貓變成<b>招財貓</b>了！牠叼著小費來，點牠就能收下。':'<b>仙草貓</b>要來偷吃配料了！快點牠把牠趕走。',wait:'click'}])},
@@ -475,28 +540,32 @@ const EV={
  vip(){if(S.nextVip||S.queue.some(c=>c.vip))return;S.nextVip=true;pop('聽說有網紅要來拍影片！','warn')}
 };
 function hideCat(){S.cat=null;$('cat').hidden=true}
+function refillStep(dt){for(const id in S.refill){S.refill[id]-=dt;if(S.refill[id]<=0){delete S.refill[id];delete S.out[id];pop(`${TBY[id].n}補好了`,'good');renderTops()}}}
 function tick(){
- if(S.paused||S.guide)return;
- const dt=.1;S.timeLeft=Math.max(0,S.timeLeft-dt);if(S.boost>0)S.boost-=dt;
- if(S.timeLeft>0){S.spawnIn-=dt;if(S.spawnIn<=0&&S.queue.length<6){S.queue.push(newCust());S.spawnIn=gap();renderQueue();renderFront()}}
- if(S.day<=2&&!S.cameo&&S.timeLeft<52&&!S.cat){S.cameo=1;S.cat={t:3.5,cameo:true};const c=$('cat');c.innerHTML=face('kuro','ok')+'<span>喵～</span>';c.hidden=false;snd('meow');pop('攤子旁邊好像有誰在看你…','warn');once('cameo',[{el:()=>$('cat'),text:'咦？碗旁邊冒出一隻小黑貓！點點看。',wait:'click'}])}
- if(S.day>=2&&S.timeLeft>5){S.evIn-=dt;if(S.evIn<=0){const ev=['stock'];if(S.day>=3)ev.push('cat','cat');if(S.day>=4)ev.push('change','vip');EV[rnd(ev)]();S.evIn=11+Math.random()*8}}
- for(const id in S.refill){S.refill[id]-=dt;if(S.refill[id]<=0){delete S.refill[id];delete S.out[id];pop(`${TBY[id].n}補好了`,'good');renderTops()}}
+ if(S.paused)return;
+ refillStep(.1);
+ if(S.guide)return;
+ const dt=.1;if(!S.practice)S.timeLeft=Math.max(0,S.timeLeft-dt);if(S.boost>0)S.boost-=dt;
+ if(S.practice){if(!S.queue.length){S.spawnIn-=dt;if(S.spawnIn<=0)pracNext()}}
+ else if(S.mile&&S.mile.id=='contest'&&S.judgeAt.length&&S.timeLeft<=S.judgeAt[0]&&S.queue.length<6){S.judgeAt.shift();const c=newCust(),w=newBowl(1);delete w.name;while(new Set(w.tops).size<3){const t=rnd(TOPS.filter(unlocked)).id;if(!w.tops.includes(t))w.tops.push(t)}c.bowls=[w];c.judge=true;c.vip=false;c.max=c.p=34+w.tops.length*3+lv('pot')*3;S.queue.push(c);pop('評審來了！','warn');renderQueue()}
+ else if(S.timeLeft>0){S.spawnIn-=dt;if(S.spawnIn<=0&&S.queue.length<6){S.queue.push(newCust());S.spawnIn=gap();renderQueue();renderFront()}}
+ if(!S.practice&&S.day<=2&&!S.cameo&&S.timeLeft<52&&!S.cat){S.cameo=1;S.cat={t:3.5,cameo:true};const c=$('cat');c.innerHTML=face('kuro','ok')+'<span>喵～</span>';c.hidden=false;snd('meow');pop('攤子旁邊好像有誰在看你…','warn');once('cameo',[{el:()=>$('cat'),text:'咦？碗旁邊冒出一隻小黑貓！點點看。',wait:'click'}])}
+ if(!S.practice&&S.day>=2&&S.timeLeft>5){S.evIn-=dt;if(S.evIn<=0){const ev=['stock'];if(S.day>=3)ev.push('cat','cat');if(S.day>=4)ev.push('change','vip');EV[rnd(ev)]();S.evIn=11+Math.random()*8}}
  {const f=S.queue[0];let up=0;
   for(let i=2;i<BW.length;i++){const w=f&&!f.react?f.bowls[i]:null;
    if(!w){if(WK[i]){WK[i]=null;up=1}continue}
    if(eqB(BW[i],w))continue;
    const sig=w.base+w.tops.join()+w.milk;let k=WK[i];
-   if(!k||k.cid!==f.id||k.sig!==sig||k.t<=0){k=WK[i]={cid:f.id,sig,t:4.5,d:4.5};BW[i]=emptyB();up=1;once('worker',[{el:()=>qs(`.bw[data-i="${i}"]`),text:`工讀生<b>${WN[i-2]}</b>會自動做訂單上的第 ${i+1} 碗！你只要專心做好第 1、2 碗，等她做完再出餐。`}])}
+   if(!k||k.cid!==f.id||k.sig!==sig||k.t<=0){k=WK[i]={cid:f.id,sig,t:eq('fan')?3.8:4.5,d:eq('fan')?3.8:4.5};BW[i]=emptyB();up=1;once('worker',[{el:()=>qs(`.bw[data-i="${i}"]`),text:`工讀生<b>${WN[i-2]}</b>會自動做訂單上的第 ${i+1} 碗！你只要專心做好第 1、2 碗，等她做完再出餐。`}])}
    if(w.tops.some(t=>S.out[t]))continue;
    k.t-=dt;
-   if(k.t<=0){BW[i]={base:w.base,tops:new Set(w.tops),milk:w.milk};up=1;pop(`${WN[i-2]}做好第 ${i+1} 碗了！`,'good');snd('add')}
+   if(k.t<=0){BW[i]={base:w.base,tops:cnt(w.tops),milk:w.milk};up=1;pop(`${WN[i-2]}做好第 ${i+1} 碗了！`,'good');snd('add')}
    else{const s=qs(`.bw[data-i="${i}"] span`);if(s)s.textContent=wLabel(i)}}
   if(up)drawBowl()}
  {const f=S.queue[0];if(lv('helper')&&f&&!f.react){let ch=0;f.bowls.forEach((w,i)=>{if(BW[i]&&!isW(i)&&!BW[i].base){BW[i].base=w.base;ch=1}});if(ch)drawBowl()}}
- if(S.cat){S.cat.t-=dt;if(S.cat.t<=0&&S.cat.lucky){pop('招財貓走掉了，下次快一點','warn');hideCat()}else if(S.cat.t<=0&&S.cat.cameo){pop('剛剛那是阿嬤養的仙草貓，牠好像在偷看配料…','warn');hideCat()}else if(S.cat.t<=0){const fb=BW.filter(b=>b.tops.size),tb=fb.length?rnd(fb):null,has=tb?[...tb.tops]:[];if(has.length){const id=rnd(has);tb.tops.delete(id);pop(`仙草貓偷吃了${TBY[id].n}！`,'bad');snd('meow');drawBowl()}else pop('仙草貓聞一聞就走了','warn');hideCat()}}
+ if(S.cat){S.cat.t-=dt;if(S.cat.t<=0&&S.cat.lucky){pop('招財貓走掉了，下次快一點','warn');hideCat()}else if(S.cat.t<=0&&S.cat.cameo){pop('剛剛那是阿嬤養的仙草貓，牠好像在偷看配料…','warn');hideCat()}else if(S.cat.t<=0){const fb=BW.filter(b=>b.tops.size),tb=fb.length?rnd(fb):null,has=tb?[...tb.tops.keys()]:[];if(has.length){const id=rnd(has),q=tb.tops.get(id);q>1?tb.tops.set(id,q-1):tb.tops.delete(id);pop(`仙草貓偷吃了${TBY[id].n}！`,'bad');snd('meow');drawBowl()}else pop('仙草貓聞一聞就走了','warn');hideCat()}}
  const busy=Object.keys(S.refill).length>0;
- S.queue.forEach((c,i)=>{if(c.react||busy)return;c.p-=i==0?dt:dt*(lv('shade')?.12:.35);
+ S.queue.forEach((c,i)=>{if(c.react||busy||S.practice)return;c.p-=i==0?dt:dt*(lv('shade')?.12:.35)*(eq('stool')?.7:1);
   if(c.p<=0){S.missed++;S.combo=0;snd('bad');if(i==0){pop('客人等太久走掉了…','bad');leave(c,false,'等太久了啦…')}else{S.queue.splice(i,1);pop('排隊的客人等不及走了','bad');renderQueue()}}});
  {const f=S.queue[0];if(lv('autosrv')&&f&&!f.react&&matchAll(f.bowls).every(i=>i>=0)){S.autoT=(S.autoT||0)+dt;if(S.autoT>=.6){S.autoT=0;serve()}}else S.autoT=0}
  renderFront();
@@ -510,15 +579,18 @@ function serve(){
  if(!filled){pop('先選燒仙草或仙草冰喔！','warn');snd('warn');return}
  const W=f.bowls,m=matchAll(W),ok=m.every(i=>i>=0);
  if(!ok&&filled<W.length){const busy=W.map((w,i)=>isW(i)&&WK[i]&&WK[i].t>0?WN[i-2]:'').filter(Boolean);pop(busy.length&&filled+busy.length>=W.length?`${busy.join('和')}還在做，等一下就好！`:`客人點了 ${W.length} 碗，還差 ${W.length-filled} 碗喔！`,'warn');snd('warn');return}
+ if(!ok&&S.practice){pop('還不太對喔，再對照一次訂單','warn');snd('warn');return}
  if(ok){
-  let price=0;W.forEach(w=>{let p=(w.base=='ice'?50+(lv('shaver')?10:0):45)+w.tops.length*10+(w.milk?10:0);if(w.name)p=Math.round(p*1.5);price+=p});
-  const r=f.p/f.max;S.combo++;let tip=(r>.6?10:r>.3?5:0)+S.weather.tip+(S.combo>=3?5:0)+(W.length-1)*10;
+  let price=0;W.forEach(w=>{let p=(w.base=='ice'?50+(lv('shaver')?10:0)+(setOn('summer')?5:0):45)+w.tops.length*10+(w.milk?10:0);if(w.name)p=Math.round(p*1.5);price+=p});
+  const r=f.p/f.max;S.combo++;let tip=(r>.6?10:r>.3?5:0)+S.weather.tip+(S.combo>=(eq('tray')?2:3)?5:0)+(W.length-1)*10+(setOn('retro')?3:0);
   if(f.vip){tip+=30;S.boost=12}
+  if(S.mile&&S.mile.id=='tv')tip*=2;
   S.money+=price+tip;S.served++;snd('coin');
   pop(f.vip?`網紅發文爆紅！+$${price+tip}，客人變多了`:`+$${price}${W.length>1?`（${W.length} 碗）`:''}${tip?`　小費 +$${tip}`:''}`,'good');
-  leave(f,true,rnd(HAPPY));
+  if(f.judge){S.judgeOK++;pop(`評審滿意！（${S.judgeOK}/3）　+$${price+tip}`,'good')}
+  leave(f,true,f.judge?'這碗，滿分！':rnd(HAPPY));
   m.forEach(i=>BW[i]=emptyB());
- }else{S.combo=0;S.missed++;snd('bad');
+ }else{if(S.forgive)S.forgive=0;else S.combo=0;S.missed++;snd('bad');
   if(f.vip){S.money=Math.max(0,S.money-20);pop('網紅留了負評… -$20','bad')}else pop('做錯了…客人生氣走了','bad');
   leave(f,false,W.length>1?'有一碗不是我們點的啦！':'這不是我點的啦！');
   BW.forEach((b,i)=>{if(b.base)BW[i]=emptyB()});
@@ -527,11 +599,44 @@ function serve(){
  B=BW[act];drawBowl();hud();
 }
 
+/* 新手練習 */
+const PRAC=[
+ {bowls:[{base:'hot',tops:['taro','peanut'],milk:false}]},
+ {bowls:[{base:'hot',tops:['pearl','bean'],milk:true}],g:'milk'},
+ {bowls:[{base:'hot',tops:['peanut','peanut','bean'],milk:false}]},
+ {bowls:[{base:'hot',tops:['taro','pearl'],milk:false}],ev:'stock'},
+ {bowls:[{base:'hot',tops:['taro'],milk:false},{base:'hot',tops:['bean','peanut'],milk:false}],ev:'cat',two:1}];
+function startPractice(){
+ Object.assign(S,{practice:true,pseen:{},pi:0,dayLen:75,timeLeft:75,queue:[],money:0,served:0,missed:0,combo:0,spawnIn:.8,evIn:999,stockN:0,cameo:1,boost:0,nextVip:false,out:{},refill:{},running:true,paused:false,weather:{n:'練習中',k:1,tip:0},mile:null});
+ hideCat();BW=[emptyB()];act=0;B=BW[0];WK.length=0;$('ov').hidden=true;$('pause').hidden=false;qs('.stage').dataset.sl=1;lastMood='';
+ drawDeco();renderTops();drawBowl();renderQueue();renderFront();hud();clearInterval(timer);timer=setInterval(tick,100);
+ pop('新手練習：不計時、客人不會生氣','good');
+}
+function pracNext(){
+ if(S.pi>=PRAC.length){finishPractice();return}
+ const c=PRAC[S.pi++];S.spawnIn=1.2;
+ if(c.two&&BW.length<2){BW.push(emptyB());qs('.stage').dataset.sl=2;drawBowl()}
+ S.queue.push({id:++cid,kind:rnd(KINDS),bowls:c.bowls.map(w=>({...w,tops:[...w.tops]})),p:99,max:99,vip:false});
+ renderQueue();renderFront();
+ if(c.g=='milk')setTimeout(()=>once('pmilk',[{el:()=>$('bubble'),text:'這位客人的訂單最後有「<b>加鮮奶</b>」，配料加完別忘了按「加鮮奶」。'}]),400);
+ if(c.ev=='stock')setTimeout(()=>{S.stockN=0;EV.stock()},1500);
+ if(c.ev=='cat')setTimeout(()=>EV.cat(),2500);
+}
+function finishPractice(){
+ clearInterval(timer);S.running=false;S.practice=false;$('pause').hidden=true;S.queue=[];hideCat();S.out={};S.refill={};
+ BW=[emptyB()];act=0;B=BW[0];S.seen.practiced=1;save();renderFront();renderQueue();renderTops();drawBowl();qs('.stage').dataset.sl=1;
+ overlay(`<h2>練習完成！</h2><p>你已經會了：看訂單、選湯底、加配料和兩勺、加鮮奶、補貨、趕走仙草貓，還有一次做兩碗。</p><p>正式營業時會計時，客人等太久也會生氣走掉。準備好就開店吧！</p>
+ <button class="btn main" id="go">開始營業</button><button class="btn" id="again">再練習一次</button><button class="btn" id="home">回到標題畫面</button>`,'go');
+ $('go').onclick=chapter;$('again').onclick=startPractice;$('home').onclick=intro;
+}
+
 /* 一天的流程 */
 function startDay(){
  const sea=season(S.day);
  Object.assign(S,{dayLen:75,timeLeft:75,queue:[],money:0,served:0,missed:0,combo:0,spawnIn:1.2,evIn:9,stockN:0,cameo:0,boost:0,nextVip:false,out:{},refill:{},running:true,paused:false,
+  practice:false,forgive:eq('photo')?1:0,mile:mileOf(S.day),judgeAt:[58,38,18],judgeOK:0,
   weather:S.day==1?WX.winter[0]:S.day==6?{n:'夏日廟會',k:.6,tip:3}:rnd(WX[sea])});
+ if(S.mile&&S.mile.w)S.weather=S.mile.w;
  $('pause').hidden=false;qs('.stage').dataset.sl=nSlots(); hideCat();BW=Array.from({length:nSlots()},emptyB);act=0;WK.length=0;B=BW[0];$('ov').hidden=true;lastMood='';snd('coin');
  drawDeco();renderTops();drawBowl();renderQueue();renderFront();hud();clearInterval(timer);timer=setInterval(tick,100);
  if(S.weather.tip)pop(`${S.weather.n}！客人變多、小費加碼`,'warn');
@@ -540,7 +645,9 @@ function startDay(){
 function overlay(html,focusId){$('box').classList.remove('wide');$('box').innerHTML=html;$('ov').hidden=false;const f=$(focusId);if(f)f.focus()}
 function chapter(){
  const d=S.day,st=STORY[d],sea=season(d);
- const [t,a,b,u]=st||[`${SN[sea]}天的老街`,LINES[sea],'',sea=='summer'?'天氣熱，點仙草冰的客人比較多':sea=='winter'?'天氣冷，點燒仙草的客人比較多':'冷熱都有人點'];
+ const M=mileOf(d);
+ let [t,a,b,u]=M?[(M.ed>1?`第 ${M.ed} 屆`:'')+M.t,M.s,'',(S.miles[d]?'（這個里程碑的獎勵已經拿過了）｜':'')+M.u]:st||[`${SN[sea]}天的老街`,LINES[sea],'',(sea=='summer'?'天氣熱，點仙草冰的客人比較多':sea=='winter'?'天氣冷，點燒仙草的客人比較多':'冷熱都有人點')+`｜下一個里程碑：第 ${nextMile(d)} 天「${mileOf(nextMile(d)).t}」`];
+ if(M)t='里程碑・'+t;
  drawDeco();renderTops();hud();
  const si=[3,5,7].indexOf(d),su=si>=0&&lv('slots')<=si?`<br>設備店新上架：${UP.find(x=>x.id=='slots').ns[si]}（可以同時多做一碗）`:'';
  overlay(`<h2>第 ${d} 天・${t}</h2><p>${a}</p>${b?`<p>${b}</p>`:''}<div class="unlock">${u}${su}</div><button class="btn main" id="go">開店！</button><button class="btn" id="shopb">先逛設備店（錢包 $${S.wallet}）</button>`,'go');
@@ -550,35 +657,55 @@ function shop(tab,back){
  const items=tab=='up'?UP.map(u=>{const l=lv(u.id),max=u.p.length,pr=u.p[l],req=u.req&&l<max?u.req[l]:0,nd=u.need&&lv(u.need[0])<u.need[1]?u.need[2]:'',can=S.wallet>=pr&&S.day>=req&&!nd;
    const nm=u.ns?(l>=max?`${u.n}（${l+1} 碗）`:u.ns[l]):u.n,ds=u.ds?(l>=max?'已經可以同時做 4 碗':u.ds[l]):u.d;
    return `<div class="item"><b>${nm} ${max>1?`<span class="lv">${'●'.repeat(l)}${'○'.repeat(max-l)}</span>`:''}</b><p>${ds}</p>${l>=max?'<button class="btn" disabled>已擁有</button>':S.day<req?`<button class="btn" disabled>第 ${req} 天起</button>`:nd?`<button class="btn" disabled>${nd}</button>`:`<button class="btn${can?' main':''}" data-buy="${u.id}"${can?'':' disabled'}>$${pr}</button>`}</div>`}).join('')
-  :tab=='skin'?SKINS.map(k=>{const own=S.skins.includes(k.id),on=S.skin==k.id;
+  :tab=='skin'?SKINS.map(k=>{const own=S.skins.includes(k.id),on=S.skin==k.id;if(k.p==null&&!own)return `<div class="item"><b><span class="sw" style="background:${k.c}"></span>${k.n}雨棚</b><p>里程碑「店面改裝開幕」的獎勵</p><button class="btn" disabled>未解鎖</button></div>`;
    return `<div class="item"><b><span class="sw" style="background:${k.c}"></span>${k.n}雨棚</b><p>${on?'使用中':own?'已擁有，點一下換上':'換個顏色，換個心情'}</p>${on?'<button class="btn" disabled>使用中</button>':own?`<button class="btn" data-skin="${k.id}">換上</button>`:`<button class="btn${S.wallet>=k.p?' main':''}" data-skin="${k.id}"${S.wallet>=k.p?'':' disabled'}>$${k.p}</button>`}</div>`}).join('')
+  :tab=='deco'?`<div class="item" style="grid-template-columns:minmax(0,1fr)"><b>目前擺設</b><p>${Object.entries(SLOTN).map(([s,n])=>`${n}：${S.place[s]?DBY[S.place[s]].n:'（空）'}`).join('<br>')}</p><p>${Object.entries(SETS).map(([k,v])=>`${setOn(k)?'<b>已湊齊</b>・':''}${v.n}｜${v.b}`).join('<br>')}</p></div>`+DECOS.map(x=>{const own=S.decos.includes(x.id),on=S.place[x.s]==x.id;
+   return `<div class="item"><b>${x.n}<span class="tag">${SETS[x.set].n.replace('系列','')}</span></b><p>${SLOTN[x.s]}・${x.e}</p>${on?`<button class="btn" data-off="${x.s}">取下</button>`:own?`<button class="btn main" data-put="${x.id}">擺上</button>`:x.p==null?`<button class="btn" disabled>${x.src}</button>`:`<button class="btn${S.wallet>=x.p?' main':''}" data-dbuy="${x.id}"${S.wallet>=x.p?'':' disabled'}>$${x.p}</button>`}</div>`}).join('')
+  :tab=='cup'?(S.trophies.length?S.trophies.map(t=>`<div class="item"><b>${t}</b><p>里程碑獎勵</p><button class="btn" disabled>已獲得</button></div>`).join(''):`<div class="item"><b>還沒有獎盃</b><p>第 8 天起每 7 天有一個里程碑：美食節、改裝開幕、甜品比賽、電視台採訪。下一個在第 ${mileOf(S.day)?S.day:nextMile(S.day)} 天。</p><button class="btn" disabled>加油</button></div>`)
   :COMBOS.map(c=>{const got=S.combos.includes(c.id);
-   return `<div class="item"><b>${got?c.n:'？？？'}</b><p>${got?`${c.b=='ice'?'仙草冰':'燒仙草'}＋${c.t.map(id=>TBY[id].n).join('、')}${c.m?(c.b=='ice'?'＋煉乳':'＋鮮奶'):''}・客人點它付 1.5 倍`:`提示：${c.h}`}</p><button class="btn" disabled>${got?'已發現':'未發現'}</button></div>`}).join('');
- const T=[['up','設備'],['skin','外觀'],['book',`招牌本 ${S.combos.length}/${COMBOS.length}`]];
+   return `<div class="item"><b>${got?c.n:'？？？'}</b><p>${got?`${c.b=='ice'?'仙草冰':'燒仙草'}＋${[...cnt(c.t)].map(([id,q])=>TBY[id].n+(q>1?'×2':'')).join('、')}${c.m?(c.b=='ice'?'＋煉乳':'＋鮮奶'):''}・客人點它付 1.5 倍`:`提示：${c.h}`}</p><button class="btn" disabled>${got?'已發現':'未發現'}</button></div>`}).join('');
+ const T=[['up','設備'],['skin','外觀'],['deco','裝飾'],['book',`招牌本 ${S.combos.length}/${COMBOS.length}`],['cup','獎盃']];
  overlay(`<h2>設備店</h2><p class="wallet" style="text-align:center">錢包 <b>$${S.wallet}</b></p>
  <div class="tabs" role="tablist">${T.map(([k,n])=>`<button class="mini" role="tab" data-tab="${k}" aria-selected="${tab==k}">${n}</button>`).join('')}</div>
- ${tab=='book'?'<p class="hint" style="margin:0 0 8px">營業時，碗裡剛好做出某個組合就會自動發現，還能拿 $50。</p>':''}
+ ${tab=='deco'?'<p class="hint" style="margin:0 0 8px">每個位置放一件，放上去才有效果。同一系列 4 件都擺上，還有套裝加成。</p>':''}${tab=='book'?'<p class="hint" style="margin:0 0 8px">營業時，碗裡剛好做出某個組合就會自動發現，還能拿 $50。</p>':''}
  <div class="items">${items}</div><button class="btn main" id="done">好了，回去</button>`,'done');
  $('box').classList.add('wide');
  $('done').onclick=back;
  $('box').querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>shop(b.dataset.tab,back));
  $('box').querySelectorAll('[data-buy]').forEach(b=>b.onclick=()=>{const u=UP.find(x=>x.id==b.dataset.buy),pr=u.p[lv(u.id)];if(S.wallet<pr)return;const nm=u.ns?u.ns[lv(u.id)]:u.n;S.wallet-=pr;S.up[u.id]=lv(u.id)+1;save();snd('coin');pop(`買了${nm}！`,'good');shop(tab,back)});
+ $('box').querySelectorAll('[data-dbuy]').forEach(b=>b.onclick=()=>{const x=DBY[b.dataset.dbuy];if(S.wallet<x.p)return;S.wallet-=x.p;S.decos.push(x.id);S.place[x.s]=x.id;save();renderDecor();snd('coin');pop(`買了${x.n}，已經擺上${SLOTN[x.s]}！`,'good');shop(tab,back)});
+ $('box').querySelectorAll('[data-put]').forEach(b=>b.onclick=()=>{const x=DBY[b.dataset.put];S.place[x.s]=x.id;save();renderDecor();snd('add');shop(tab,back)});
+ $('box').querySelectorAll('[data-off]').forEach(b=>b.onclick=()=>{delete S.place[b.dataset.off];save();renderDecor();snd('add');shop(tab,back)});
  $('box').querySelectorAll('[data-skin]').forEach(b=>b.onclick=()=>{const k=SKINS.find(x=>x.id==b.dataset.skin);if(!S.skins.includes(k.id)){if(S.wallet<k.p)return;S.wallet-=k.p;S.skins.push(k.id)}S.skin=k.id;save();drawDeco();snd('coin');shop(tab,back)});
 }
 function endDay(){
  clearInterval(timer);S.running=false;$('pause').hidden=true;S.queue=[];hideCat();renderFront();renderQueue();
- const goal=200+Math.min(S.day,10)*100,stars=S.money>=goal*1.5?3:S.money>=goal?2:S.money>=goal*.5?1:0;
- const nb=S.money>S.best;if(nb)S.best=S.money;S.wallet+=S.money;save();hud();
- const last=S.day==7&&stars>=1;
+ const d=S.day,goal=200+Math.min(d,10)*100,stars=S.money>=goal*1.5?3:S.money>=goal?2:S.money>=goal*.5?1:0;
+ const nb=S.money>S.best;if(nb)S.best=S.money;
+ const prev=S.dayBest[d]||0,credit=Math.max(0,S.money-prev);S.dayBest[d]=Math.max(prev,S.money);S.wallet+=credit;
+ S.run[d]=Math.max(S.run[d]||0,S.money);S.total=Object.values(S.run).reduce((x,y)=>x+y,0);
+ let mres='';const M=S.mile;
+ if(M&&S.miles[d])mres='<div class="unlock">這個里程碑的獎勵之前已經拿過了</div>';
+ else if(M){let rw=0,tr='';
+  if(M.id=='contest'){if(S.judgeOK>=3){rw=1500;tr='甜品比賽冠軍盃'}else if(S.judgeOK==2){rw=600;tr='甜品比賽亞軍獎牌'}}
+  else if(stars>=2){rw=M.reward;tr=M.trophy}
+  if(rw){const nm=(M.ed>1?`第 ${M.ed} 屆 `:'')+tr;S.miles[d]=1;S.wallet+=rw;S.trophies.push(nm);
+   const sk=M.skin&&!S.skins.includes(M.skin);if(sk)S.skins.push(M.skin);const dk=M.deco&&!S.decos.includes(M.deco);if(dk)S.decos.push(M.deco);
+   mres=`<div class="unlock"><b>里程碑達成！</b>獲得「${nm}」，獎金 $${rw} 已存進錢包${sk?'，還解鎖了「原木雨棚」外觀':''}${dk?'，還拿到「彩色三角旗」裝飾':''}</div>`;snd('good')}
+  else mres=`<div class="unlock"><b>里程碑還沒達成</b>（${M.id=='contest'?`評審做對 ${S.judgeOK}／3 位，至少要 2 位`:'需要兩顆星'}），可以按「這一天再玩一次」再挑戰</div>`}
+ save();hud();
+ const last=d==7&&stars>=1;
  const show=()=>{overlay(`<h2>今天打烊囉！</h2><div class="stars" aria-label="${stars} 顆星">${'★'.repeat(stars)}${'☆'.repeat(3-stars)}</div>
- <div class="res"><span>第 ${S.day} 天營收</span><span><b>$${S.money}</b>${nb?' 新紀錄！':''}</span><span>兩顆星目標</span><span>$${goal}</span><span>服務客人</span><span>${S.served} 位</span><span>錯過客人</span><span>${S.missed} 位</span><span>錢包</span><span>$${S.wallet}</span><span>累計營收</span><span>$${S.total+(stars?S.money:0)}</span></div>
+ <div class="res"><span>第 ${d} 天營收</span><span><b>$${S.money}</b>${nb?' 新紀錄！':''}</span><span>兩顆星目標</span><span>$${goal}</span><span>服務客人</span><span>${S.served} 位</span><span>錯過客人</span><span>${S.missed} 位</span><span>存進錢包</span><span>+$${credit}</span><span>錢包</span><span>$${S.wallet}</span><span>本輪累計營收</span><span>$${S.total}</span></div>
+ ${prev&&credit<S.money?`<p class="hint">這一天以前最高賺過 $${prev}，重玩只會把超過紀錄的部分存進錢包。</p>`:''}
+ ${mres}
  ${stars?'':'<p class="hint">要拿到至少一顆星（$'+goal/2+'）才能進到下一天喔</p>'}
- ${stars?`<button class="btn main" id="next">${last?'看結局':`前往第 ${S.day+1} 天`}</button>`:''}
+ ${stars?`<button class="btn main" id="next">${last?'看結局':`前往第 ${d+1} 天`}</button>`:''}
  <button class="btn" id="shopb">逛設備店（錢包 $${S.wallet}）</button>
  <button class="btn${stars?'':' main'}" id="again">${stars?'這一天再玩一次':'再挑戰一次'}</button>`,stars?'next':'again');
  $('again').onclick=startDay;$('shopb').onclick=()=>shop('up',show);
- if(stars)$('next').onclick=()=>{S.total+=S.money;S.day++;save();last?ending():chapter()};
- if(stars)once('shop',[{el:()=>$('shopb'),text:'今天賺的錢存進<b>錢包</b>了！點這裡逛設備店。',wait:'click'},{el:()=>$('box').querySelector('.items'),text:'錢夠的設備，按鈕會變粉紅色，點一下就買了。上面還能切換「外觀」和「招牌本」。'}])};
+ if(stars)$('next').onclick=()=>{S.day++;save();last?ending():chapter()};
+ if(stars)once('shop',[{el:()=>$('shopb'),text:'今天賺的錢存進<b>錢包</b>了！點這裡逛設備店。',wait:'click'},{el:()=>$('box').querySelector('.items'),text:'錢夠的設備，按鈕會變粉紅色，點一下就買了。上面還能切換「外觀」、「裝飾」、「招牌本」和「獎盃」。裝飾擺上攤位就有小效果。'}])};
  show();
 }
 function ending(){
@@ -591,21 +718,28 @@ function ending(){
  $('go').onclick=chapter;
 }
 function intro(){
- const cont=S.day>1;
+ const cont=S.day>1,newbie=!cont&&!S.seen.practiced;
  overlay(`<svg viewBox="0 0 120 120" width="96" height="96" aria-hidden="true">${face('bunny','happy').replace(/^<svg[^>]*>|<\/svg>$/g,'')}</svg>
  <h2>圓圓燒仙草</h2>
  <p>阿嬤住院了，換你回老街顧這攤四十年的燒仙草。撐過一週，阿嬤就會回來看你。</p>
- <ul><li>先選湯底，再照客人說的加配料，做好按「出餐」</li><li>出餐越快小費越多，連續做對還有加碼</li><li>小心缺貨、偷吃的仙草貓、臨時改點的客人</li><li>打烊後用錢包買設備、僱工讀生，最多同時做 4 碗，還能發現隱藏的招牌組合</li></ul>
- ${cont?`<button class="btn main" id="go">繼續第 ${S.day} 天</button><button class="btn" id="restart">從第 1 天重新開始</button>`:'<button class="btn main" id="go">開始故事</button>'}`,'go');
- $('go').onclick=chapter;
- if(cont)$('restart').onclick=()=>{S.day=1;S.total=0;save();chapter()};
+ <ul><li>先選湯底，再照客人說的加配料，做好按「出餐」</li><li>出餐越快小費越多，連續做對還有加碼</li><li>小心缺貨、偷吃的仙草貓、臨時改點的客人</li><li>打烊後用錢包買設備、僱工讀生，第 8 天起每週還有新的里程碑挑戰</li></ul>
+ ${cont?`<button class="btn main" id="go">繼續第 ${S.day} 天</button><button class="btn" id="prac">新手練習（不計時）</button><button class="btn" id="restart">從第 1 天重新挑戰（保留升級）</button><button class="gskip" id="wipe" style="width:100%">清除全部進度，開新遊戲</button>`
+  :newbie?`<button class="btn main" id="prac">先來新手練習（推薦）</button><button class="btn" id="go">直接開始故事</button>`
+  :`<button class="btn main" id="go">開始故事</button><button class="btn" id="prac">新手練習（不計時）</button>${S.wallet||Object.keys(S.up).length?'<button class="gskip" id="wipe" style="width:100%">清除全部進度，開新遊戲</button>':''}`}`,newbie?'prac':'go');
+ $('go').onclick=chapter;$('prac').onclick=startPractice;
+ if($('restart'))$('restart').onclick=()=>confirmBox('從第 1 天重新挑戰？','會回到第 1 天、重看第一週劇情。錢包、設備、外觀、招牌本和獎盃都會保留。<br>為了公平，重玩同一天只會把<b>超過以前紀錄</b>的營收存進錢包。','重新挑戰',()=>{S.day=1;S.run={};S.total=0;save();chapter()});
+ if($('wipe'))$('wipe').onclick=()=>confirmBox('清除全部進度？','錢包、設備、外觀、裝飾、招牌本、獎盃和教學紀錄都會刪掉，<b>沒辦法復原</b>。','清除，開新遊戲',()=>{const m=S.muted;Object.assign(S,{day:1,total:0,best:0,wallet:0,up:{},skin:'pink',skins:['pink'],combos:[],seen:{},decos:[],place:{},dayBest:{},run:{},miles:{},trophies:[],muted:m});save();drawDeco();renderTops();intro()},true);
+}
+function confirmBox(t,txt,okLabel,fn,danger){
+ overlay(`<h2>${t}</h2><p>${txt}</p><button class="btn${danger?'':' main'}" id="ok"${danger?' style="background:#d43d5e;color:#fff;border-color:#a82a46;box-shadow:0 4px 0 #a82a46"':''}>${okLabel}</button><button class="btn${danger?' main':''}" id="no">取消</button>`,'no');
+ $('ok').onclick=fn;$('no').onclick=intro;
 }
 function pause(){if(!S.running||S.paused)return;S.paused=true;$('pause').hidden=true;$('spot').hidden=$('gtip').hidden=true;overlay(`<h2>休息一下</h2><p style="text-align:center">客人會乖乖等你回來。</p><button class="btn main" id="go">繼續營業</button><button class="btn" id="reg">重看所有教學</button>`,'go');$('go').onclick=resume;$('reg').onclick=()=>{S.seen={};save();$('reg').textContent='好了！遇到新東西時會再教一次';$('reg').disabled=true}}
 function resume(){S.paused=false;$('ov').hidden=true;$('pause').hidden=!S.running;if(G.cur){$('spot').hidden=$('gtip').hidden=false;place()}}
 /* 新手引導：亮起要點的地方，一步一步教 */
 const G={q:[],cur:null,iv:null};
 const qs=s=>document.querySelector(s);
-function once(k,steps,alive){if(S.seen[k])return;S.seen[k]=1;save();steps.forEach((s,i)=>{s.g=k;if(alive&&!s.after)s.alive=alive});G.q.push(...steps);if(!G.cur)nextStep()}
+function once(k,steps,alive){const st=S.practice?S.pseen:S.seen;if(st[k])return;st[k]=1;if(!S.practice)save();steps.forEach((s,i)=>{s.g=k;if(alive&&!s.after)s.alive=alive});G.q.push(...steps);if(!G.cur)nextStep()}
 function nextStep(){
  const st=G.q.shift();G.cur=st||null;
  if(!st){S.guide=false;$('spot').hidden=$('gtip').hidden=true;clearInterval(G.iv);G.iv=null;return}
@@ -618,7 +752,7 @@ function nextStep(){
  if($('gnext')){$('gnext').onclick=nextStep;$('gnext').focus({preventScroll:true})}
  $('gskip').onclick=()=>{G.q=[];nextStep()};
  place();
- if(!G.iv)G.iv=setInterval(()=>{if(!G.cur||S.paused)return;const c=G.cur;if(c.alive&&!c.alive()){G.q=G.q.filter(s=>s.g!==c.g);nextStep();return}place();const w=c.wait;if(typeof w=='function'&&w())nextStep()},150);
+ if(!G.iv)G.iv=setInterval(()=>{if(!G.cur||S.paused)return;const c=G.cur,ce=c.el();if(c.wait&&(!ce||!ce.isConnected||ce.closest('[hidden]')))c.miss=(c.miss||0)+1;else c.miss=0;if((c.alive&&!c.alive())||c.miss>5){G.q=G.q.filter(s=>s.g!==c.g);nextStep();return}place();const w=c.wait;if(typeof w=='function'&&w())nextStep()},150);
 }
 function place(){
  const st=G.cur,el=st&&st.el(),sp=$('spot'),tp=$('gtip'),vw=innerWidth,vh=innerHeight,tw=tp.offsetWidth,th=tp.offsetHeight;
@@ -637,10 +771,11 @@ function onFront(f){
  if(W.length==1)once('basic',[
   {el:()=>$('bubble'),text:'客人來了！上面的對話框就是他要的：<b>湯底＋配料</b>。'},
   {el:()=>$(w.base=='ice'?'ice':'hot'),text:`第一步：點「${baseName(w.base)}」，先盛好一碗。`,wait:'click',skip:()=>B.base==w.base},
-  {el:()=>$('tops'),text:'第二步：照對話框點配料。點過的配料，訂單上會被劃掉。',wait:()=>w.tops.every(t=>B.tops.has(t))},
+  {el:()=>$('tops'),text:'第二步：照對話框點配料。點過的配料，訂單上會被劃掉。',wait:()=>hasAll(B.tops,w.tops)},
   ...(w.milk?[{el:()=>$('milk'),text:'他還要加鮮奶，點這裡。',wait:'click',skip:()=>B.milk}]:[]),
   {el:()=>$('serve'),text:'訂單全部劃掉了！按「出餐」送給客人。',wait:'click',skip:()=>lv('autosrv')>0},
   {el:()=>$('money').closest('.chip'),text:'賺到的錢會加在這裡。出餐越快、小費越多，加油！',after:1}],al);
+ if(W.some(x=>x.tops.length>new Set(x.tops).size))once('double',[{el:()=>$('bubble'),text:'訂單上出現「<b>×2</b>」了！代表這個配料要<b>兩勺</b>，同一個配料按兩下就好。按到第三下會整個拿掉重來。'}],al);
  if(f.vip)once('vip',[{el:()=>$('front'),text:'頭上掛「網紅」牌子的是網紅客人！做對會發文讓攤子爆紅，做錯會被留負評扣錢。'}],al);
  if(W.some(x=>x.name))once('combo',[{el:()=>$('bubble'),text:'客人點了你發現過的<b>招牌組合</b>！照下面的配料做，他會付 1.5 倍的錢。'}],al);
  if(W.length>1)once('multi',[
@@ -668,9 +803,9 @@ function autoNext(){const f=S.queue[0];if(!f||f.react||f.bowls.length<2)return;c
 const noBase=()=>{pop('先選燒仙草或仙草冰喔！','warn');snd('warn')};
 function toggleTop(id){
  const t=TBY[id];if(!S.running||S.paused||!unlocked(t))return;
- if(S.out[id]){if(!S.refill[id]){S.refill[id]=lv('box')?.4:1.2;renderTops();snd('add')}return}
+ if(S.out[id]){if(!S.refill[id]){S.refill[id]=(lv('box')?.4:1.2)*(eq('icebox')?.7:1);renderTops();snd('add')}return}
  if(!B.base)return noBase();
- B.tops.has(id)?B.tops.delete(id):B.tops.add(id);snd('add');drawBowl();autoNext();
+ const q=B.tops.get(id)||0;if(q>=2){B.tops.delete(id);pop(`最多兩勺，${t.n}先拿掉了`,'warn')}else B.tops.set(id,q+1);snd('add');drawBowl();autoNext();
 }
 function setBase(b){if(!S.running||S.paused||(b=='ice'&&!iceOn()))return;B.base=b;snd('add');drawBowl();autoNext()}
 $('tops').addEventListener('click',e=>{const b=e.target.closest('.tp');if(b)toggleTop(b.dataset.id)});
