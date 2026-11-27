@@ -254,6 +254,7 @@ body{--aw:#ff7aa2}[data-skin=sky]{--aw:#6cb8f0}[data-skin=lemon]{--aw:#ffc21a}[d
 
 <script>
 {
+const VER='v7.2';
 const TOPS=[
  {id:'taro',n:'芋圓',c:'#b79ad8',s:'cube',d:1},
  {id:'pearl',n:'粉圓',c:'#8a5a3e',s:'ball',d:1},
@@ -319,7 +320,7 @@ const UP=[
  {id:'shaver',n:'新刨冰機',d:'仙草冰每碗多賣 $10（第 5 天起）',p:[1500]},
  {id:'helper',n:'打工小幫手',d:'阿福的弟弟會照客人的單，幫空碗先盛好湯底',p:[2500]},
  {id:'slots',n:'工作台',ns:['第二個碗位','僱用工讀生小美','僱用工讀生阿傑'],ds:['可以同時做 2 碗，也會開始有客人一次點 2 碗','小美會自動幫你做訂單上的第 3 碗，你只要做好第 1、2 碗','阿傑也來幫忙，自動做第 4 碗，可以接 4 碗的大單'],p:[1500,3000,5000],req:[3,5,7]},
- {id:'autosrv',n:'自動出餐',d:'工讀生看到整單都做好，會自動幫你送給客人，不用再按出餐',p:[2000],need:['slots',2,'先僱用小美']}];
+ {id:'autosrv',n:'自動出餐',d:'工讀生看到整單都做好，會自動幫你送給客人，不用再按出餐。要先在上面的「工作台」買到第 2 級（僱用工讀生小美）',p:[2000],need:['slots',2,'工作台 Lv2 後']}];
 const SKINS=[{id:'pink',n:'草莓粉',c:'#ff7aa2',p:0},{id:'sky',n:'汽水藍',c:'#6cb8f0',p:300},{id:'lemon',n:'檸檬黃',c:'#ffc21a',p:300},{id:'grape',n:'葡萄紫',c:'#a98be0',p:400},{id:'wood',n:'原木',c:'#b07a4f',p:null},{id:'tomato',n:'番茄紅',c:'#ff6a55',p:400}];
 const COMBOS=[
  {id:'old',n:'古早味燒仙草',b:'hot',t:['peanut','bean'],m:false,h:'熱的・兩種「豆」'},
@@ -725,7 +726,7 @@ function intro(){
  <ul><li>先選湯底，再照客人說的加配料，做好按「出餐」</li><li>出餐越快小費越多，連續做對還有加碼</li><li>小心缺貨、偷吃的仙草貓、臨時改點的客人</li><li>打烊後用錢包買設備、僱工讀生，第 8 天起每週還有新的里程碑挑戰</li></ul>
  ${cont?`<button class="btn main" id="go">繼續第 ${S.day} 天</button><button class="btn" id="prac">新手練習（不計時）</button><button class="btn" id="restart">從第 1 天重新挑戰（保留升級）</button><button class="gskip" id="wipe" style="width:100%">清除全部進度，開新遊戲</button>`
   :newbie?`<button class="btn main" id="prac">先來新手練習（推薦）</button><button class="btn" id="go">直接開始故事</button>`
-  :`<button class="btn main" id="go">開始故事</button><button class="btn" id="prac">新手練習（不計時）</button>${S.wallet||Object.keys(S.up).length?'<button class="gskip" id="wipe" style="width:100%">清除全部進度，開新遊戲</button>':''}`}`,newbie?'prac':'go');
+  :`<button class="btn main" id="go">開始故事</button><button class="btn" id="prac">新手練習（不計時）</button>${S.wallet||Object.keys(S.up).length?'<button class="gskip" id="wipe" style="width:100%">清除全部進度，開新遊戲</button>':''}`}<p class="hint">版本 ${VER}</p>`,newbie?'prac':'go');
  $('go').onclick=chapter;$('prac').onclick=startPractice;
  if($('restart'))$('restart').onclick=()=>confirmBox('從第 1 天重新挑戰？','會回到第 1 天、重看第一週劇情。錢包、設備、外觀、招牌本和獎盃都會保留。<br>為了公平，重玩同一天只會把<b>超過以前紀錄</b>的營收存進錢包。','重新挑戰',()=>{S.day=1;S.run={};S.total=0;save();chapter()});
  if($('wipe'))$('wipe').onclick=()=>confirmBox('清除全部進度？','錢包、設備、外觀、裝飾、招牌本、獎盃和教學紀錄都會刪掉，<b>沒辦法復原</b>。','清除，開新遊戲',()=>{const m=S.muted;Object.assign(S,{day:1,total:0,best:0,wallet:0,up:{},skin:'pink',skins:['pink'],combos:[],seen:{},decos:[],place:{},dayBest:{},run:{},miles:{},trophies:[],muted:m});save();drawDeco();renderTops();intro()},true);
@@ -734,7 +735,7 @@ function confirmBox(t,txt,okLabel,fn,danger){
  overlay(`<h2>${t}</h2><p>${txt}</p><button class="btn${danger?'':' main'}" id="ok"${danger?' style="background:#d43d5e;color:#fff;border-color:#a82a46;box-shadow:0 4px 0 #a82a46"':''}>${okLabel}</button><button class="btn${danger?' main':''}" id="no">取消</button>`,'no');
  $('ok').onclick=fn;$('no').onclick=intro;
 }
-function pause(){if(!S.running||S.paused)return;S.paused=true;$('pause').hidden=true;$('spot').hidden=$('gtip').hidden=true;overlay(`<h2>休息一下</h2><p style="text-align:center">客人會乖乖等你回來。</p><button class="btn main" id="go">繼續營業</button><button class="btn" id="reg">重看所有教學</button>`,'go');$('go').onclick=resume;$('reg').onclick=()=>{S.seen={};save();$('reg').textContent='好了！遇到新東西時會再教一次';$('reg').disabled=true}}
+function pause(){if(!S.running||S.paused)return;S.paused=true;$('pause').hidden=true;$('spot').hidden=$('gtip').hidden=true;overlay(`<h2>休息一下</h2><p style="text-align:center">客人會乖乖等你回來。</p><button class="btn main" id="go">繼續營業</button><button class="btn" id="reg">重看所有教學</button><p class="hint">版本 ${VER}</p>`,'go');$('go').onclick=resume;$('reg').onclick=()=>{S.seen={};save();$('reg').textContent='好了！遇到新東西時會再教一次';$('reg').disabled=true}}
 function resume(){S.paused=false;$('ov').hidden=true;$('pause').hidden=!S.running;if(G.cur){$('spot').hidden=$('gtip').hidden=false;place()}}
 /* 新手引導：亮起要點的地方，一步一步教 */
 const G={q:[],cur:null,iv:null};
