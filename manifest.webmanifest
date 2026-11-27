@@ -1,0 +1,17 @@
+{
+  "name": "圓圓燒仙草",
+  "short_name": "圓圓燒仙草",
+  "description": "可愛的台灣燒仙草攤經營小遊戲",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FFF3DF",
+  "theme_color": "#FFF3DF",
+  "lang": "zh-Hant",
+  "icons": [
+    {"src": "icon-192.png", "sizes": "192x192", "type": "image/png"},
+    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png"},
+    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"}
+  ]
+}
