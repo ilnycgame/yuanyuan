@@ -298,6 +298,8 @@ body{--aw:#D99A91}[data-skin=sky]{--aw:#6cb8f0}[data-skin=lemon]{--aw:#ffc21a}[d
 .ti.ok{background:#E5ECD8;border-color:#A4B58C;opacity:.5}
 .bw .tk .ti{position:relative;left:auto;top:auto;font-size:inherit;font-weight:400}
 .bw{display:flex;flex-direction:column;justify-content:flex-start;align-items:stretch}
+.bases .btn{gap:6px}.bases .bi{width:26px;height:26px;flex:none}.bases .btn[disabled] .bi{opacity:.5}
+@media(max-width:600px){.bases .bi{width:24px;height:24px}.bases .btn{gap:3px}}
 #upd{position:fixed;left:50%;top:max(10px,env(safe-area-inset-top));transform:translateX(-50%);z-index:12;display:flex;align-items:center;gap:10px;padding:8px 8px 8px 16px;border-radius:14px;border:2px solid var(--caramel);background:#FFF8EA;color:var(--jelly);font:inherit;font-size:15px;box-shadow:0 4px 0 rgba(135,92,67,.3);cursor:pointer;white-space:nowrap;animation:unl .35s ease}
 #upd[hidden]{display:none}#upd b{background:var(--jelly);color:var(--cream);border-radius:10px;padding:4px 10px;font-weight:500}
 /* ===== 第三階段：商店圖示與解鎖動畫 ===== */
@@ -365,6 +367,7 @@ body{--aw:#D99A91}[data-skin=sky]{--aw:#6cb8f0}[data-skin=lemon]{--aw:#ffc21a}[d
 <symbol id="i-hot" viewBox="0 0 32 32"><path d="M5 15h22q-1 10-11 11Q6 25 5 15Z" fill="#FFF8EE" stroke="#875C43" stroke-width="1.4"/><ellipse cx="16" cy="15" rx="11" ry="3" fill="#43342F" stroke="#875C43" stroke-width="1.4"/><path d="M11 11q-2-2.5 0-5M16 10q-2-2.5 0-5M21 11q-2-2.5 0-5" stroke="#C9B39F" stroke-width="1.5" fill="none" stroke-linecap="round"/></symbol>
 <symbol id="i-ice" viewBox="0 0 32 32"><path d="M5 17h22q-1 9-11 10Q6 26 5 17Z" fill="#FFF8EE" stroke="#875C43" stroke-width="1.4"/><path d="M7 17Q8 5 16 5Q24 5 25 17Z" fill="url(#gIce)" stroke="#9DB6C3" stroke-width="1.4"/><path d="M10 11q3 2 6 0t6 0" stroke="#8A5530" stroke-width="1.6" fill="none" stroke-linecap="round"/></symbol>
 <symbol id="i-milk" viewBox="0 0 32 32"><path d="M13 5h6v3.5l3 4v13.5q0 2-2 2h-8q-2 0-2-2V12.5l3-4Z" fill="#FFFDF8" stroke="#875C43" stroke-width="1.4" stroke-linejoin="round"/><rect x="12.5" y="3.5" width="7" height="3" rx="1" fill="#9FC0CF"/><path d="M10.7 18h10.6" stroke="#9FC0CF" stroke-width="2.4"/></symbol>
+<symbol id="i-cmilk" viewBox="0 0 32 32"><rect x="7" y="9" width="18" height="18" rx="3" fill="#FFF8EA" stroke="#875C43" stroke-width="1.4"/><ellipse cx="16" cy="9" rx="9" ry="2.6" fill="#E8D2A6" stroke="#875C43" stroke-width="1.4"/><rect x="7" y="14" width="18" height="8" fill="#9FC0CF"/><path d="M11 18h10" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/><path d="M22 6q3 0 3 3" stroke="#FFF0C8" stroke-width="2.4" fill="none" stroke-linecap="round"/></symbol>
 <symbol id="i-lock" viewBox="0 0 32 32"><rect x="8" y="14" width="16" height="12" rx="3" fill="#E9DCCD" stroke="#A08A7A" stroke-width="1.6"/><path d="M11 14v-3a5 5 0 0 1 10 0v3" fill="none" stroke="#A08A7A" stroke-width="1.8"/><circle cx="16" cy="20" r="1.6" fill="#A08A7A"/></symbol>
 </defs></svg>
 <div class="wrap">
@@ -414,9 +417,9 @@ body{--aw:#D99A91}[data-skin=sky]{--aw:#6cb8f0}[data-skin=lemon]{--aw:#ffc21a}[d
   <section class="card">
    <h2>配料台</h2>
    <div class="bases">
-    <button class="btn" id="hot" aria-pressed="false">燒仙草 <kbd>Q</kbd></button>
-    <button class="btn" id="ice" aria-pressed="false">仙草冰 <kbd>W</kbd></button>
-    <button class="btn" id="milk" aria-pressed="false">加奶 <kbd>M</kbd></button>
+    <button class="btn" id="hot" aria-pressed="false"><svg class="bi" viewBox="0 0 32 32" aria-hidden="true"><use href="#i-hot"/></svg><span class="bl">燒仙草</span> <kbd>Q</kbd></button>
+    <button class="btn" id="ice" aria-pressed="false"><svg class="bi" viewBox="0 0 32 32" aria-hidden="true"><use href="#i-ice"/></svg><span class="bl">仙草冰</span> <kbd>W</kbd></button>
+    <button class="btn" id="milk" aria-pressed="false"><svg class="bi" viewBox="0 0 32 32" aria-hidden="true"><use href="#i-milk"/></svg><span class="bl">加奶</span> <kbd>M</kbd></button>
    </div>
    <div class="tops" id="tops"></div>
    <p class="hint desk">鍵盤：Q／W 湯底、1～8 配料、M 奶、A／S／D／F 切換碗、空白鍵出餐、⌫ 倒掉、P 暫停</p>
@@ -429,8 +432,8 @@ body{--aw:#D99A91}[data-skin=sky]{--aw:#6cb8f0}[data-skin=lemon]{--aw:#ffc21a}[d
 
 <script>
 {
-const VER='v8.1';
-const NOTES={'v8.1':['之後有新版本時，打開遊戲會在上方提醒「有新版本，點這裡更新」，點一下就好','可以加到手機主畫面了：有專屬的圓圓燒仙草圖示，打開是全螢幕'],'v8.0':['美術全面改版：奶油米白、焦糖棕、仙草深褐的溫暖配色，按鈕和介面統一成同一套風格','碗、配料、客人、仙草貓重畫成柔和插畫風，客人會眨眼、穿不同顏色的毛衣，表情跟著耐心變化','新的懷舊甜品店背景：花磚、木紋櫃台、黑板菜單、玻璃罐和鐵湯鍋，下雨天還會下雨','加料時配料會掉進碗裡、出餐時冒星星、發現招牌組合有專屬動畫','每個碗下面都有自己的小訂單，多碗訂單不用再捲動對話框','加奶改成奶茶色的效果；裝飾品和設備店圖示也換成新畫風'],'v7.4':['一天不再限時 75 秒，改成服務完當天的客人才打烊。天氣和祭典會影響來客數，例如寒流 +30%、秋颱 −30%','網紅發文爆紅時，當天會多來 2 位客人','星星改看「客人滿意度」：50% 一顆、75% 兩顆、90% 三顆','打烊時新增「今日結算」：賣出幾碗、收入、小費、最熱門配料','剛買第二個碗位的那天，第一位客人就會點 2 碗，馬上一步一步教學','配料按鈕兩排高度一致','新增這個更新公告']};
+const VER='v8.2';
+const NOTES={'v8.2':['燒仙草、仙草冰、加鮮奶／淋煉乳按鈕也加上了小圖示'],'v8.1':['之後有新版本時，打開遊戲會在上方提醒「有新版本，點這裡更新」，點一下就好','可以加到手機主畫面了：有專屬的圓圓燒仙草圖示，打開是全螢幕'],'v8.0':['美術全面改版：奶油米白、焦糖棕、仙草深褐的溫暖配色，按鈕和介面統一成同一套風格','碗、配料、客人、仙草貓重畫成柔和插畫風，客人會眨眼、穿不同顏色的毛衣，表情跟著耐心變化','新的懷舊甜品店背景：花磚、木紋櫃台、黑板菜單、玻璃罐和鐵湯鍋，下雨天還會下雨','加料時配料會掉進碗裡、出餐時冒星星、發現招牌組合有專屬動畫','每個碗下面都有自己的小訂單，多碗訂單不用再捲動對話框','加奶改成奶茶色的效果；裝飾品和設備店圖示也換成新畫風'],'v7.4':['一天不再限時 75 秒，改成服務完當天的客人才打烊。天氣和祭典會影響來客數，例如寒流 +30%、秋颱 −30%','網紅發文爆紅時，當天會多來 2 位客人','星星改看「客人滿意度」：50% 一顆、75% 兩顆、90% 三顆','打烊時新增「今日結算」：賣出幾碗、收入、小費、最熱門配料','剛買第二個碗位的那天，第一位客人就會點 2 碗，馬上一步一步教學','配料按鈕兩排高度一致','新增這個更新公告']};
 const TOPS=[
  {id:'taro',n:'芋圓',c:'#b79ad8',s:'cube',d:1},
  {id:'pearl',n:'粉圓',c:'#8a5a3e',s:'ball',d:1},
@@ -646,7 +649,7 @@ function drawBowl(){
  $('hot').setAttribute('aria-pressed',B.base=='hot');
  $('ice').setAttribute('aria-pressed',B.base=='ice');
  $('milk').setAttribute('aria-pressed',B.milk);
- $('milk').firstChild.nodeValue=(B.base=='ice'?'淋煉乳':B.base=='hot'?'加鮮奶':iceOn()?'加奶':'加鮮奶')+' ';
+ $('milk').querySelector('.bl').textContent=B.base=='ice'?'淋煉乳':B.base=='hot'?'加鮮奶':iceOn()?'加奶':'加鮮奶';$('milk').querySelector('use').setAttribute('href',B.base=='ice'?'#i-cmilk':'#i-milk');
  document.querySelectorAll('.tp').forEach(b=>{const q=B.tops.get(b.dataset.id)||0;b.setAttribute('aria-pressed',q>0);const g=b.querySelector('.qb');if(g){g.textContent='×'+q;g.hidden=q<1}});
  renderBubble();
  if(S.running&&B.base){const c=COMBOS.find(c=>!S.combos.includes(c.id)&&c.b==B.base&&c.m==B.milk&&sameTops(B.tops,c.t));
@@ -655,7 +658,7 @@ function drawBowl(){
 function renderTops(){
  $('tops').innerHTML=TOPS.map((t,i)=>{const lock=!unlocked(t),out=S.out[t.id],rf=S.refill[t.id];
   return `<button class="tp${out?' out':''}" data-id="${t.id}" aria-pressed="${B.tops.has(t.id)}"${lock?' disabled':''}><b class="qb"${(B.tops.get(t.id)||0)?'':' hidden'}>×${B.tops.get(t.id)||0}</b>${lock?useI('i-lock',32):icon(t,32)}<span>${lock?'？？':t.n}</span><small>${lock?`第${t.d}天`:rf?'補貨中…':out?'缺貨・點我':`<span class="pr">+$10・${i+1}</span>`}</small></button>`}).join('');
- const ice=$('ice');ice.disabled=!iceOn();ice.firstChild.nodeValue=iceOn()?'仙草冰 ':'第5天開賣 ';
+ const ice=$('ice');ice.disabled=!iceOn();ice.querySelector('.bl').textContent=iceOn()?'仙草冰':'第5天開賣';
 }
 function renderFront(){
  const f=S.queue[0];
