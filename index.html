@@ -299,7 +299,14 @@ body{--aw:#D99A91}[data-skin=sky]{--aw:#6cb8f0}[data-skin=lemon]{--aw:#ffc21a}[d
 .bw .tk .ti{position:relative;left:auto;top:auto;font-size:inherit;font-weight:400}
 .bw .tk .ti.dbl{width:auto;grid-auto-flow:column;gap:1px;padding:0 5px 0 2px;border-color:#D99A91;background:#FBE9E3}
 .bw .tk .ti.dbl b{position:static;background:none;color:#A8483F;font-size:12px;font-weight:700;padding:0;line-height:1}
-.tk{row-gap:4px}
+.tk{row-gap:3px}
+.bw .tk{height:52px;align-content:center;overflow:hidden}
+.bw .tk.dense .ti{width:20px;height:20px}.bw .tk.dense .ti.dbl{width:auto;height:20px}.bw .tk.dense svg{width:15px;height:15px}.bw .tk.dense{gap:2px}
+.bw .tk.xdense .ti{width:16px;height:16px;border-radius:5px}.bw .tk.xdense .ti.dbl{width:auto;height:16px;padding:0 2px 0 1px}.bw .tk.xdense svg{width:12px;height:12px}.bw .tk.xdense .ti.dbl b{font-size:10px}
+.bw .tk svg{display:block;margin:0;width:19px;height:19px;flex:none}
+.bw .tk .ti{width:24px;height:24px;border-radius:7px}
+.bw .tk .ti.dbl{width:auto;height:24px}
+@media(max-width:600px){.bw .tk{gap:2px;margin:0 1px 3px;height:46px}.bw .tk .ti{width:21px;height:21px;border-radius:6px}.bw .tk .ti.dbl{width:auto;height:21px;padding:0 3px 0 1px}.bw .tk svg{width:16px;height:16px}.bw .tk .ti.dbl b{font-size:11px}}
 .bw{display:flex;flex-direction:column;justify-content:flex-start;align-items:stretch}
 .bases .btn{gap:6px}.bases .bi{width:26px;height:26px;flex:none}.bases .btn[disabled] .bi{opacity:.5}
 @media(max-width:600px){.bases .bi{width:24px;height:24px}.bases .btn{gap:3px}}
@@ -435,8 +442,8 @@ body{--aw:#D99A91}[data-skin=sky]{--aw:#6cb8f0}[data-skin=lemon]{--aw:#ffc21a}[d
 
 <script>
 {
-const VER='v8.4';
-const NOTES={'v8.4':['碗下方小訂單的「兩勺」改成在圖示旁邊直接寫「×2」，多碗時不會再跟上一排擠在一起'],'v8.3':['修正設備店「自動出餐」的說明文字，改成「需要先買上面的『僱用工讀生小美』」'],'v8.2':['燒仙草、仙草冰、加鮮奶／淋煉乳按鈕也加上了小圖示'],'v8.1':['之後有新版本時，打開遊戲會在上方提醒「有新版本，點這裡更新」，點一下就好','可以加到手機主畫面了：有專屬的圓圓燒仙草圖示，打開是全螢幕'],'v8.0':['美術全面改版：奶油米白、焦糖棕、仙草深褐的溫暖配色，按鈕和介面統一成同一套風格','碗、配料、客人、仙草貓重畫成柔和插畫風，客人會眨眼、穿不同顏色的毛衣，表情跟著耐心變化','新的懷舊甜品店背景：花磚、木紋櫃台、黑板菜單、玻璃罐和鐵湯鍋，下雨天還會下雨','加料時配料會掉進碗裡、出餐時冒星星、發現招牌組合有專屬動畫','每個碗下面都有自己的小訂單，多碗訂單不用再捲動對話框','加奶改成奶茶色的效果；裝飾品和設備店圖示也換成新畫風'],'v7.4':['一天不再限時 75 秒，改成服務完當天的客人才打烊。天氣和祭典會影響來客數，例如寒流 +30%、秋颱 −30%','網紅發文爆紅時，當天會多來 2 位客人','星星改看「客人滿意度」：50% 一顆、75% 兩顆、90% 三顆','打烊時新增「今日結算」：賣出幾碗、收入、小費、最熱門配料','剛買第二個碗位的那天，第一位客人就會點 2 碗，馬上一步一步教學','配料按鈕兩排高度一致','新增這個更新公告']};
+const VER='v8.6';
+const NOTES={'v8.6':['碗下方的小訂單改成固定高度，配料多或少都不會讓碗位區忽高忽低；配料特別多時圖示會自動縮小'],'v8.5':['碗下方小訂單的圖示改成在格子裡置中，格子也縮小一點，比較省空間'],'v8.4':['碗下方小訂單的「兩勺」改成在圖示旁邊直接寫「×2」，多碗時不會再跟上一排擠在一起'],'v8.3':['修正設備店「自動出餐」的說明文字，改成「需要先買上面的『僱用工讀生小美』」'],'v8.2':['燒仙草、仙草冰、加鮮奶／淋煉乳按鈕也加上了小圖示'],'v8.1':['之後有新版本時，打開遊戲會在上方提醒「有新版本，點這裡更新」，點一下就好','可以加到手機主畫面了：有專屬的圓圓燒仙草圖示，打開是全螢幕'],'v8.0':['美術全面改版：奶油米白、焦糖棕、仙草深褐的溫暖配色，按鈕和介面統一成同一套風格','碗、配料、客人、仙草貓重畫成柔和插畫風，客人會眨眼、穿不同顏色的毛衣，表情跟著耐心變化','新的懷舊甜品店背景：花磚、木紋櫃台、黑板菜單、玻璃罐和鐵湯鍋，下雨天還會下雨','加料時配料會掉進碗裡、出餐時冒星星、發現招牌組合有專屬動畫','每個碗下面都有自己的小訂單，多碗訂單不用再捲動對話框','加奶改成奶茶色的效果；裝飾品和設備店圖示也換成新畫風'],'v7.4':['一天不再限時 75 秒，改成服務完當天的客人才打烊。天氣和祭典會影響來客數，例如寒流 +30%、秋颱 −30%','網紅發文爆紅時，當天會多來 2 位客人','星星改看「客人滿意度」：50% 一顆、75% 兩顆、90% 三顆','打烊時新增「今日結算」：賣出幾碗、收入、小費、最熱門配料','剛買第二個碗位的那天，第一位客人就會點 2 碗，馬上一步一步教學','配料按鈕兩排高度一致','新增這個更新公告']};
 const TOPS=[
  {id:'taro',n:'芋圓',c:'#b79ad8',s:'cube',d:1},
  {id:'pearl',n:'粉圓',c:'#8a5a3e',s:'ball',d:1},
@@ -686,9 +693,10 @@ function renderBubble(){_rb();fitStage();renderTickets()}
 function renderTickets(){
  const f=S.queue[0],live=f&&!f.react&&S.running;
  document.querySelectorAll('.bw').forEach(el=>{const i=+el.dataset.i;let t=el.querySelector('.tk');if(!t){t=document.createElement('div');t.className='tk';el.appendChild(t)}
-  const w=live&&f.bowls[i];if(!w){t.innerHTML='';t.hidden=true;return}
-  const b=BW[i],has=b&&b.base;t.hidden=false;
+  const w=live&&f.bowls[i];t.hidden=false;t.className='tk';if(!w){t.innerHTML='';return}
+  const b=BW[i],has=b&&b.base;
   t.innerHTML=`<span class="ti${b&&b.base==w.base?' ok':''}" title="${w.base=='ice'?'仙草冰':'燒仙草'}">${baseIcon(w.base)}</span>`+[...cnt(w.tops)].map(([id,q])=>`<span class="ti${q>1?' dbl':''}${has&&(b.tops.get(id)||0)==q?' ok':''}" title="${TBY[id].n}${q>1?'×2':''}">${icon(TBY[id])}${q>1?'<b>×2</b>':''}</span>`).join('')+(w.milk?`<span class="ti${has&&b.milk?' ok':''}" title="${w.base=='ice'?'淋煉乳':'加鮮奶'}">${milkIcon}</span>`:'');
+  if(t.scrollHeight>t.clientHeight+1){t.classList.add('dense');if(t.scrollHeight>t.clientHeight+1)t.classList.add('xdense')}
  });
 }
 function _rb(){
